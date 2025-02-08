@@ -40,7 +40,7 @@ export default function Footer() {
 
         {/* section: Navigation links */}
         <nav aria-label='Footer Links'>
-          <ul className=' flex space-x-10 font-normal text-sm text-nowrap'>
+          <ul className=' flex flex-wrap justify-center gap-x-10 gap-y-5 font-normal text-sm text-nowrap'>
             {sitemapLinks.map((link) => (
               <li key={link.href}>
                 <Link
@@ -66,7 +66,7 @@ export default function Footer() {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <Image src={social.src} width={30} height={30} alt={social.alt} />
+              <Image src={social.src} width={30} height={30} alt={social.alt} className='hover:scale-110' />
             </a>
           ))}
         </div>
@@ -74,8 +74,8 @@ export default function Footer() {
 
       {/* Footer bottom bar */}
       <aside className='py-3 px-5 flex justify-between flex-wrap gap-3 sm:text-base text-sm text-white/70'>
-        <small>Cynqai © All rights reserved.</small>
-        <small>
+        <small className='sm:mx-0 mx-auto'>Cynqai © All rights reserved.</small>
+        <small className='sm:mx-0 mx-auto'>
           <Link
             href='/terms-of-use'
             title='Terms and Conditions'

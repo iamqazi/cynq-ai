@@ -1,4 +1,4 @@
-import Image from 'next/image' 
+import Image from 'next/image'
 
 export default function FutureOfAi() {
   return (
@@ -7,21 +7,18 @@ export default function FutureOfAi() {
       className='py-20 '
     >
       <div className='container mx-auto px-4 max-w-6xl  '>
-        <div className='relative border border-white/15 rounded-lg px-4 md:py-28 sm:py-20 pt-12 pb-2 text-center flex flex-col items-center shadow-[0px_0px_150px_#4A208A] overflow-clip '>
-          <Image
-            src='/future-of-ai-bg.png'
-            alt='Decorative background'
-            quality={75}
-            fill
-            objectFit='cover'
-            priority
-            className='absolute inset-0 z-[0]'
-          />
+        <div
+          className='border border-white/15 rounded-lg px-4 md:pt-28 sm:pt-20 pt-12 md:pb-12 pb-6 text-center flex flex-col items-center shadow-[0px_0px_130px_#9B4BFC] sm:gap-8 gap-6'
+          style={{
+            background: ' radial-gradient(circle at 0%, #271141, #000 )',
+          }}
+        >
           {/* Semantic heading structure */}
-          <header className='sm:mb-8 mb-4 relative '>
-            <h1 className=' md:text-5xl sm:text-4xl text-3xl font-medium  leading-tight sm:max-w-[60%] mx-auto '>
-              The Future of AI-Driven 
-              Decentralized Finance
+          <header>
+            <h1 className=' lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-medium  leading-tight sm:max-w-[70%] mx-auto '>
+              CYNQAi
+              <br />
+              The Future of AI-Driven Decentralized Finance
             </h1>
           </header>
 
@@ -29,7 +26,7 @@ export default function FutureOfAi() {
           <form
             action='/submit-email'
             method='POST'
-            className='sm:mt-6 mb-3 w-full max-w-md relative'
+            className='w-full max-w-md'
           >
             <div className='flex flex-col sm:flex-row gap-2 border border-white/15 rounded-lg p-1 '>
               <div className='flex-1 relative'>
@@ -42,7 +39,7 @@ export default function FutureOfAi() {
                   name='email'
                   required
                   placeholder='Your email'
-                  className='w-full px-3 py-2 bg-black/30  focus:outline-none '
+                  className='w-full px-3 py-2 backdrop-blur-md bg-transparent rounded-lg focus:outline-none '
                 />
               </div>
               <button
@@ -53,28 +50,33 @@ export default function FutureOfAi() {
               </button>
             </div>
           </form>
-
+          <div className=' flex space-x-10 items-center'>
+            {[
+              { href: '#', src: '/mingcute.svg', alt: 'Mingcute Icon' },
+              { href: '#', src: '/twitter.svg', alt: 'Twitter Icon' },
+              { href: '#', src: '/telegram.svg', alt: 'Telegram Icon' },
+              { href: '#', src: '/magic.svg', alt: 'Magic Icon' },
+            ].map((social, index) => (
+              <a
+                key={index}
+                href={social.href}
+                title={social.alt}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <Image
+                  src={social.src}
+                  width={50}
+                  height={50}
+                  alt={social.alt}
+                  className='max-w-[30px] sm:max-w-[50px] hover:scale-110'
+                />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>
   )
 }
-// import Link from 'next/link'
 
-// export default function FutureOfAi() {
-//   return (
-//     <section className='py-20 '>
-//       <div className=" lg:w-[70%] sm:w-[85%] sm:mx-auto mx-5 border border-white/15 rounded-lg  bg-[url('/future-of-ai-bg.png')]  bg-cover bg-no-repeat bg-center md:py-28 sm:py-20 py-14 text-center flex flex-col items-center shadow-[0px_0px_150px_#4A208A] sm:px-4 px-2 ">
-//         <h1 className=' lg:text-5xl md:text-4xl sm:text-3xl text-2xl max-w-[500px]  font-medium'>
-//           The Future of AI-Driven Decentralized Finance
-//         </h1>
-//         <form className='mt-8 border rounded-lg border-white/15 p-1 backdrop-blur-sm grid sm:grid-cols-[60%_40%] grid-cols-1 gap-y-2 sm:w-fit w-[90%]'>
-//           <input type="text" placeholder='Your email' className='outline-none bg-transparent pl-3 py-1.5 sm:text-start text-center w-full' />
-//           <Link href={'/sign-up'} className='transition-all duration-500 bg-white hover:bg-transparent border rounded-lg py-1.5 px-8 text-black hover:text-white  w-full'>
-//           Sign up
-//           </Link>
-//         </form>
-//       </div>
-//     </section>
-//   )
-// }
