@@ -12,16 +12,14 @@ export default function LandingPage() {
     <>
       <div>
         <section className="max-w-[1440px] mx-auto">
-          <section id="home">
-            <Navbar />
-            <HeroSection />
-            <About />
-            <DevelopmentProcess />
-            <Utilities />
-            <FutureOfAi />
-            <Footer />
-          </section>
+          <Navbar />
+          <HeroSection />
+          <About />
+          <DevelopmentProcess />
+          <Utilities />
           <FAQSection />
+          <FutureOfAi />
+          <Footer />
         </section>
       </div>
     </>
