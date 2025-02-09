@@ -1,16 +1,29 @@
+import FutureOfAi from "../components/future-of-ai";
+import About from "../components/about";
 import FAQSection from "../components/faq";
 import HeroSection from "../components/hero-section";
+import Utilities from "../components/utilities";
+import Footer from "../components/shared/footer";
+import DevelopmentProcess from "../components/roadmap-animation";
+import Navbar from "../components/shared/navbar";
 
 export default function LandingPage() {
   return (
     <>
-      <section className="max-w-[1440px] mx-auto">
-        {" "}
-        <section id="home">
-          <HeroSection />
+      <div>
+        <section className="max-w-[1440px] mx-auto">
+          <section id="home">
+            <Navbar />
+            <HeroSection />
+            <About />
+            <DevelopmentProcess />
+            <Utilities />
+            <FutureOfAi />
+            <Footer />
+          </section>
           <FAQSection />
         </section>
-      </section>
+      </div>
     </>
   );
 }

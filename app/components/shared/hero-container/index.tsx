@@ -1,14 +1,14 @@
 import React from "react";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
-import GradientButton from "../button";
+import { Button } from "@nextui-org/react";
 
 const CryptoPurchaseUI = () => {
   return (
     <div className=" flex items-center justify-center p-4">
       <div className="w-full max-w-md bg-gradient-to-br from-purple-800/50 to-blue-900/50 backdrop-blur-lg rounded-3xl p-8 border border-purple-500/20">
         <div className="text-white/50 text-right mb-2 text-[14px] ">
-          Can't find tokens in your wallet?
+          Can&apos;t find tokens in your wallet?
         </div>
 
         <h1 className="text-white text-[28px] font-[600] text-center mb-4">
@@ -60,7 +60,7 @@ const CryptoPurchaseUI = () => {
             { discount: "10", amount: "1000" },
             { discount: "15", amount: "2500" },
           ].map((item) => (
-            <button
+            <Button
               key={item.amount}
               className="bg-[#8C45FF40] flex flex-col justify-center items-center rounded-xl p-2 text-center border border-white/15 hover:bg-purple-700/50 transition-colors"
             >
@@ -68,25 +68,27 @@ const CryptoPurchaseUI = () => {
               <hr className="border-t w-[48px] border-white/15" />
 
               <div className="text-gray-400">${item.amount}</div>
-            </button>
+            </Button>
           ))}
         </div>
 
         <div className="flex w-full gap-[10px] items-center">
-          <GradientButton text="Connect Wallet" borderRadius="64px" />
+          <Button className="relative flex bg-[#7B15F8] rounded-full items-center justify-center w-[207px] h-[54px] gap-2 px-4 py-4 text-white font-medium">
+            Connect Wallet
+          </Button>
 
-          <button className="w-full bg-transparent border border-gray-600 text-white rounded-[64px] py-4 font-medium hover:bg-purple-800/20 transition-colors">
+          <Button className="w-[207px] bg-transparent border h-[54px] border-gray-600 text-white rounded-[64px] py-4 font-medium hover:bg-purple-800/20 transition-colors">
             Refer a friend
-          </button>
+          </Button>
         </div>
 
         <div className="mt-6 space-y-2">
-          <button className="w-full text-gray-400 text-sm flex items-center justify-center gap-2">
+          <Button className="w-full text-gray-400 text-sm flex items-center justify-center gap-2">
             <span>ⓘ</span> How to Buy
-          </button>
-          <button className="w-full text-gray-400 text-sm flex items-center justify-center gap-2">
-            <span>?</span> Help, My Wallet Won't Connect!
-          </button>
+          </Button>
+          <Button className="w-full text-gray-400 text-sm flex items-center justify-center gap-2">
+            <span>?</span> Help, My Wallet Won&apos;t Connect!
+          </Button>
         </div>
       </div>
     </div>
