@@ -1,5 +1,6 @@
 import FutureOfAi from "../components/future-of-ai";
 import About from "../components/about";
+import FAQSection from "../components/faq";
 import HeroSection from "../components/hero-section";
 import Utilities from "../components/utilities";
 import Footer from "../components/shared/footer";
@@ -20,6 +21,7 @@ export default function LandingPage() {
             <FutureOfAi />
             <Footer />
           </section>
+          <FAQSection />
         </section>
       </div>
     </>
