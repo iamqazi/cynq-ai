@@ -42,6 +42,7 @@ const FAQsArray: FAQItem[] = [
 ]
 
 const FAQSection: React.FC = () => {
+  const [openedFaq, setOpenedFaq] = useState<string>('')
   const faqRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if (!faqRef.current) return
@@ -52,12 +53,12 @@ const FAQSection: React.FC = () => {
     // Animate each item from opacity 0 and y offset to full opacity and original position
     gsap.fromTo(
       faqItems,
-      { opacity: 0, y: 20 },
+      { opacity: 0, y: 60 },
       {
         opacity: 1,
         y: 0,
-        duration: 1,
-        stagger: 0.2,
+        duration: 0.7,
+        stagger: 0.1,
         ease: 'power2.out',
         scrollTrigger: {
           trigger: faqRef.current,
@@ -71,18 +72,22 @@ const FAQSection: React.FC = () => {
   return (
     <section
       ref={faqRef}
-      className='mx-auto max-w-[800px] sm:my-14 my-8 px-2 sm:px-5 '
+      className='mx-auto max-w-[800px] sm:py-14 py-8 px-2 sm:px-5 '
       aria-label='Frequently Asked Questions'
     >
       {/* Section Title */}
-      <h1 className='lg:text-5xl md:text-4xl text-3xl font-medium text-center'>
+      <h1 className='faq-item lg:text-5xl md:text-4xl text-3xl font-medium text-center text-white '>
         FAQ
       </h1>
-
       {/* FAQ Items */}
-      <div className='flex flex-col sm:px-10 px-5 gap-3 my-5 md:my-10'>
+      <div className='faq-item flex flex-col sm:px-10 px-5 gap-3 my-5 md:my-10'>
         {FAQsArray.map((FAQ) => (
-          <Question key={FAQ.id} {...FAQ} />
+          <Question
+            key={FAQ.id}
+            {...FAQ}
+            openedFaq={openedFaq}
+            setOpenedFaq={setOpenedFaq}
+          />
         ))}
       </div>
     </section>
@@ -93,10 +98,17 @@ interface QuestionProps {
   id: string
   question: string
   ans: string
+  openedFaq: string
+  setOpenedFaq: React.Dispatch<React.SetStateAction<string>>
 }
 
-export function Question({ id, question, ans }: QuestionProps) {
-  const [opened, setOpened] = useState<boolean>(false)
+export function Question({
+  id,
+  question,
+  ans,
+  openedFaq,
+  setOpenedFaq,
+}: QuestionProps) {
   const [height, setHeight] = useState<number>(0)
   const answerRef = useRef<HTMLParagraphElement>(null)
 
@@ -108,10 +120,17 @@ export function Question({ id, question, ans }: QuestionProps) {
       )
       setHeight(calculatedHeight)
     }
-  }, [ans, opened])
+  }, [ans, openedFaq])
 
   return (
-    <article className='faq-item bg-gradient-to-br from-[#190D2E] to-[#000000] border border-[#333333] rounded-lg overflow-hidden'>
+    <article
+      className='faq-item relative 
+    relative z-[10] 
+    bg-gradient-to-br from-[#190D2E] to-[#000000] 
+    border border-[#333333] 
+    rounded-lg 
+  '
+    >
       <header
         className='grid grid-cols-[1fr_45px] md:grid-cols-[1fr_65px] pl-3 sm:pl-6'
         id={`faq-question-${id}`}
@@ -121,22 +140,24 @@ export function Question({ id, question, ans }: QuestionProps) {
           {question}
         </h2>
         <button
-          onClick={() => setOpened((prev) => !prev)}
+          onClick={
+            openedFaq !== id ? () => setOpenedFaq(id) : () => setOpenedFaq('')
+          }
           className='flex justify-center items-center relative'
-          aria-expanded={opened}
+          aria-expanded={openedFaq ? true : false}
           aria-controls={`faq-answer-${id}`}
           aria-label={`Toggle answer for: ${question}`}
         >
           {/* Horizontal Bar */}
           <span
             aria-hidden='true'
-            className='transition-all duration-500 w-[12px] md:w-[18px] h-[1px] block bg-[#A3A5A6] group-hover:bg-[#d4d5d5]'
+            className='transition-all duration-500 w-[12px]  h-[1px] block bg-[#A3A5A6] group-hover:bg-[#d4d5d5]'
           ></span>
           {/* Vertical Bar */}
           <span
             aria-hidden='true'
-            className={`absolute transition-all duration-500 w-[12px] md:w-[18px] h-[1px] bg-[#A3A5A6] group-hover:bg-[#d4d5d5] ${
-              opened ? 'bg-[#d4d5d5]' : 'rotate-90'
+            className={`absolute transition-all duration-500 w-[12px]  h-[1px] bg-[#A3A5A6] group-hover:bg-[#d4d5d5] ${
+              openedFaq == id ? 'bg-[#d4d5d5]' : 'rotate-90'
             }`}
           ></span>
         </button>
@@ -148,7 +169,7 @@ export function Question({ id, question, ans }: QuestionProps) {
         aria-labelledby={`faq-question-${id}`}
         className='transition-all overflow-hidden'
         style={{
-          height: opened ? `${height}px` : '0px',
+          height: openedFaq == id ? `${height}px` : '0px',
           transitionDuration: `${500 + height * 2}ms`,
         }}
       >
