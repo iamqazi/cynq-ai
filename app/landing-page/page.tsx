@@ -1,3 +1,4 @@
+import FAQSection from "../components/faq";
 import HeroSection from "../components/hero-section";
 
 export default function LandingPage() {
@@ -7,6 +8,7 @@ export default function LandingPage() {
         {" "}
         <section id="home">
           <HeroSection />
+          <FAQSection />
         </section>
       </section>
     </>
