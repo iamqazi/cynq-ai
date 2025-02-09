@@ -1,40 +1,53 @@
 "use client";
 import React from "react";
-import Navbar from "../shared/navbar";
 import CryptoPurchaseUI from "../shared/hero-container";
-import GradientButton from "../shared/button";
+import { Button } from "@nextui-org/react";
+import Image from "next/image";
+
 const HeroSection: React.FC = () => {
   return (
-    <div>
-      <Navbar />
-      <div className="min-h-screen flex items-center justify-center text-white ">
-        <div className="grid lg:grid-cols-2 grid-col-1 gap-8 max-w-[1440] mx-auto xl:mx-[117px]  w-full">
+    <div className="min-h-screen w-full">
+      <div className="flex items-center justify-center text-white px-4 py-8 lg:py-0">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 max-w-[1440px] mx-auto xl:mx-[117px] w-full">
           {/* Left Side Content */}
-          <div>
-            <h1 className="text-4xl md:text-[72px] leading-[78px] font-bold">
+          <div className="flex flex-col space-y-4 lg:space-y-6">
+            <h1 className="text-4xl md:text-6xl lg:text-[72px] leading-tight lg:leading-[78px] font-bold">
               Cynq Ai
             </h1>
-            <p className="text-2xl md:text-[72px] leading-[78px] font-semibold">
+            <p className="text-2xl md:text-5xl lg:text-[72px] leading-tight lg:leading-[78px] font-semibold">
               The Future of AI-Powered Crypto Automation
             </p>
-            <p className="text-[22px] md:text-[30px] leading-[36px] text-gray-300 mt-4">
+            <p className="text-lg md:text-2xl lg:text-[30px] leading-normal lg:leading-[36px] text-gray-300">
               Trade Smarter. Invest Better. Automate Everything.
             </p>
-            <div className="flex mt-4 items-center gap-[10px]">
-              <GradientButton text=" Buy Now" />
 
-              <div className="flex gap-4 ">
-                {/* Icons Placeholder */}
-                <span>🔊</span>
-                <span>🐦</span>
-                <span>📢</span>
-                <span>✨</span>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-[10px] mt-2">
+              <Button className="relative flex bg-[#7B15F8] w-[188px] h-[44px] rounded-[8px] items-center justify-center gap-2 px-4 py-4 text-white font-medium">
+                Buy Now
+              </Button>
+
+              <div className="flex items-center gap-4 flex-wrap sm:flex-nowrap">
+                {/* Icons with responsive sizing */}
+                {["/one.png", "/second.png", "/three.png", "/last.png"].map(
+                  (src, index) => (
+                    <Image
+                      key={index}
+                      src={src}
+                      alt={`icon-${index + 1}`}
+                      className="w-[24px] h-[24px]"
+                      width={100}
+                      height={50}
+                    />
+                  )
+                )}
               </div>
             </div>
           </div>
 
           {/* Right Side Card */}
-          <CryptoPurchaseUI />
+          <div className="w-full">
+            <CryptoPurchaseUI />
+          </div>
         </div>
       </div>
     </div>
