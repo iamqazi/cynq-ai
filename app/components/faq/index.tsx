@@ -124,8 +124,7 @@ export function Question({
 
   return (
     <article
-      className='faq-item relative 
-    relative z-[10] 
+      className='faq-item relative z-[10] 
     bg-gradient-to-br from-[#190D2E] to-[#000000] 
     border border-[#333333] 
     rounded-lg 
