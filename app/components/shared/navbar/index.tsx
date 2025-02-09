@@ -3,7 +3,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { slide as Menu } from "react-burger-menu";
-import GradientButton from "../button";
+import { Button } from "@nextui-org/react";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -38,48 +38,59 @@ export default function Navbar() {
           </Link>
 
           {/* Navbar menu for medium and large screens */}
-          <div className="hidden md:flex flex-grow justify-center">
-            <ul className="flex space-x-8 text-white">
+          <div className="hidden  md:flex flex-grow justify-center">
+            <ul className="flex border px-[26px] py-[14px] rounded-full border-white/15 space-x-8 text-white/70 ">
               <li>
                 <Link href="/">
-                  <button className={isActive("/") ? "text-[#01F2A7]" : ""}>
+                  <Button className={isActive("/") ? "text-[#7B15F8]" : ""}>
                     Home
-                  </button>
+                  </Button>
                 </Link>
               </li>
               <li>
-                <Link href="/about">
-                  <button
-                    className={isActive("/about") ? "text-[#01F2A7]" : ""}
+                <Link href="/">
+                  <Button
+                    className={isActive("/about") ? "text-[#7B15F8]" : ""}
                   >
-                    About Us
-                  </button>
+                    Ai Arbitrage
+                  </Button>
                 </Link>
               </li>
               <li>
-                <Link href="/why-us">
-                  <button
-                    className={isActive("/why-us") ? "text-[#01F2A7]" : ""}
+                <Link href="/">
+                  <Button
+                    className={isActive("/why-us") ? "text-[#7B15F8]" : ""}
                   >
-                    Why Us
-                  </button>
+                    AI Tax Tool
+                  </Button>
                 </Link>
               </li>
               <li>
-                <Link href="/roadmap">
-                  <button
-                    className={isActive("/roadmap") ? "text-[#01F2A7]" : ""}
+                <Link href="/">
+                  <Button
+                    className={isActive("/roadmap") ? "text-[#7B15F8]" : ""}
                   >
-                    Roadmap
-                  </button>
+                    Blog
+                  </Button>
+                </Link>
+              </li>
+              <li>
+                <Link href="/">
+                  <Button
+                    className={isActive("/roadmap") ? "text-[#7B15F8]" : ""}
+                  >
+                    Contact Us
+                  </Button>
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Signup button on the right for medium and large screens */}
+          {/* Signup Button on the right for medium and large screens */}
           <div className="hidden md:block">
-            <GradientButton text="white paper" />
+            <Button className="bg-[#fff] z-10 text-[16px] text-black font-medium px-[48px] py-[10px] rounded-[8px]">
+              White Paper
+            </Button>
           </div>
         </div>
       </header>
@@ -89,28 +100,28 @@ export default function Navbar() {
         <Menu right>
           <Link
             id="home"
-            className={`menu-item ${isActive("/") ? "text-[#000]" : ""}`}
+            className={`menu-item ${isActive("/") ? "text-white" : ""}`}
             href="/"
           >
             Home
           </Link>
           <Link
             id="about"
-            className={`menu-item ${isActive("/about") ? "text-[#000]" : ""}`}
+            className={`menu-item ${isActive("/about") ? "text-white" : ""}`}
             href="/about"
           >
             About Us
           </Link>
           <Link
             id="about"
-            className={`menu-item ${isActive("/why-us") ? "text-[#000]" : ""}`}
+            className={`menu-item ${isActive("/why-us") ? "text-white" : ""}`}
             href="/why-us"
           >
             Why Us
           </Link>
           <Link
             id="about"
-            className={`menu-item ${isActive("/roadmap") ? "text-[#000]" : ""}`}
+            className={`menu-item ${isActive("/roadmap") ? "text-white" : ""}`}
             href="/roadmap"
           >
             Roadmap
