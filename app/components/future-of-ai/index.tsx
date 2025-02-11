@@ -4,7 +4,7 @@ export default function FutureOfAi() {
   return (
     <section
       aria-label="AI-Driven Decentralized Finance Section"
-      className="py-20 "
+      className="py-20 text-white"
     >
       <div className="container mx-auto px-4 max-w-6xl  ">
         <div
@@ -69,7 +69,7 @@ export default function FutureOfAi() {
                   width={50}
                   height={50}
                   alt={social.alt}
-                  className="max-w-[30px] sm:max-w-[50px] hover:scale-110"
+                  className="max-w-[30px] sm:max-w-[50px] hover:scale-110 select-none"
                 />
               </a>
             ))}

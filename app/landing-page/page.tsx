@@ -6,6 +6,7 @@ import Utilities from "../components/utilities";
 import Footer from "../components/shared/footer";
 import DevelopmentProcess from "../components/roadmap-animation";
 import Navbar from "../components/shared/navbar";
+import BuiltOn from "../components/built-on";
 
 export default function LandingPage() {
   return (
@@ -18,6 +19,7 @@ export default function LandingPage() {
           <DevelopmentProcess />
           <Utilities />
           <FAQSection />
+          <BuiltOn />
           <FutureOfAi />
           <Footer />
         </section>

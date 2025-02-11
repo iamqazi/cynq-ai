@@ -27,7 +27,7 @@ export default function Utilities() {
   return (
     <section
       aria-label='CYNQ Ai Utilities'
-      className='lg:p-20 sm:p-14 p-8 flex flex-col items-center'
+      className='lg:p-20 sm:p-14 p-8 flex flex-col items-center text-white'
     >
       <header className='md:mb-20 sm:mb-16 mb-12 text-center'>
         <h1 className='lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-medium'>
@@ -56,7 +56,7 @@ export default function Utilities() {
 
               {/* Image Container */}
               <div
-                className={`order-1 w-full h-full sm:max-w-[500px] max-w-[300px] sm:max-h-[400px] max-h-[250px] relative border border-white/15 rounded-xl overflow-clip bg-[#8c45ff1c]`}
+                className={`order-1 w-full h-full sm:max-w-[500px] max-w-[300px] sm:max-h-[400px] max-h-[250px] relative border border-white/15 rounded-xl overflow-clip `}
                 aria-hidden='true'
               >
                 <Image
@@ -65,7 +65,7 @@ export default function Utilities() {
                   quality={85} // Reduced for performance
                   width={500}
                   height={400}
-                  className='w-full h-full object-cover'
+                  className='w-full h-full object-cover select-none'
                   loading={index < 2 ? 'eager' : 'lazy'} // Lazy load below fold
                   itemProp='image'
                 />
@@ -82,7 +82,7 @@ export default function Utilities() {
                   quality={85}
                   width={670}
                   height={123}
-                  className='w-full h-full'
+                  className='w-full h-full select-none'
                   loading='lazy' // Always lazy load decorative images
                 />
               </div>
