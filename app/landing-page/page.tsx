@@ -16,7 +16,7 @@ export default function LandingPage() {
           <Navbar />
           <HeroSection />
           <About />
-          {/* <DevelopmentProcess /> */}
+          <DevelopmentProcess />
           <Utilities />
           <Tokenomics />
           <FAQSection />

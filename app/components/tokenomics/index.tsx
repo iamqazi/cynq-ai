@@ -58,8 +58,8 @@ const renderCustomizedLabel = ({
   percent,
   index,
 }: CustomLabelProps) => {
-  // Offset the label 20 pixels outside of the pie slice.
-  const radius = outerRadius + 30
+  // Offset the label 40 pixels outside of the pie slice.
+  const radius = outerRadius + 40
   const x = cx + radius * Math.cos(-midAngle * RADIAN)
   const y = cy + radius * Math.sin(-midAngle * RADIAN)
   // Wrap the label text (using a max of 15 characters per line, adjust as needed)
@@ -70,10 +70,10 @@ const renderCustomizedLabel = ({
       y={y}
       fill='#FFFFFF'
       textAnchor={x > cx ? 'start' : 'end'}
-      className='sm:text-lg text-white'
+      className='md:text-xl sm:text-lg text-white'
     >
       {labelLines.map((line, i) => (
-        <tspan key={i} x={x} dy={i === 0 ? '0' : '1.2em'}>
+        <tspan  key={i} x={x} dy={i === 0 ? '0' : '1.2em'}>
           {line}
         </tspan>
       ))}
@@ -91,15 +91,15 @@ const PieChartWithLabels: React.FC = () => {
  
   // Define chart dimensions and center coordinates.
   const chartWidth = 600
-  const chartHeight = 500
+  const chartHeight = 600
   const cx = chartWidth / 2 // center x-coordinate
   const cy = chartHeight / 2 // center y-coordinate
-  const innerRadius = 110
-  const outerRadius = 157.5
+  const innerRadius = 140
+  const outerRadius = 187.5
 
   // Define image dimensions
-  const imageWidth = 170
-  const imageHeight = 170
+  const imageWidth = 200
+  const imageHeight = 200
 
   // Calculate image position so that it is centered in the hole.
   const imageX = cx - imageWidth / 2 + 5
@@ -118,33 +118,33 @@ const PieChartWithLabels: React.FC = () => {
         className=' my-10 lg:py-10 pt-10  lg:px-20 sm:px-5 px-3 border rounded-lg border-white/15 flex flex-wrap items-center gap-x-10'
         style={{ backgroundImage: 'linear-gradient(130deg,#190D2E,#000000)' }}
       >
-        <div  className={` ${isInView?'opacity-100':'opacity-0 translate-y-10'} transition-all duration-[1500] sm:text-xl flex-1 max-w-[400px]`}>
+        <div  className={` ${isInView?'opacity-100':'opacity-0 translate-y-10'} transition-all duration-[1500] sm:text-xl flex-1 `}>
           <h3 className='md:text-4xl sm:text-3xl text-2xl font-semibold mb-5'>
             Token Details
           </h3>
-          <div className='flex flex-col gap-3 p-5 border border-white/15 rounded-xl text-white'>
+          <div className='flex flex-col gap-3 p-5 border font-thin border-white/15 rounded-xl text-white/70'>
             <span>
-              Token Name: <span className='font-semibold'>CYNQAI</span>
+              Token Name: <span className='font-semibold text-white'>CYNQAI</span>
             </span>
             <hr className='border-b border-white/15' />
             <span>
-              Token Ticker: <span className='font-semibold'>$CYNQAI</span>
+              Token Ticker: <span className='font-semibold text-white'>$CYNQAI</span>
             </span>
             <hr className='border-b border-white/15' />
             <span>
-              Chain: <span className='font-semibold'>Ethereum</span>
+              Chain: <span className='font-semibold text-white'>Ethereum</span>
             </span>
             <hr className='border-b border-white/15' />
             <span>
-              Contract: <span className='font-semibold'>To Be Announced</span>
+              Contract: <span className='font-semibold text-white'>To Be Announced</span>
             </span>
             <hr className='border-b border-white/15' />
             <span>
-              Supply: <span className='font-semibold'>10,000,000,000</span>
+              Supply: <span className='font-semibold text-white'>10,000,000,000</span>
             </span>
             <hr className='border-b border-white/15' />
             <span>
-              Decimals: <span className='font-semibold'>9</span>
+              Decimals: <span className='font-semibold text-white'>9</span>
             </span>
           </div>
         </div>
