@@ -6,6 +6,7 @@ import Utilities from "../components/utilities";
 import Footer from "../components/shared/footer";
 import DevelopmentProcess from "../components/roadmap-animation";
 import Navbar from "../components/shared/navbar";
+import Tokenomics from "../components/tokenomics";
 
 export default function LandingPage() {
   return (
@@ -15,8 +16,9 @@ export default function LandingPage() {
           <Navbar />
           <HeroSection />
           <About />
-          <DevelopmentProcess />
+          {/* <DevelopmentProcess /> */}
           <Utilities />
+          <Tokenomics />
           <FAQSection />
           <FutureOfAi />
           <Footer />
