@@ -3,6 +3,7 @@ import React from "react";
 import CryptoPurchaseUI from "../shared/hero-container";
 import { Button } from "@nextui-org/react";
 import Image from "next/image";
+import { ShieldHalf } from "lucide-react";
 
 const HeroSection: React.FC = () => {
   return (
@@ -55,3 +56,65 @@ const HeroSection: React.FC = () => {
 };
 
 export default HeroSection;
+
+// dynamic hero section for other pages
+type secondaryHeroType = {
+  text: string;
+  heading: string;
+  btnText: string;
+};
+export function SecondaryHero({ text, heading, btnText }: secondaryHeroType) {
+  const headingArray = heading.split("/~*");
+  const purpleTextIndex: number[] = [];
+  for (let i = 0; i < headingArray.length; i++) {
+    if (headingArray[i].startsWith("{~}") && headingArray[i].endsWith("{~}")) {
+      purpleTextIndex.push(i);
+    }
+  }
+  return (
+    <section
+      className={`bg-[url('/boxes.png')] bg-cover bg-no-repeat bg-bottom w-full flex flex-col text-center items-center gap-3 md:gap-6 py-12 md:py-16 lg:pt-32 lg:pb-20 `}
+    >
+      <h2 className={` heading-xl sm:max-w-[900px] max-w-[400px] `}>
+        {headingArray.map((str, ind) => {
+          let br = false;
+          let string = str;
+          if (str.includes("<br/>")) {
+            br = true;
+            string = str.replaceAll("<br/>", "");
+          }
+          // if text should be purple
+          if (purpleTextIndex.includes(ind)) {
+            return (
+              <>
+                <span className="text-[#936DFF]">
+                  {string.replaceAll("{~}", "")}
+                </span>
+                {br && <br />}
+              </>
+            );
+          }
+          return (
+            <>
+              {string}
+              {br && <br />}
+            </>
+          );
+        })}
+        <br />
+        {/* {purpleText && (
+          
+        )}{' '} */}
+      </h2>
+      <p className="text-[#C5C6C5] font-thin sm:text-lg sm:max-w-[700px] max-w-[400px] mx-10">
+        {text}
+      </p>
+      {btnText && (
+        <Button className="relative flex bg-[#7B15F8] rounded-[8px] items-center justify-center gap-2 sm:py-2 py-1 sm:px-10 px-5 shadow-[0px_0px_80px_#9B4BFC] text-white font-medium capitalize">
+          <ShieldHalf />
+          {btnText}
+        </Button>
+      )}
+    </section>
+  );
+}
