@@ -8,6 +8,7 @@ import Utilities from "../components/utilities";
 import Footer from "../components/shared/footer";
 import DevelopmentProcess from "../components/roadmap-animation";
 import Navbar from "../components/shared/navbar";
+import BuiltOn from "../components/built-on";
 import BannerAnimation from "../components/banner-slider";
 import Image from "next/image";
 
@@ -49,6 +50,7 @@ export default function LandingPage() {
         <DevelopmentProcess />
         <Utilities />
         <FAQSection />
+        <BuiltOn />
         <FutureOfAi />
         <Footer />
       </section>

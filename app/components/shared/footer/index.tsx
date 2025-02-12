@@ -15,10 +15,10 @@ export default function Footer() {
   ]
 
   const socialLinks = [
-    { href: '#', src: '/mingcute.png', alt: 'Mingcute Icon' },
-    { href: '#', src: '/twitter.png', alt: 'Twitter Icon' },
-    { href: '#', src: '/telegram.png', alt: 'Telegram Icon' },
-    { href: '#', src: '/magic.png', alt: 'Magic Icon' },
+    { href: '#', src: '/mingcute.svg', alt: 'Mingcute Icon' },
+    { href: '#', src: '/twitter.svg', alt: 'Twitter Icon' },
+    { href: '#', src: '/telegram.svg', alt: 'Telegram Icon' },
+    { href: '#', src: '/magic.svg', alt: 'Magic Icon' },
   ]
 
   return (
@@ -66,7 +66,7 @@ export default function Footer() {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <Image src={social.src} width={30} height={30} alt={social.alt} className='hover:scale-110' />
+              <Image src={social.src} width={30} height={30} alt={social.alt} className='hover:scale-110 select-none' />
             </a>
           ))}
         </div>

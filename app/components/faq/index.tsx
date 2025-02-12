@@ -72,7 +72,7 @@ const FAQSection: React.FC = () => {
   return (
     <section
       ref={faqRef}
-      className="mx-auto max-w-[800px] sm:py-14 py-8 px-2 sm:px-5 "
+      className="mx-auto max-w-[800px] sm:py-14 py-8 px-2 sm:px-5 text-white"
       aria-label="Frequently Asked Questions"
     >
       {/* Section Title */}
@@ -123,62 +123,67 @@ export function Question({
   }, [ans, openedFaq]);
 
   return (
-    <article
-      className="faq-item relative z-[10] 
-    bg-gradient-to-br from-[#190D2E] to-[#000000] 
-    border border-[#333333] 
-    rounded-lg 
-  "
-    >
-      <header
-        className="grid grid-cols-[1fr_45px] md:grid-cols-[1fr_65px] pl-3 sm:pl-6"
-        id={`faq-question-${id}`}
-      >
-        {/* Use a heading element for the question */}
-        <h2 className="p-4 pl-0 text-sm md:text-base text-white/70">
-          {question}
-        </h2>
-        <button
-          onClick={
-            openedFaq !== id ? () => setOpenedFaq(id) : () => setOpenedFaq("")
-          }
-          className="flex justify-center items-center relative"
-          aria-expanded={openedFaq ? true : false}
-          aria-controls={`faq-answer-${id}`}
-          aria-label={`Toggle answer for: ${question}`}
-        >
-          {/* Horizontal Bar */}
-          <span
-            aria-hidden="true"
-            className="transition-all duration-500 w-[12px]  h-[1px] block bg-[#A3A5A6] group-hover:bg-[#d4d5d5]"
-          ></span>
-          {/* Vertical Bar */}
-          <span
-            aria-hidden="true"
-            className={`absolute transition-all duration-500 w-[12px]  h-[1px] bg-[#A3A5A6] group-hover:bg-[#d4d5d5] ${
-              openedFaq == id ? "bg-[#d4d5d5]" : "rotate-90"
-            }`}
-          ></span>
-        </button>
-      </header>
-
-      <section
-        id={`faq-answer-${id}`}
-        role="region"
-        aria-labelledby={`faq-question-${id}`}
-        className="transition-all overflow-hidden"
+    <article className="faq-item relative text-white">
+      <div
+        className="absolute w-full h-full z-[-10] bg-[#333333] left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 box-content p-[1px] rounded-lg"
         style={{
-          height: openedFaq == id ? `${height}px` : "0px",
-          transitionDuration: `${500 + height * 2}ms`,
+          backgroundImage: `linear-gradient(130deg , #ffffff26 15% , #ffffffbe 25%, #ffffff26 37%)`,
         }}
+      ></div>
+      <div
+        className="relative z-[1] 
+    bg-gradient-to-br from-[#190D2E] to-[#000000] rounded-lg "
       >
-        <p
-          ref={answerRef}
-          className="pl-3 sm:pl-6 pr-6 md:w-[90%] font-thin text-sm md:text-base text-white/70"
+        <header
+          className="grid grid-cols-[1fr_45px] md:grid-cols-[1fr_65px] pl-3 sm:pl-6"
+          id={`faq-question-${id}`}
         >
-          Ans. {ans}
-        </p>
-      </section>
+          {/* Use a heading element for the question */}
+          <h2 className="p-4 pl-0 text-sm md:text-base text-white/70">
+            {question}
+          </h2>
+          <button
+            onClick={
+              openedFaq !== id ? () => setOpenedFaq(id) : () => setOpenedFaq("")
+            }
+            className="flex justify-center items-center relative"
+            aria-expanded={openedFaq ? true : false}
+            aria-controls={`faq-answer-${id}`}
+            aria-label={`Toggle answer for: ${question}`}
+          >
+            {/* Horizontal Bar */}
+            <span
+              aria-hidden="true"
+              className="transition-all duration-500 w-[12px]  h-[1px] block bg-[#A3A5A6] group-hover:bg-[#d4d5d5]"
+            ></span>
+            {/* Vertical Bar */}
+            <span
+              aria-hidden="true"
+              className={`absolute transition-all duration-500 w-[12px]  h-[1px] bg-[#A3A5A6] group-hover:bg-[#d4d5d5] ${
+                openedFaq == id ? "bg-[#d4d5d5]" : "rotate-90"
+              }`}
+            ></span>
+          </button>
+        </header>
+
+        <section
+          id={`faq-answer-${id}`}
+          role="region"
+          aria-labelledby={`faq-question-${id}`}
+          className="transition-all overflow-hidden"
+          style={{
+            height: openedFaq == id ? `${height}px` : "0px",
+            transitionDuration: `${200 + height * 2}ms`,
+          }}
+        >
+          <p
+            ref={answerRef}
+            className="pl-3 sm:pl-6 pr-6 md:w-[90%] font-thin text-sm md:text-base text-white/70"
+          >
+            Ans. {ans}
+          </p>
+        </section>
+      </div>
     </article>
   );
 }
