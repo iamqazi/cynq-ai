@@ -91,21 +91,35 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+/* pie chart  */
+.pie-responsive {
+  max-height: 300px;
+}
+@media (min-width: 640px) {
+  .pie-responsive {
+    max-height: 500px;
+  }
+}
+@media (min-width: 440px) {
+  .pie-responsive {
+    max-height: 400px;
+  }
+}
 
-@layer components{
+@layer components {
   .image {
-   @apply bg-center bg-no-repeat bg-cover select-none
+    @apply bg-center bg-no-repeat bg-cover select-none;
   }
   .heading-xl {
-   @apply xl:text-6xl md:text-5xl sm:text-4xl text-3xl
+    @apply xl:text-6xl md:text-5xl sm:text-4xl text-3xl;
   }
   .heading-lg {
-   @apply xl:text-5xl md:text-4xl sm:text-3xl text-2xl
+    @apply xl:text-5xl md:text-4xl sm:text-3xl text-2xl;
   }
   .heading-md {
-   @apply  md:text-2xl sm:text-xl text-xl
+    @apply md:text-2xl sm:text-xl text-xl;
   }
-  .para{
-   @apply text-base md:text-lg lg:text-xl xl:text-2xl font-light text-[#C5C6C5]
+  .para {
+    @apply text-base md:text-lg lg:text-xl xl:text-2xl font-light text-[#C5C6C5];
   }
- }
+}

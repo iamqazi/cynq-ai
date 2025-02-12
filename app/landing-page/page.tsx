@@ -8,6 +8,7 @@ import Utilities from "../components/utilities";
 import Footer from "../components/shared/footer";
 import DevelopmentProcess from "../components/roadmap-animation";
 import Navbar from "../components/shared/navbar";
+import Tokenomics from "../components/tokenomics";
 import BuiltOn from "../components/built-on";
 import BannerAnimation from "../components/banner-slider";
 import Image from "next/image";
@@ -49,6 +50,7 @@ export default function LandingPage() {
         <About />
         <DevelopmentProcess />
         <Utilities />
+        <Tokenomics />
         <FAQSection />
         <BuiltOn />
         <FutureOfAi />
