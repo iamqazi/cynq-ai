@@ -3,3 +3,7 @@ export type CardData = {
   title: string;
   description?: string;
 };
+export type articleType = {
+  title: string
+  text: string
+}
