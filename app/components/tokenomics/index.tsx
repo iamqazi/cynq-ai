@@ -86,7 +86,7 @@ const renderCustomizedLabel = ({
 
 const PieChartWithLabels: React.FC = () => {
   const pieChartSection = useRef<HTMLDivElement>(null)
-  const isInView = useInView(pieChartSection, { amount: 0.5 })
+  const isInView = useInView(pieChartSection, { amount: 0.3 })
 
  
   // Define chart dimensions and center coordinates.
@@ -106,7 +106,7 @@ const PieChartWithLabels: React.FC = () => {
   const imageY = cy - imageHeight / 2
   return (
     <section
-      className=' sm:py-14 py-8 px-2 sm:px-5 md:mx-20 sm:mx-5 mx-3 text-white'
+      className=' sm:py-14 py-8 px-2 sm:px-5 md:mx-20 sm:mx-5 mx-3 text-white overflow-hidden'
       aria-label='Tokenomics'
     >
       {/* Section Title */}
@@ -115,10 +115,10 @@ const PieChartWithLabels: React.FC = () => {
       </h1>
       <section
         ref={pieChartSection}
-        className=' my-10 lg:py-10 pt-10  lg:px-20 sm:px-5 px-3 border rounded-lg border-white/15 flex flex-wrap items-center gap-x-10'
+        className=' my-10 lg:py-10 pt-10  lg:px-20 sm:px-5 px-3 border rounded-lg border-white/15 flex flex-wrap items-center gap-x-10 transition-all'
         style={{ backgroundImage: 'linear-gradient(130deg,#190D2E,#000000)' }}
       >
-        <div  className={` ${isInView?'opacity-100':'opacity-0 translate-y-10'} transition-all duration-[1500] sm:text-xl flex-1 `}>
+        <div  className={` ${isInView?'opacity-100':'opacity-0 translate-y-10'} transition-all duration-[1500ms] sm:text-xl flex-1 `}>
           <h3 className='md:text-4xl sm:text-3xl text-2xl font-semibold mb-5'>
             Token Details
           </h3>
@@ -148,7 +148,7 @@ const PieChartWithLabels: React.FC = () => {
             </span>
           </div>
         </div>
-        {isInView && (
+        {isInView ? (
           <PieChart
             width={chartWidth}
             height={chartHeight}
@@ -193,7 +193,7 @@ const PieChartWithLabels: React.FC = () => {
               y={imageY}
               width={imageWidth}
               height={imageHeight}
-              href='/pieImg.svg' // Make sure this path is correct
+              href='/cyanaiPie.gif' // Make sure this path is correct
             />
             {/* SVG Gradient element placed in the center of the chart */}
             <image
@@ -204,7 +204,7 @@ const PieChartWithLabels: React.FC = () => {
               href='/pieGradient.svg'
             />
           </PieChart>
-        )}
+        ):(<div style={{width:chartWidth,height:chartHeight}} className=' mx-auto pie-responsive relative'></div>)}
       </section>
     </section>
   )
