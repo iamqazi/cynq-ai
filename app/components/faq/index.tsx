@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Image from "next/image";
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -75,6 +76,13 @@ const FAQSection: React.FC = () => {
       className="mx-auto max-w-[800px] sm:py-14 py-8 px-2 sm:px-5 text-white"
       aria-label="Frequently Asked Questions"
     >
+      <Image
+        src="/faqGrid.png"
+        alt="background image"
+        width={800}
+        height={640}
+        className="absolute z-[0] top-0 left-0 -translate-y-[40%] opacity-50"
+      />
       {/* Section Title */}
       <h1 className="faq-item lg:text-5xl md:text-4xl text-3xl font-medium text-center text-white ">
         FAQ
