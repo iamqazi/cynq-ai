@@ -20,6 +20,7 @@
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",
     "react-select": "^5.10.0",
+    "recharts": "^2.15.1",
     "swiper": "^11.2.2"
   },
   "devDependencies": {
