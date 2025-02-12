@@ -7,14 +7,6 @@ import { Button } from "@nextui-org/react";
 
 export default function Navbar() {
   const pathname = usePathname();
-  //   const documentUrl =
-  //   ("https://docs.google.com/document/d/1yRy_y1yqMba74uwvqMhZRiZHk-76bCgp/edit");
-  // const handleButtonClick = () => {
-  //   window.open("/whitepaper.pdf", "_blank");
-  // };
-  //   const handleClick = () => {
-  //     window.open(documentUrl, "_blank", "noopener,noreferrer");
-  //   };
 
   const handleButtonClickHome = () => {
     window.location.href = "/";
