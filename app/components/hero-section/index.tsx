@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CryptoPurchaseUI from "../shared/hero-container";
 import { Button } from "@nextui-org/react";
 import Image from "next/image";
@@ -7,10 +7,28 @@ import Image from "next/image";
 import CircularPathAnimation from "./OrbitalBackground";
 import AnimatedBackground from "./start";
 import { ShieldHalf } from "lucide-react";
+import { motion } from "framer-motion";
+
+const rotatingTexts = [
+  "AI Predictions",
+  "AI Trading",
+  "AI Arbitrage",
+  "AI Tax Tool",
+];
 
 const HeroSection: React.FC = () => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % rotatingTexts.length);
+    }, 3000); // Change text every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="min-h-screen relative">
+    <div className="h-[90vh] relative">
       <Image
         src={"Background.svg"}
         alt="img"
@@ -18,29 +36,54 @@ const HeroSection: React.FC = () => {
         height={100}
         className="absolute inset-0 z-0 top-10 pointer-events-none w-full h-full"
       />
-      <div className="min-h-screen w-full z-90 relative overflow-hidden">
+      <div className="w-full z-90 relative overflow-hidden">
         <CircularPathAnimation />
         <AnimatedBackground />
 
-        {/* Rest of your existing component code remains the same */}
-        <div className="flex items-center justify-center text-white px-4 py-8 mt-[100px] lg:py-0">
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 max-w-[1440px] mx-auto xl:mx-[117px] w-full">
+        {/* Main Content */}
+        <div className="flex items-center justify-center text-white  py-8 mt-[34px] lg:py-0">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-8  mx-[24px]  w-full">
             {/* Left Side Content */}
-            <div className="flex flex-col justify-center space-y-4 lg:space-y-6">
+            <div className="flex flex-col text-center lg:text-left justify-center space-y-4 lg:space-y-6">
               <h1 className="text-4xl md:text-6xl lg:text-[72px] leading-tight lg:leading-[78px] font-bold">
                 Cynq Ai
               </h1>
               <p className="text-2xl md:text-5xl lg:text-[72px] leading-tight lg:leading-[78px] font-semibold">
-                The Future of AI-Powered Crypto Automation
+                The Future of{" "}
+                <span className="relative inline-flex mr-1">
+                  <motion.span
+                    key={index}
+                    className="text-[#7B15F8] inline-block"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    {rotatingTexts[index]}
+                  </motion.span>
+                </span>
+                <br></br>
+                Crypto Automation
               </p>
               <p className="text-lg md:text-2xl lg:text-[30px] leading-normal lg:leading-[36px] text-gray-300">
                 Trade Smarter. Invest Better. Automate Everything.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-[10px] mt-2">
-                <Button className="relative flex bg-[#7B15F8] w-[188px] h-[44px] rounded-[8px] items-center justify-center gap-2 px-4 py-4 text-white font-medium">
-                  Buy Now
-                </Button>
+              <div className="flex flex-col justify-center lg:justify-start lg:flex-row lg:items-center gap-4 lg:gap-[28px] items-center  mt-2">
+                <div className="flex gap-4">
+                  <Button className="relative flex bg-[#7B15F8] w-[188px] h-[44px] rounded-[8px] items-center justify-center gap-2 px-4 py-4 text-white font-medium">
+                    <Image
+                      src={"/Vector.png"}
+                      height={20}
+                      width={15}
+                      alt="img"
+                    />{" "}
+                    Audit
+                  </Button>
+                  <Button className="relative flex bg-[#fff] w-full md:w-[188px] h-[44px] rounded-[8px] items-center justify-center gap-2 px-4 py-4 text-black font-medium sm:flex md:hidden lg:hidden">
+                    Stacking
+                  </Button>
+                </div>
 
                 <div className="flex items-center gap-4 flex-wrap sm:flex-nowrap">
                   {["/one.png", "/second.png", "/three.png", "/last.png"].map(
@@ -88,9 +131,9 @@ export function SecondaryHero({ text, heading, btnText }: secondaryHeroType) {
   }
   return (
     <section
-      className={`bg-[url('/boxes.png')] bg-cover bg-no-repeat bg-bottom w-full flex flex-col text-center items-center gap-3 md:gap-6 py-12 md:py-16 lg:pt-32 lg:pb-20 `}
+      className={`bg-[url('/boxes.png')] min-h-screen bg-cover bg-no-repeat bg-bottom w-full flex flex-col text-center items-center justify-center gap-3 md:gap-6 py-12 md:py-16 lg:pt-32 lg:pb-20 `}
     >
-      <h2 className={` heading-xl sm:max-w-[900px] max-w-[400px] `}>
+      <h2 className={` heading-xl sm:max-w-[900px] max-w-[400px] text-white `}>
         {headingArray.map((str, ind) => {
           let br = false;
           let string = str;

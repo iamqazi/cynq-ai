@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const utilitiesArray = [
   {
@@ -24,8 +27,103 @@ const utilitiesArray = [
 ];
 
 export default function Utilities() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const articleRefs = useRef<(HTMLElement | null)[]>([]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Initialize article refs array
+    articleRefs.current = articleRefs.current.slice(0, utilitiesArray.length);
+
+    articleRefs.current.forEach((article) => {
+      if (!article) return;
+
+      const textContent = article.querySelector(".text-content");
+      const imageContainer = article.querySelector(".image-container");
+      const connectionLine = article.querySelector(".connection-line");
+
+      if (!textContent || !imageContainer) return;
+
+      // Set initial state - completely invisible
+      gsap.set([textContent, imageContainer, connectionLine].filter(Boolean), {
+        opacity: 0,
+        y: 0,
+      });
+
+      // Create scrub animation for progressive reveal
+      ScrollTrigger.create({
+        trigger: article,
+        start: "top 90%",
+        end: "top 40%",
+        scrub: true,
+        onUpdate: (self) => {
+          // Calculate opacity based on scroll progress
+          // 0 at start, 0.5 at middle, 1 at end
+          const progress = self.progress;
+          const opacity = Math.min(progress * 2, 1);
+
+          gsap.to(textContent, {
+            opacity: opacity,
+            y: 0,
+            duration: 0.1,
+            overwrite: true,
+          });
+
+          gsap.to(imageContainer, {
+            opacity: opacity,
+            y: 0,
+            duration: 0.1,
+            overwrite: true,
+          });
+
+          if (connectionLine) {
+            // Delay the connection line animation
+            gsap.to(connectionLine, {
+              opacity: Math.max(0, (progress - 0.3) * 1.5),
+              scale: 0.95 + progress * 0.05,
+              duration: 0.1,
+              overwrite: true,
+            });
+          }
+        },
+      });
+
+      // Create reverse animation for fade-out when scrolling back
+      ScrollTrigger.create({
+        trigger: article,
+        start: "bottom 100%",
+        end: "top 0%",
+        onLeaveBack: () => {
+          gsap.to(
+            [textContent, imageContainer, connectionLine].filter(Boolean),
+            {
+              opacity: 0,
+              y: 0,
+              duration: 0.5,
+              stagger: 0.1,
+              ease: "power2.out",
+            }
+          );
+        },
+      });
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
+  // Setup refs callback
+  const setArticleRef = (el: HTMLElement | null, i: number) => {
+    articleRefs.current[i] = el;
+  };
+
   return (
     <section
+      ref={sectionRef}
       aria-label="CYNQ Ai Utilities"
       className="lg:p-20 sm:p-14 p-8 flex flex-col items-center text-white"
     >
@@ -36,14 +134,19 @@ export default function Utilities() {
       </header>
 
       <div role="list" className="w-full max-w-[1000px]">
-        {utilitiesArray.map((util, index) => (
-          <article key={index} role="listitem" className="mb-10 sm:mb-0">
+        {utilitiesArray.map((util, i) => (
+          <article
+            key={i}
+            role="listitem"
+            className="mb-10 sm:mb-0"
+            ref={(el: HTMLElement | null) => setArticleRef(el, i)}
+          >
             <div className="grid sm:grid-cols-2 grid-cols-1 lg:gap-x-28 sm:gap-10 gap-6 place-items-center">
               {/* Text Content */}
               <div
                 className={`${
-                  index % 2 ? "sm:order-2 order-1" : "order-1"
-                } flex flex-col lg:gap-y-5 gap-y-3 sm:text-start text-center`}
+                  i % 2 ? "sm:order-2 order-1" : "order-1"
+                } flex flex-col lg:gap-y-5 gap-y-3 sm:text-start text-center text-content`}
                 itemProp="description"
               >
                 <h2 className="text-white lg:text-3xl md:text-2xl sm:text-xl text-lg font-medium">
@@ -56,34 +159,33 @@ export default function Utilities() {
 
               {/* Image Container */}
               <div
-                className={`order-1 w-full h-full sm:max-w-[500px] max-w-[300px] sm:max-h-[400px] max-h-[250px] relative border border-white/15 rounded-xl overflow-clip `}
+                className={`order-1 w-full h-full sm:max-w-[500px] max-w-[300px] sm:max-h-[400px] max-h-[250px] relative border border-white/15 rounded-xl overflow-clip image-container`}
                 aria-hidden="true"
               >
                 <Image
                   src={util.img}
-                  alt={util.title} // More descriptive alt text
-                  quality={85} // Reduced for performance
+                  alt={util.title}
+                  quality={85}
                   width={500}
                   height={400}
                   className="w-full h-full object-cover select-none"
-                  loading={index < 2 ? "eager" : "lazy"} // Lazy load below fold
+                  loading={i < 2 ? "eager" : "lazy"}
                   itemProp="image"
                 />
               </div>
             </div>
 
             {/* Connection Line */}
-            {index !== utilitiesArray.length - 1 && (
-              <div className="hidden sm:block xl:max-w-[600px] lg:max-w-[500px] md:max-w-[400px] max-w-[350px] max-h-[123px] mx-auto">
+            {i !== utilitiesArray.length - 1 && (
+              <div className="!transform !translate-x-0 !translate-y-0 sm:block xl:max-w-[600px] lg:max-w-[500px] md:max-w-[400px] max-w-[350px] max-h-[123px] mx-auto connection-line">
                 <Image
-                  src={index % 2 ? "/connectLine2.png" : "/connectLine.png"}
+                  src={i % 2 ? "/connectLine2.png" : "/connectLine.png"}
                   alt=""
                   role="presentation"
                   quality={85}
                   width={670}
                   height={123}
                   className="w-full h-full select-none"
-                  loading="lazy" // Always lazy load decorative images
                 />
               </div>
             )}

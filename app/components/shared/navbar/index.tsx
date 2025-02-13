@@ -27,7 +27,7 @@ const Header = () => {
         <div className="md:hidden fixed w-screen h-screen top-0 left-0 bg-black/80  z-[60]"></div>
       )}
       <Nav sideBarOpen={sideBarOpen} setSideBarOpen={setSideBarOpen} />
-      <div className="lg:ml-8 mx-4 gap-4 flex items-center relative z-[1]">
+      <div className="  gap-4 flex items-center relative z-[1]">
         <Button className="xs:block hidden px-6 py-2 text-black rounded-lg transition-all duration-700 hover:rounded-sm bg-[#ffffff]">
           Whitepaper
         </Button>
