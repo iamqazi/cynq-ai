@@ -143,7 +143,7 @@ const DevelopmentProcessLg = ({ data = dummyData }) => {
                   top: `${index * 40}rem`,
                 }}
               >
-                <div className="h-auto w-full rounded-[2rem] bg-black px-4 md:px-6 py-5">
+                <div className="h-auto w-full rounded-[2rem] relative top-[-60px] bg-black px-4 md:px-6 py-5">
                   <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
                     <h4 className="text-[24px] md:text-[36px] font-[700] font-metro-semi-bold text-white">
                       {item.heading}
