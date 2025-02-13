@@ -177,7 +177,7 @@ const DevelopmentProcessLg = ({ data = dummyData }) => {
               alt="img"
               height={100}
               width={100}
-              className="w-[200px] h-[200px] md:w-[600px] md:h-[600px] absolute top-[-120px] md:top-[-320px] right-[20px] md:right-[10px] cursor-pointer"
+              className="w-[200px] h-[200px] md:w-[500px] md:h-[500px] absolute top-[-120px] md:top-[-240px] right-[20px] md:right-[10px] cursor-pointer"
               style={{ transformOrigin: "center center" }}
             />
           </div>
@@ -190,7 +190,7 @@ const DevelopmentProcessLg = ({ data = dummyData }) => {
                   top: `${index * 40}rem`,
                 }}
               >
-                <div className="h-auto w-full rounded-[2rem] relative top-[-60px] bg-black px-4 md:px-6 py-5">
+                <div className="h-auto w-full rounded-[2rem] relative top-0px bg-black px-4 md:px-6 py-5">
                   <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
                     <h4 className="text-[24px] md:text-[36px] font-[700] font-metro-semi-bold text-white">
                       {item.heading}

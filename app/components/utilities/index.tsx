@@ -177,7 +177,7 @@ export default function Utilities() {
 
             {/* Connection Line */}
             {i !== utilitiesArray.length - 1 && (
-              <div className="!transform !translate-x-0 !translate-y-0 sm:block xl:max-w-[600px] lg:max-w-[500px] md:max-w-[400px] max-w-[350px] max-h-[123px] mx-auto connection-line">
+              <div className="!transform connection-line !translate-x-0 !translate-y-0 sm:block xl:max-w-[600px] lg:max-w-[500px] md:max-w-[400px] max-w-[350px] max-h-[123px] mx-auto connection-line">
                 <Image
                   src={i % 2 ? "/connectLine2.png" : "/connectLine.png"}
                   alt=""
@@ -185,7 +185,7 @@ export default function Utilities() {
                   quality={85}
                   width={670}
                   height={123}
-                  className="w-full h-full select-none"
+                  className="w-full connection-line h-full select-none"
                 />
               </div>
             )}
