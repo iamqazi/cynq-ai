@@ -43,7 +43,7 @@ export default function LandingPage() {
 
   return (
     <div>
-      <section className="max-w-[1440px] mx-auto">
+      <section className="">
         <MarqueeBanner />
         <Navbar />
         <HeroSection />
