@@ -93,8 +93,8 @@ const ArtbitrageKeyFeaturesBg = ({ data = dummyData }) => {
 
   return (
     <div className='w-full max-w-[1440px] mx-auto mb-10'>
-      <div className='dep-trigger flex flex-col h-[120vh] items-center overflow-hidden bg-black text-white relative z-[1]'>
-        <div className='flex  items-center  px-10'>
+      <div className='dep-trigger flex flex-col h-fit items-center  bg-black text-white relative z-[1]'>
+        <div className='flex  items-center  px-10 lg:mb-10'>
           <h2 className='xl:text-5xl md:text-4xl text-3xl sm:font-medium font-semibold text-white pb-10 max-w-[850px] '>
             Key Features of the AI-Optimized Cross-Chain Arbitrage Bot
           </h2>

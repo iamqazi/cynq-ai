@@ -22,7 +22,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer role='contentinfo'>
+    <footer role='contentinfo' className='w-full'>
       <div className='bg-black border-y border-[#95959525] flex flex-col gap-5 p-10 pb-5 items-center text-center relative z-20 text-white/70 ' >
         {/* Logo */}
         <Link
@@ -46,7 +46,7 @@ export default function Footer() {
                 <Link
                   href={link.href}
                   className={
-                    pathname === link.href ? 'text-[#4d4bdd]' : 'hover:text-[#4d4bdd]'
+                    pathname === link.href ? 'text-[#7B15F8]' : 'hover:text-[#7B15F8]'
                   }
                   aria-current={pathname === link.href ? 'page' : undefined}
                   title={link.label}
@@ -79,7 +79,7 @@ export default function Footer() {
           <Link
             href='/terms-of-use'
             title='Terms and Conditions'
-            className='hover:text-[#4d4bdd]'
+            className='hover:text-[#7B15F8]'
           >
             Terms and Conditions
           </Link>{' '}
@@ -87,7 +87,7 @@ export default function Footer() {
           <Link
             href='/privacy-policy'
             title='Privacy Policy'
-            className='hover:text-[#4d4bdd]'
+            className='hover:text-[#7B15F8]'
           >
             Privacy Policy
           </Link>

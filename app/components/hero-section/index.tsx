@@ -6,7 +6,6 @@ import Image from "next/image";
 // import OrbitalBackground from "./OrbitalBackground";
 import CircularPathAnimation from "./OrbitalBackground";
 import AnimatedBackground from "./start";
-import { ShieldHalf } from "lucide-react";
 import { motion } from "framer-motion";
 
 const rotatingTexts = [
@@ -166,7 +165,13 @@ export function SecondaryHero({ text, heading, btnText }: secondaryHeroType) {
       </p>
       {btnText && (
         <Button className="relative flex bg-[#7B15F8] rounded-[8px] items-center justify-center gap-2 sm:py-2 py-1 sm:px-10 px-5 shadow-[0px_0px_80px_#9B4BFC] text-white font-medium capitalize">
-          <ShieldHalf />
+          <Image
+            src={"/shield.svg"}
+            alt={`shield`}
+            className="w-[16px] h-[20px]"
+            width={16}
+            height={20}
+          />
           {btnText}
         </Button>
       )}
