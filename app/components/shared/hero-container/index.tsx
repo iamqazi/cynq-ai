@@ -8,7 +8,7 @@ const CryptoPurchaseUI = () => {
     <div className=" flex items-center justify-center p-4">
       <div className="w-full max-w-md bg-gradient-to-br from-purple-800/50 to-blue-900/50 backdrop-blur-lg rounded-3xl p-8 border border-purple-500/20">
         <div className="text-white/50 text-right mb-2 text-[14px] ">
-          Can't find tokens in your wallet?
+          Can&apos;t find tokens in your wallet?
         </div>
 
         <h1 className="text-white text-[28px] font-[600] text-center mb-4">
@@ -85,7 +85,7 @@ const CryptoPurchaseUI = () => {
             <span>ⓘ</span> How to Buy
           </button>
           <button className="w-full text-gray-400 text-sm flex items-center justify-center gap-2">
-            <span>?</span> Help, My Wallet Won't Connect!
+            <span>?</span> Help, My Wallet Won&apos;t Connect!
           </button>
         </div>
       </div>
