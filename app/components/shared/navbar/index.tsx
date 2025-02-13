@@ -1,122 +1,129 @@
 "use client";
+import React from "react";
+import ReactCountryFlag from "react-country-flag";
+
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { slide as Menu } from "react-burger-menu";
-import GradientButton from "../button";
+import { useState } from "react";
+import Nav from "./Nav";
+//icons
+import { Menu } from "lucide-react";
+import { Button } from "@nextui-org/react";
 
-export default function Navbar() {
-  const pathname = usePathname();
-  //   const documentUrl =
-  //   ("https://docs.google.com/document/d/1yRy_y1yqMba74uwvqMhZRiZHk-76bCgp/edit");
-  // const handleButtonClick = () => {
-  //   window.open("/whitepaper.pdf", "_blank");
-  // };
-  //   const handleClick = () => {
-  //     window.open(documentUrl, "_blank", "noopener,noreferrer");
-  //   };
-
-  const handleButtonClickHome = () => {
-    window.location.href = "/";
-  };
-
-  const isActive = (path: string) => pathname === path;
-
+const Header = () => {
+  const [sideBarOpen, setSideBarOpen] = useState(false);
+  const [optionOpen, setOptionOpen] = useState(false);
   return (
-    <>
-      <header className="w-full bg-black border-b py-[18px] border-gray-900 sticky top-0 z-10">
-        <div className="max-w-[1440px] mx-[40px] h-[48px]  flex justify-between items-center p-4">
-          {/* Logo on the left */}
-          <Link href="/" className="text-white text-xl font-bold">
-            <Image
-              onClick={handleButtonClickHome}
-              src={"/logo.png"}
-              width={190}
-              height={50}
-              alt="logo"
-            />
-          </Link>
-
-          {/* Navbar menu for medium and large screens */}
-          <div className="hidden md:flex flex-grow justify-center">
-            <ul className="flex space-x-8 text-white">
-              <li>
-                <Link href="/">
-                  <button className={isActive("/") ? "text-[#01F2A7]" : ""}>
-                    Home
-                  </button>
-                </Link>
-              </li>
-              <li>
-                <Link href="/about">
-                  <button
-                    className={isActive("/about") ? "text-[#01F2A7]" : ""}
-                  >
-                    About Us
-                  </button>
-                </Link>
-              </li>
-              <li>
-                <Link href="/why-us">
-                  <button
-                    className={isActive("/why-us") ? "text-[#01F2A7]" : ""}
-                  >
-                    Why Us
-                  </button>
-                </Link>
-              </li>
-              <li>
-                <Link href="/roadmap">
-                  <button
-                    className={isActive("/roadmap") ? "text-[#01F2A7]" : ""}
-                  >
-                    Roadmap
-                  </button>
-                </Link>
-              </li>
-            </ul>
+    <header
+      className={`sticky top-0 bg-black w-full  z-50 py-4 sm:px-6 px-3 flex justify-between items-center border-b border-white/15 text-sm `}
+    >
+      <Link href="/" className="relative z-[1]">
+        <Image
+          src={"/logo.svg"}
+          alt="Cynq AI"
+          width={150}
+          height={50}
+          className="bg-center bg-no-repeat bg-contain"
+        />
+      </Link>
+      {sideBarOpen && (
+        <div className="lg:hidden fixed w-screen h-screen top-0 left-0 bg-black/80  z-[60]"></div>
+      )}
+      <Nav sideBarOpen={sideBarOpen} setSideBarOpen={setSideBarOpen} />
+      <div className=" ml-4 gap-4 flex items-center  relative z-[1]">
+        <div className="relative text-left lg:block hidden  ">
+          <div>
+            <button
+              onClick={() => setOptionOpen(!optionOpen)}
+              type="button"
+              className="inline-flex w-fit items-center justify-center gap-x-1.5 rounded-md  p-2"
+              id="menu-button"
+              aria-expanded="true"
+              aria-haspopup="true"
+            >
+              <ReactCountryFlag
+                countryCode="US"
+                svg
+                style={{
+                  width: "2em",
+                  height: "2em",
+                }}
+                title="US"
+              />
+              <svg
+                className="-mr-1 size-5 text-gray-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
           </div>
-
-          {/* Signup button on the right for medium and large screens */}
-          <div className="hidden md:block">
-            <GradientButton text="white paper" />
+          <div
+            className={`${
+              optionOpen ? "" : "hidden"
+            } absolute z-10 mt-2.5 rounded-md border border-white/15 bg-black text-nowrap px-4 `}
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="menu-button"
+            tabIndex={-1}
+          >
+            <div className="py-1" role="none">
+              <a
+                href="#"
+                className="block py-1 text-sm"
+                role="menuitem"
+                tabIndex={-1}
+                id="menu-item-0"
+              >
+                <ReactCountryFlag
+                  countryCode="US"
+                  svg
+                  style={{
+                    width: "2em",
+                    height: "2em",
+                  }}
+                  title="US"
+                />
+              </a>
+              <a
+                href="#"
+                className="block py-1 text-sm"
+                role="menuitem"
+                tabIndex={-1}
+                id="menu-item-0"
+              >
+                <ReactCountryFlag
+                  countryCode="EU"
+                  svg
+                  style={{
+                    width: "2em",
+                    height: "2em",
+                  }}
+                  title="EU"
+                />
+              </a>
+            </div>
           </div>
         </div>
-      </header>
-
-      {/* Mobile Menu */}
-      <div className="md:hidden block">
-        <Menu right>
-          <Link
-            id="home"
-            className={`menu-item ${isActive("/") ? "text-[#000]" : ""}`}
-            href="/"
-          >
-            Home
-          </Link>
-          <Link
-            id="about"
-            className={`menu-item ${isActive("/about") ? "text-[#000]" : ""}`}
-            href="/about"
-          >
-            About Us
-          </Link>
-          <Link
-            id="about"
-            className={`menu-item ${isActive("/why-us") ? "text-[#000]" : ""}`}
-            href="/why-us"
-          >
-            Why Us
-          </Link>
-          <Link
-            id="about"
-            className={`menu-item ${isActive("/roadmap") ? "text-[#000]" : ""}`}
-            href="/roadmap"
-          >
-            Roadmap
-          </Link>
-        </Menu>
+        <Button className="lg:block hidden px-6 py-2 text-black rounded-lg transition-all duration-700 hover:rounded-sm bg-[#ffffff]">
+          Whitepaper
+        </Button>
+        <button
+          onClick={() => setSideBarOpen(!sideBarOpen)}
+          className=" lg:hidden text-[#7B15F8] hover:text-[#7B15F8]/50 text-3xl"
+        >
+          <Menu size={35} />
+        </button>
       </div>
-    </>
+    </header>
   );
-}
+};
+
+export default Header;

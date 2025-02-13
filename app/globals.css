@@ -30,12 +30,12 @@ body {
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: rgb(1 242 167 / var(--tw-text-opacity, 1));
+  background: rgb(147 51 234 / var(--tw-text-opacity, 1)); /* Purple-800 */
 }
 
-/* Color/shape of burger icon bars on hover*/
+/* Color/shape of burger icon bars on hover */
 .bm-burger-bars-hover {
-  background: rgb(1 242 167 / var(--tw-text-opacity, 1));
+  background: rgb(59 130 246 / var(--tw-text-opacity, 1)); /* Blue-500 */
 }
 
 /* Position and sizing of clickable cross button */
@@ -46,7 +46,7 @@ body {
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: white;
+  background: rgb(147 51 234 / var(--tw-text-opacity, 1)); /* Purple-800 */
 }
 
 /*
@@ -61,7 +61,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: rgb(1 242 167 / var(--tw-text-opacity, 1));
+  background: linear-gradient(
+    to bottom right,
+    rgb(126, 34, 206),
+    rgba(37, 100, 235, 0.996)
+  );
+  backdrop-filter: blur(10px);
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -73,7 +78,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: black;
+  color: white;
   padding: 0.8em;
 }
 
@@ -85,4 +90,57 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+/* pie chart  */
+.pie-responsive {
+  max-height: 300px;
+}
+@media (min-width: 640px) {
+  .pie-responsive {
+    max-height: 500px;
+  }
+}
+@media (min-width: 440px) {
+  .pie-responsive {
+    max-height: 400px;
+  }
+}
+
+@layer components {
+  .image {
+    @apply bg-center bg-no-repeat bg-cover select-none;
+  }
+  .heading-xl {
+    @apply xl:text-6xl md:text-5xl sm:text-4xl text-3xl;
+  }
+  .heading-lg {
+    @apply xl:text-5xl md:text-4xl sm:text-3xl text-2xl;
+  }
+  .heading-md {
+    @apply md:text-2xl sm:text-xl text-xl;
+  }
+  .para {
+    @apply text-base md:text-lg lg:text-xl xl:text-2xl font-light text-[#C5C6C5];
+  }
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7),
+      0 0 40px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.animate-glow {
+  animation: glow 2s infinite alternate ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.animate-glow:hover {
+  transform: scale(1.05);
 }
