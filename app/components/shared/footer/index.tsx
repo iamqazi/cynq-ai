@@ -30,7 +30,7 @@ export default function Footer() {
           title='Go to homepage'
         >
           <Image
-            src='/logo.png'
+            src='/logo.svg'
             width={190}
             height={50}
             alt='Cynq Ai Logo'

@@ -96,15 +96,15 @@ export default function BuiltOn() {
     },
   ]
   return (
-    <section className='text-white mb-24 mt-10 px-10'>
+    <section className='text-white mb-24 mt-10 sm:px-10 px-5'>
       <h1 className='faq-item lg:text-5xl md:text-4xl text-3xl font-medium text-center '>
         Built On
       </h1>
-      <article className='flex flex-wrap items-center justify-center gap-8 mt-14 lg:px-20 sm:px-10 px-5'>
+      <article className='flex flex-wrap items-center justify-center md:gap-8 sm:gap-5 gap-3 sm:mt-14 mt-6 lg:px-20 sm:px-10 px-5'>
         {builtOnArray.map((item, ind) => (
           <div
             key={ind}
-            className='relative z-[1] md:max-w-[75px] md:max-h-[75px] sm:max-w-[60px] sm:max-h-[60px] max-w-[45px] max-h-[45px] md:hover:scale-110 transition-all
+            className='relative z-[1] lg:max-w-[75px] md:max-w-[60px] sm:max-w-[50px]  xs:max-w-[40px] max-w-[30px] md:hover:scale-110 transition-all
             md:hover:-translate-y-3
             md:hover:after:opacity-100
             after:opacity-0
