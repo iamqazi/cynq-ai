@@ -3,12 +3,12 @@ import FutureAnimation from "./FutureAnimation";
 
 export default function FutureOfAi() {
   return (
-    <div className="relative flex justify-center min-h-screen">
+    <div className="relative flex justify-center md:min-h-[800px] min-h-[550px] max-w-[1440px] mx-auto">
       <FutureAnimation />
 
       <section
         aria-label="AI-Driven Decentralized Finance Section"
-        className="py-20 absolute bottom-[20px]  text-white"
+        className="md:py-20 py-10 absolute bottom-[20px]  text-white"
       >
         <div className="container mx-auto px-4 max-w-6xl  ">
           <div

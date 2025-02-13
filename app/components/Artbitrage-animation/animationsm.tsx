@@ -50,9 +50,9 @@ const ArtbitrageKeyFeaturesSM = () => {
   ]
 
   return (
-    <div className=' pt-16 '>
-      <div className='flex  items-center justify-between px-10'>
-        <h2 className='md:text-3xl text-2xl sm:font-medium font-semibold text-white pb-10 max-w-[800px] md:text-start text-center '>
+    <div className=' 2xl:pt-0 sm:pt-8  '>
+      <div className='flex  items-center justify-between sm:px-10 px-4'>
+        <h2 className='2xl:text-5xl md:text-3xl text-2xl sm:font-medium font-semibold text-white pb-10 max-w-[800px] md:text-start text-center '>
           Key Features of the AI-Optimized Cross-Chain Arbitrage Bot
         </h2>
         <Image
@@ -63,8 +63,8 @@ const ArtbitrageKeyFeaturesSM = () => {
           className=' lg:w-[300px] md:w-[250px] w-[200px] md:block hidden translate-x-10'
         />
       </div>
-      <div className='relative w-full  px-5'>
-        <div className='relative w-full flex px-5 justify-center items-center'>
+      <div className='relative w-full  sm:px-5'>
+        <div className='relative w-full flex sm:px-5 justify-center items-center'>
           <div className='sm:flex hidden flex-col items-center relative top-2/4 '>
             <span className=' w-5 h-5 bg-[#7B15F8] rounded-[50%] '></span>
             <span className='w-[2px] h-[300px] bg-gradient-to-b from-[#7B15F8] via-[#7B15F8] to-transparent'></span>
@@ -79,7 +79,7 @@ const ArtbitrageKeyFeaturesSM = () => {
           >
             {dummyData.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className='overflow-hidden border z-[1] relative rounded-lg border-white/15 md:text-base sm:text-sm text-[12px] leading-4'>
+                <div className='overflow-hidden border z-[1] relative rounded-lg border-white/15 md:text-base sm:text-sm text-[12px] leading-4 2xl:text-2xl'>
                   <Image
                     src={'/bgforkeyfeature.png'}
                     fill
@@ -89,8 +89,8 @@ const ArtbitrageKeyFeaturesSM = () => {
                   <div className='absolute top-0 left-1.5 text-7xl sm:text-8xl text-white/15 font-bold'>
                     0{index + 1}
                   </div>
-                  <div className='relative z-[1] sm:p-10 p-5 flex font-medium flex-col gap-2'>
-                    <h3 className='text-white font-semibold heading-md '>
+                  <div className='relative z-[1] sm:p-10 p-5 flex font-medium flex-col 2xl:gap-5 gap-2'>
+                    <h3 className='text-white font-semibold heading-md 2xl:text-5xl'>
                       {item.heading}
                     </h3>
                     <p className='text-white/70'>{item.text}</p>

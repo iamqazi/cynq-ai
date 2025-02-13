@@ -106,7 +106,7 @@ const PieChartWithLabels: React.FC = () => {
   const imageY = cy - imageHeight / 2
   return (
     <section
-      className=' sm:py-14 py-8 px-2 sm:px-5 md:mx-20 sm:mx-5 mx-3 text-white overflow-hidden'
+      className=' sm:py-14 py-8 px-2 sm:px-5 md:mx-20 sm:mx-5  text-white overflow-hidden relative z-[1] max-w-[1440px] mx-auto'
       aria-label='Tokenomics'
     >
       {/* Section Title */}
@@ -118,7 +118,7 @@ const PieChartWithLabels: React.FC = () => {
         className=' my-10 lg:py-10 pt-10  lg:px-20 sm:px-5 px-3 border rounded-lg border-white/15 flex flex-wrap items-center gap-x-10 transition-all'
         style={{ backgroundImage: 'linear-gradient(130deg,#190D2E,#000000)' }}
       >
-        <div  className={` ${isInView?'opacity-100':'opacity-0 translate-y-10'} transition-all duration-[1500ms] sm:text-xl flex-1 `}>
+        <div  className={` ${isInView?'opacity-100':'opacity-0 translate-y-10'} transition-all duration-[1500ms] sm:text-xl md:text-2xl flex-1 `}>
           <h3 className='md:text-4xl sm:text-3xl text-2xl font-semibold mb-5'>
             Token Details
           </h3>

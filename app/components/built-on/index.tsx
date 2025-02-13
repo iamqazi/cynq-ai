@@ -96,7 +96,7 @@ export default function BuiltOn() {
     },
   ]
   return (
-    <section className='text-white mb-24 mt-10 sm:px-10 px-5'>
+    <section className='text-white md:mb-24 mt-10 sm:px-10 px-5'>
       <h1 className='faq-item lg:text-5xl md:text-4xl text-3xl font-medium text-center '>
         Built On
       </h1>
