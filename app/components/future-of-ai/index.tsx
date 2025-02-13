@@ -14,7 +14,7 @@ export default function FutureOfAi() {
           <div
             className="border border-white/15 rounded-lg px-4 md:pt-28 sm:pt-20 pt-12 md:pb-12 pb-6 text-center flex flex-col items-center shadow-[0px_0px_130px_#9B4BFC] sm:gap-8 gap-6"
             style={{
-              background: " radial-gradient(circle at 0%, #271141, #000 )",
+              background: " radial-gradient(circle at -20%, #271141, #000 )",
             }}
           >
             {/* Semantic heading structure */}
