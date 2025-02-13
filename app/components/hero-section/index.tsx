@@ -6,7 +6,6 @@ import Image from "next/image";
 // import OrbitalBackground from "./OrbitalBackground";
 import CircularPathAnimation from "./OrbitalBackground";
 import AnimatedBackground from "./start";
-import { ShieldHalf } from "lucide-react";
 
 const HeroSection: React.FC = () => {
   return (
