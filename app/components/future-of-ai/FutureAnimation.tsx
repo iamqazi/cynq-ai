@@ -19,13 +19,13 @@ const FutureAnimation: React.FC = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute inset-0  overflow-hidden pointer-events-none ">
       <svg
         width="100%"
         height="100%"
         viewBox="0 0 1200 1600"
         preserveAspectRatio="xMidYMin slice"
-        className="absolute top-0 left-0 w-full h-full opacity-30"
+        className="absolute sm:top-[-180px] top-[-80px] left-0 w-full h-full  opacity-30"
       >
         {/* Radial Gradient Background */}
         <defs>

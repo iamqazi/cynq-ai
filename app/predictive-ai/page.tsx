@@ -87,7 +87,7 @@ export default function PredictiveAi() {
       />
       <p
         ref={textRef}
-        className="heading-md my-5 text-[33px] leading-[39px] max-[1186px] md:px-24 px-5"
+        className="heading-md my-5 text-[33px] leading-[39px] max-w-[1186px] md:px-24 px-5 mx-auto"
       >
         Unlike traditional data oracles that only relay historical and real-time
         data, CYNQAi&apos;s AI-powered prediction engine analyzes on-chain

@@ -133,7 +133,7 @@ export function Question({
   return (
     <article className="faq-item relative text-white">
       <div
-        className="absolute w-full h-full z-[-10] bg-white/15 left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 box-content p-[1px] rounded-lg"
+        className="absolute w-full h-full z-[-10] bg-[#333333] left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 box-content p-[1px] rounded-lg"
         style={{
           backgroundImage: `linear-gradient(130deg , #ffffff26 15% , #ffffffbe 25%, #ffffff26 37%)`,
         }}
