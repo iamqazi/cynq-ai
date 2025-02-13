@@ -73,7 +73,7 @@ const FAQSection: React.FC = () => {
   return (
     <section
       ref={faqRef}
-      className="mx-auto max-w-[800px] sm:py-14 py-8 px-2 sm:px-5 text-white"
+      className="mx-auto max-w-[800px] sm:py-14 py-8 px-2 sm:px-5 text-white relative z-0"
       aria-label="Frequently Asked Questions"
     >
       <Image
