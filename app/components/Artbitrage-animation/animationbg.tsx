@@ -5,38 +5,36 @@ import Image from 'next/image'
 import { useEffect } from 'react'
 
 const dummyData = [
- {
-  heading: 'AI-Driven Arbitrage Opportunity Detection',
-  text: 'The cryptocurrency market is highly fragmented, with different prices for the same asset ovarious blockchains and exchanges. CYNQAi’s AI continuously monitors thousands of trading pairs across centralized (CEX) and decentralized (DEX) exchanges, detecting price discrepancies that present profitable arbitrage opportunities.',
-  points: [
-    `Real-Time Price Scanning – AI constantly tracks price
+  {
+    heading: 'AI-Driven Arbitrage Opportunity Detection',
+    text: 'The cryptocurrency market is highly fragmented, with different prices for the same asset ovarious blockchains and exchanges. CYNQAi’s AI continuously monitors thousands of trading pairs across centralized (CEX) and decentralized (DEX) exchanges, detecting price discrepancies that present profitable arbitrage opportunities.',
+    points: [
+      `Real-Time Price Scanning – AI constantly tracks price
    movements across multiple blockchains.`,
-    `Liquidity & Slippage Analysis – AI ensures that trades
+      `Liquidity & Slippage Analysis – AI ensures that trades
       execute with minimal price impact.`,
-    `Multi-Chain Data Integration – Works across Ethereum,
+      `Multi-Chain Data Integration – Works across Ethereum,
   BSC, Solana, Avalanche, and Layer 2 networks.`,
-  ],
-},
-{
- heading: 'Automated Execution & Gas Fee Optimization',
- text: 'One of the biggest challenges in arbitrage trading is execution speed—delays can cause price shifts, slippage, and unprofitable trades. CYNQAi’s AI bot executes transactions automatically within milliseconds, ensuring that orders are placed and settled instantly across chains. Additionally, AI optimizes gas fees and network congestion costs, selecting the most cost-effective route for trade execution.',
- points: [
-   `High-Frequency Trading Execution – AI executes trades at lightning-fast speeds to capture price gaps.`,
-   `Smart Contract-Based Automation – Eliminates manual trade execution delays.`,
-   `AI-Optimized Gas Fee Reduction – AI routes transactions through the cheapest and fastest blockchain pathways.`,
- ],
-},
-{
- heading: 'Risk Management & Security Measures',
- text: 'TCrypto markets can be unpredictable, with risks such as front-running, slippage, and liquidity issues affecting arbitrage trades. CYNQAi’s AI-powered arbitrage bot analyzes real-time market conditions to mitigate risks before executing trades. Additionally, AI-powered smart contracts ensure secure and trustless arbitrage execution across multiple chains.',
- points: [
-   `Slippage & Market Impact Prevention – AI ensures optimal trade sizing to avoid losses.`,
-   `Front-Running Protection – AI monitors network activity to prevent bots from copying trade transactions.`,
-   `Flash Loan Arbitrage Support – Executes zero-capital arbitrage opportunities using DeFi flash loans.`,
- ],
-},
- 
-  
+    ],
+  },
+  {
+    heading: 'Automated Execution & Gas Fee Optimization',
+    text: 'One of the biggest challenges in arbitrage trading is execution speed—delays can cause price shifts, slippage, and unprofitable trades. CYNQAi’s AI bot executes transactions automatically within milliseconds, ensuring that orders are placed and settled instantly across chains. Additionally, AI optimizes gas fees and network congestion costs, selecting the most cost-effective route for trade execution.',
+    points: [
+      `High-Frequency Trading Execution – AI executes trades at lightning-fast speeds to capture price gaps.`,
+      `Smart Contract-Based Automation – Eliminates manual trade execution delays.`,
+      `AI-Optimized Gas Fee Reduction – AI routes transactions through the cheapest and fastest blockchain pathways.`,
+    ],
+  },
+  {
+    heading: 'Risk Management & Security Measures',
+    text: 'TCrypto markets can be unpredictable, with risks such as front-running, slippage, and liquidity issues affecting arbitrage trades. CYNQAi’s AI-powered arbitrage bot analyzes real-time market conditions to mitigate risks before executing trades. Additionally, AI-powered smart contracts ensure secure and trustless arbitrage execution across multiple chains.',
+    points: [
+      `Slippage & Market Impact Prevention – AI ensures optimal trade sizing to avoid losses.`,
+      `Front-Running Protection – AI monitors network activity to prevent bots from copying trade transactions.`,
+      `Flash Loan Arbitrage Support – Executes zero-capital arbitrage opportunities using DeFi flash loans.`,
+    ],
+  },
 ]
 
 const ArtbitrageKeyFeaturesBg = ({ data = dummyData }) => {
@@ -95,9 +93,9 @@ const ArtbitrageKeyFeaturesBg = ({ data = dummyData }) => {
 
   return (
     <div className='w-full max-w-[1440px] mx-auto mb-10'>
-      <div className='dep-trigger flex flex-col h-[120vh] items-center overflow-hidden bg-black text-white relative z-[1]'>
-        <div className='flex  items-center justify-between px-10'>
-          <h2 className='lg:text-5xl md:text-4xl text-3xl sm:font-medium font-semibold text-white pb-10 max-w-[800px]'>
+      <div className='dep-trigger flex flex-col h-fit items-center  bg-black text-white relative z-[1]'>
+        <div className='flex  items-center  px-10 lg:mb-10'>
+          <h2 className='xl:text-5xl md:text-4xl text-3xl sm:font-medium font-semibold text-white pb-10 max-w-[850px] '>
             Key Features of the AI-Optimized Cross-Chain Arbitrage Bot
           </h2>
           <Image
@@ -105,11 +103,15 @@ const ArtbitrageKeyFeaturesBg = ({ data = dummyData }) => {
             alt='logo'
             height={300}
             width={300}
-            className=' lg:w-[300px] md:w-[250px] w-[200px] sm:block hidden'
+            className=' xl:w-[300px] lg:w-[270px] md:w-[250px] w-[200px] sm:block hidden xl:translate-x-20 translate-x-10 '
           />
         </div>
-        <div className='container mx-auto px-4 md:px-6 flex flex-col items-center gap-x-[5rem] md:flex-row '>
-          <div className='relative z-[1] w-full'>
+        <div className='w-full mx-auto lg:px-0 px-4 md:px-6 flex flex-col gap-x-[4rem] md:flex-row justify-center '>
+          <div className='flex flex-col items-center relative top-2/4'>
+            <span className=' w-5 h-5 bg-[#7B15F8] rounded-[50%] '></span>
+            <span className='w-[2px] h-[300px] bg-gradient-to-b from-[#7B15F8] via-[#7B15F8] to-transparent'></span>
+          </div>
+          <div className='relative z-[1] w-[75%]'>
             {data.map((item, index) => (
               <div
                 key={index}
@@ -129,7 +131,7 @@ const ArtbitrageKeyFeaturesBg = ({ data = dummyData }) => {
                     0{index + 1}
                   </div>
                   <div className='relative z-[1] p-10 flex font-medium flex-col gap-5'>
-                    <h3 className='text-white font-semibold heading-lg'>
+                    <h3 className='text-white font-semibold heading-md lg:text-4xl'>
                       {item.heading}
                     </h3>
                     <p className='text-white/70'>{item.text}</p>

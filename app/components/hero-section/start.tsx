@@ -17,7 +17,7 @@ const AnimatedBackground = () => {
     const numCircles = 100;
     const newCircles = Array.from({ length: numCircles }).map((_, i) => ({
       id: i,
-      size: Math.random() * 8 + 4, // Random size between 4px and 12px
+      size: Math.random() * 4 + 2, // Random size between 4px and 12px
       left: Math.random() * 100, // Positioning in viewport width
       duration: Math.random() * 9 + 5, // Animation duration between 5s and 14s
       delay: Math.random() * 4, // Random delay up to 4s

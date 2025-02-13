@@ -73,7 +73,7 @@ const FAQSection: React.FC = () => {
   return (
     <section
       ref={faqRef}
-      className="mx-auto max-w-[800px] sm:py-14 py-8 px-2 sm:px-5 text-white"
+      className="mx-auto max-w-[800px] sm:py-14 py-8 px-2 sm:px-5 text-white relative z-0"
       aria-label="Frequently Asked Questions"
     >
       <Image
@@ -88,7 +88,7 @@ const FAQSection: React.FC = () => {
         FAQ
       </h1>
       {/* FAQ Items */}
-      <div className="faq-item flex flex-col sm:px-10 px-5 gap-3 my-5 md:my-10">
+      <div className="faq-item flex flex-col sm:px-10 px-3 gap-3 my-5 md:my-10">
         {FAQsArray.map((FAQ) => (
           <Question
             key={FAQ.id}

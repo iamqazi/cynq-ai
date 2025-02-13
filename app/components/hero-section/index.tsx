@@ -6,11 +6,10 @@ import Image from "next/image";
 // import OrbitalBackground from "./OrbitalBackground";
 import CircularPathAnimation from "./OrbitalBackground";
 import AnimatedBackground from "./start";
-import { ShieldHalf } from "lucide-react";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="min-h-screen relative">
+    <div className="lg:min-h-[700px] min-h-[600px] relative">
       <Image
         src={"Background.svg"}
         alt="img"
@@ -18,7 +17,7 @@ const HeroSection: React.FC = () => {
         height={100}
         className="absolute inset-0 z-0 top-10 pointer-events-none w-full h-full"
       />
-      <div className="min-h-screen w-full z-90 relative overflow-hidden">
+      <div className=" w-full z-90 relative overflow-hidden">
         <CircularPathAnimation />
         <AnimatedBackground />
 
@@ -88,7 +87,7 @@ export function SecondaryHero({ text, heading, btnText }: secondaryHeroType) {
   }
   return (
     <section
-      className={`bg-[url('/boxes.png')] bg-cover bg-no-repeat bg-bottom w-full flex flex-col text-center items-center gap-3 md:gap-6 py-12 md:py-16 lg:pt-32 lg:pb-20 `}
+      className={`bg-[url('/boxes.png')] max-w-[1440px] bg-cover bg-no-repeat bg-bottom w-full flex flex-col text-center items-center gap-3 md:gap-6 py-12 md:py-16 lg:pt-32 lg:pb-20 mx-auto`}
     >
       <h2 className={` heading-xl sm:max-w-[900px] max-w-[400px] `}>
         {headingArray.map((str, ind) => {
@@ -101,32 +100,35 @@ export function SecondaryHero({ text, heading, btnText }: secondaryHeroType) {
           // if text should be purple
           if (purpleTextIndex.includes(ind)) {
             return (
-              <>
+              <span key={ind}>
                 <span className="text-[#936DFF]">
                   {string.replaceAll("{~}", "")}
                 </span>
                 {br && <br />}
-              </>
+              </span>
             );
           }
           return (
-            <>
+            <span key={ind}>
               {string}
               {br && <br />}
-            </>
+            </span>
           );
         })}
         <br />
-        {/* {purpleText && (
-          
-        )}{' '} */}
       </h2>
       <p className="text-[#C5C6C5] font-thin sm:text-lg sm:max-w-[700px] max-w-[400px] mx-10">
         {text}
       </p>
       {btnText && (
         <Button className="relative flex bg-[#7B15F8] rounded-[8px] items-center justify-center gap-2 sm:py-2 py-1 sm:px-10 px-5 shadow-[0px_0px_80px_#9B4BFC] text-white font-medium capitalize">
-          <ShieldHalf />
+          <Image
+                        src={'/shield.svg'}
+                        alt={`shield`}
+                        className="w-[16px] h-[20px]"
+                        width={16}
+                        height={20}
+                      />
           {btnText}
         </Button>
       )}

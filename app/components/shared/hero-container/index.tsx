@@ -6,14 +6,14 @@ import { Button } from "@nextui-org/react";
 const CryptoPurchaseUI = () => {
   return (
     <div className="relative flex items-center justify-center p-4">
-      <div className="relative w-full max-w-md rounded-[30px] overflow-hidden">
+      <div className="relative w-full max-w-md md:rounded-[30px] overflow-hidden">
         {/* Background Image */}
         <Image
           src="/border.png"
           alt="background"
           width={424}
           height={720}
-          className="absolute inset-0 w-full h-full "
+          className="absolute  inset-0 w-full h-full "
         />
 
         {/* Blurred glow element */}
@@ -26,7 +26,7 @@ const CryptoPurchaseUI = () => {
         />
 
         {/* Content */}
-        <div className="relative z-10 p-8">
+        <div className="relative z-10 rounded-[90px] p-8">
           <div className="text-white/50 text-right mb-2 text-[14px]">
             Can&apos;t find tokens in your wallet?
           </div>
