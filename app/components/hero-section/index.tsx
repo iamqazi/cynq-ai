@@ -9,7 +9,7 @@ import AnimatedBackground from "./start";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="lg:min-h-[700px] min-h-[600px] relative">
+    <div className="lg:min-h-[700px] min-h-[600px] relative max-w-[1440px] mx-auto">
       <Image
         src={"Background.svg"}
         alt="img"

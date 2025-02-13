@@ -33,7 +33,7 @@ const BannerAnimation = ({ theme }: { theme?: "light" | "dark" }) => {
   ];
 
   return (
-    <div className={`mt-[100px] sec-5-trigger ${backgroundClass}`}>
+    <div className={`mt-[100px] sec-5-trigger ${backgroundClass} max-w-[1440px] mx-auto`}>
       <div className="flex flex-col gap-8 md:gap-16 ">
         <div className="sec-5-move-anim relative top-[200px] flex flex-col gap-11 opacity-0 md:gap-16">
           <div className="h-[7.125rem]">

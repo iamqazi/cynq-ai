@@ -5,7 +5,7 @@ import { TradingCardGrid } from '../ui/cards'
 
 export default function About() {
   return (
-    <section className='relative flex flex-col items-center min-h-[800px] text-white bg-black pb-16 sm:pt-8 px-4 md:px-8 lg:px-16'>
+    <section className='relative flex flex-col items-center min-h-[800px] text-white bg-black pb-16 sm:pt-8 px-4 md:px-8 lg:px-16 max-w-[1440px] mx-auto'>
       <div className='max-w-3xl text-center pb-[50px] md:pb-[80px] lg:pb-[100px] items-center flex flex-col'>
         <h2 className='text-4xl md:text-5xl lg:text-6xl '>
           About Cnyq
