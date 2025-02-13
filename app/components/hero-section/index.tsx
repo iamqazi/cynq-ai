@@ -26,8 +26,8 @@ const HeroSection: React.FC = () => {
         <div className="flex items-center justify-center text-white px-4 py-8 mt-[100px] lg:py-0">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 max-w-[1440px] mx-auto xl:mx-[117px] w-full">
             {/* Left Side Content */}
-            <div className="flex flex-col justify-center space-y-4 lg:space-y-6">
-              <h1 className="text-4xl md:text-6xl lg:text-[72px] leading-tight lg:leading-[78px] font-bold">
+            <div className="flex flex-col text-center lg:text-left justify-center space-y-4 lg:space-y-6">
+              <h1 className="text-4xl  md:text-6xl lg:text-[72px] leading-tight lg:leading-[78px] font-bold">
                 Cynq Ai
               </h1>
               <p className="text-2xl md:text-5xl lg:text-[72px] leading-tight lg:leading-[78px] font-semibold">
@@ -37,7 +37,7 @@ const HeroSection: React.FC = () => {
                 Trade Smarter. Invest Better. Automate Everything.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-[10px] mt-2">
+              <div className="flex flex-col justify-center lg:justify-start sm:flex-row items-center lg:items-start   gap-4 sm:gap-[10px] mt-2">
                 <Button className="relative flex bg-[#7B15F8] w-[188px] h-[44px] rounded-[8px] items-center justify-center gap-2 px-4 py-4 text-white font-medium">
                   Buy Now
                 </Button>
