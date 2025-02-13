@@ -101,25 +101,22 @@ export function SecondaryHero({ text, heading, btnText }: secondaryHeroType) {
           // if text should be purple
           if (purpleTextIndex.includes(ind)) {
             return (
-              <>
+              <span key={ind}>
                 <span className="text-[#936DFF]">
                   {string.replaceAll("{~}", "")}
                 </span>
                 {br && <br />}
-              </>
+              </span>
             );
           }
           return (
-            <>
+            <span key={ind}>
               {string}
               {br && <br />}
-            </>
+            </span>
           );
         })}
         <br />
-        {/* {purpleText && (
-          
-        )}{' '} */}
       </h2>
       <p className="text-[#C5C6C5] font-thin sm:text-lg sm:max-w-[700px] max-w-[400px] mx-10">
         {text}
