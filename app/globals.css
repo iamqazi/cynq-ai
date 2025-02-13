@@ -123,3 +123,24 @@ Note: Beware of modifying this element as it can break the animations - you shou
     @apply text-base md:text-lg lg:text-xl xl:text-2xl font-light text-[#C5C6C5];
   }
 }
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7),
+      0 0 40px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.animate-glow {
+  animation: glow 2s infinite alternate ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.animate-glow:hover {
+  transform: scale(1.05);
+}

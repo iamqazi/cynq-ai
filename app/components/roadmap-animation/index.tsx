@@ -3,7 +3,7 @@ import DevelopmentProcessSm from "./roadmap-sm";
 
 const DevelopmentProcess = () => {
   return (
-    <div className="bg-black text-white relative w-full py-16">
+    <div className="bg-black text-white relative w-full ">
       <div className="hidden md:block w-full">
         <DevelopmentProcessLg />
       </div>

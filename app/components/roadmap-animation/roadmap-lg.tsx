@@ -2,7 +2,7 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const dummyData = [
   {
@@ -59,6 +59,7 @@ const dummyData = [
 
 const DevelopmentProcessLg = ({ data = dummyData }) => {
   gsap.registerPlugin(ScrollTrigger);
+  const imageRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     gsap.to(".dep-left", {
@@ -71,6 +72,45 @@ const DevelopmentProcessLg = ({ data = dummyData }) => {
         toggleActions: "play none none reverse",
       },
     });
+
+    // Animate the image
+    const imageElement = imageRef.current;
+    if (imageElement) {
+      // Create rotating animation
+      gsap.to(imageElement, {
+        rotation: 360,
+        duration: 20,
+        repeat: -1,
+        ease: "linear",
+      });
+
+      // Create pulsing effect
+      gsap.to(imageElement, {
+        scale: 1.05,
+        duration: 2,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
+
+      // Add hover animations directly with GSAP instead of event listeners
+      const enterAnimation = gsap.to(imageElement, {
+        scale: 1.1,
+        duration: 0.5,
+        ease: "power1.out",
+        paused: true,
+      });
+
+      const leaveAnimation = gsap.to(imageElement, {
+        scale: 1,
+        duration: 0.5,
+        ease: "power1.out",
+        paused: true,
+      });
+
+      imageElement.onmouseenter = () => enterAnimation.play();
+      imageElement.onmouseleave = () => leaveAnimation.play();
+    }
 
     const cards = document.querySelectorAll(".dep-card");
 
@@ -103,6 +143,11 @@ const DevelopmentProcessLg = ({ data = dummyData }) => {
 
     return () => {
       gsap.killTweensOf(".dep-left");
+      if (imageElement) {
+        gsap.killTweensOf(imageElement);
+        imageElement.onmouseenter = null;
+        imageElement.onmouseleave = null;
+      }
       cards.forEach((card) => gsap.killTweensOf(card));
     };
   }, [data.length]);
@@ -114,24 +159,26 @@ const DevelopmentProcessLg = ({ data = dummyData }) => {
   return (
     <div className="w-full max-w-[1440px] mx-auto">
       <div
-        className="dep-trigger flex h-[100vh] items-center overflow-hidden bg-black text-white relative"
+        className="dep-trigger flex h-[100vh]  items-center overflow-hidden bg-black text-white relative"
         style={{
           backgroundImage: "url('/boxes.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <h1 className="absolute top-10 left-1/2 transform -translate-x-1/2 text-[56px] md:text-4xl font-[500] text-center w-full px-4">
+        <h1 className="absolute top-10 left-1/2 pt-[20px] transform -translate-x-1/2 text-[56px] md:text-[56px]  font-[500] text-center w-full px-4">
           Roadmap
         </h1>
         <div className="container mx-auto px-4 md:px-6 flex flex-col items-start gap-x-[5rem] md:flex-row">
           <div className="dep-left flex h-fit w-full relative flex-[0.5] flex-col pb-[5rem]">
             <Image
+              ref={imageRef}
               src={"/image-8.svg"}
               alt="img"
               height={100}
               width={100}
-              className="w-[200px] h-[200px] md:w-[377px] md:h-[377px] absolute top-[-120px] md:top-[-220px] right-[20px] md:right-[40px]"
+              className="w-[200px] h-[200px] md:w-[600px] md:h-[600px] absolute top-[-120px] md:top-[-320px] right-[20px] md:right-[10px] cursor-pointer"
+              style={{ transformOrigin: "center center" }}
             />
           </div>
           <div className="relative flex-[0.5] w-full">

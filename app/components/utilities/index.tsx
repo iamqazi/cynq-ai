@@ -125,7 +125,7 @@ export default function Utilities() {
     <section
       ref={sectionRef}
       aria-label="CYNQ Ai Utilities"
-      className="lg:p-20 sm:p-14 p-8 flex flex-col items-center text-white"
+      className="lg:px-20 p-14  flex flex-col items-center text-white"
     >
       <header className="md:mb-20 sm:mb-16 mb-12 text-center">
         <h1 className="text-white lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-medium">
@@ -159,7 +159,7 @@ export default function Utilities() {
 
               {/* Image Container */}
               <div
-                className={`order-1 w-full h-full sm:max-w-[500px] max-w-[300px] sm:max-h-[400px] max-h-[250px] relative border border-white/15 rounded-xl overflow-clip image-container`}
+                className="order-1 w-full h-full sm:max-w-[500px] max-w-[300px] sm:max-h-[400px] max-h-[250px] relative rounded-xl overflow-clip image-container border-animation animate-glow"
                 aria-hidden="true"
               >
                 <Image
