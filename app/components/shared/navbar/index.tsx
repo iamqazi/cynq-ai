@@ -40,7 +40,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/ai-arbitrage">
                   <Button
                     className={isActive("/about") ? "text-[#7B15F8]" : ""}
                   >
@@ -49,7 +49,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/ai-tax-tool">
                   <Button
                     className={isActive("/why-us") ? "text-[#7B15F8]" : ""}
                   >
@@ -58,7 +58,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/blog">
                   <Button
                     className={isActive("/roadmap") ? "text-[#7B15F8]" : ""}
                   >
@@ -67,7 +67,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/contact-us">
                   <Button
                     className={isActive("/roadmap") ? "text-[#7B15F8]" : ""}
                   >

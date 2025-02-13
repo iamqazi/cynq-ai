@@ -26,8 +26,8 @@ const HeroSection: React.FC = () => {
         <div className="flex items-center justify-center text-white px-4 py-8 mt-[100px] lg:py-0">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 max-w-[1440px] mx-auto xl:mx-[117px] w-full">
             {/* Left Side Content */}
-            <div className="flex flex-col text-center lg:text-left justify-center space-y-4 lg:space-y-6">
-              <h1 className="text-4xl  md:text-6xl lg:text-[72px] leading-tight lg:leading-[78px] font-bold">
+            <div className="flex flex-col justify-center space-y-4 lg:space-y-6">
+              <h1 className="text-4xl md:text-6xl lg:text-[72px] leading-tight lg:leading-[78px] font-bold">
                 Cynq Ai
               </h1>
               <p className="text-2xl md:text-5xl lg:text-[72px] leading-tight lg:leading-[78px] font-semibold">
@@ -37,7 +37,7 @@ const HeroSection: React.FC = () => {
                 Trade Smarter. Invest Better. Automate Everything.
               </p>
 
-              <div className="flex flex-col justify-center lg:justify-start sm:flex-row items-center lg:items-start   gap-4 sm:gap-[10px] mt-2">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-[10px] mt-2">
                 <Button className="relative flex bg-[#7B15F8] w-[188px] h-[44px] rounded-[8px] items-center justify-center gap-2 px-4 py-4 text-white font-medium">
                   Buy Now
                 </Button>
@@ -87,40 +87,46 @@ export function SecondaryHero({ text, heading, btnText }: secondaryHeroType) {
     }
   }
   return (
-    <section className="bg-[url('/boxes.png')] min-h-screen bg-cover bg-no-repeat bg-bottom w-full flex justify-center items-center">
-      <div className="text-center flex flex-col items-center gap-4">
-        <h2 className="heading-xl sm:max-w-[900px] max-w-[400px] text-white">
-          {headingArray.map((str, ind) => {
-            let br = false;
-            let string = str;
-            if (str.includes("<br/>")) {
-              br = true;
-              string = str.replaceAll("<br/>", "");
-            }
+    <section
+      className={`bg-[url('/boxes.png')] bg-cover bg-no-repeat bg-bottom w-full flex flex-col text-center items-center gap-3 md:gap-6 py-12 md:py-16 lg:pt-32 lg:pb-20 `}
+    >
+      <h2 className={` heading-xl sm:max-w-[900px] max-w-[400px] `}>
+        {headingArray.map((str, ind) => {
+          let br = false;
+          let string = str;
+          if (str.includes("<br/>")) {
+            br = true;
+            string = str.replaceAll("<br/>", "");
+          }
+          // if text should be purple
+          if (purpleTextIndex.includes(ind)) {
             return (
-              <>
-                <span
-                  className={
-                    purpleTextIndex.includes(ind) ? "text-[#936DFF]" : ""
-                  }
-                >
+              <span key={ind}>
+                <span className="text-[#936DFF]">
                   {string.replaceAll("{~}", "")}
                 </span>
                 {br && <br />}
-              </>
+              </span>
             );
-          })}
-        </h2>
-        <p className="text-[#C5C6C5] font-thin sm:text-lg sm:max-w-[700px] max-w-[400px] mx-10">
-          {text}
-        </p>
-        {btnText && (
-          <Button className="bg-[#7B15F8] rounded-[8px] flex items-center justify-center gap-2 sm:py-2 py-1 sm:px-10 px-5 shadow-[0px_0px_80px_#9B4BFC] text-white font-medium capitalize">
-            <ShieldHalf />
-            {btnText}
-          </Button>
-        )}
-      </div>
+          }
+          return (
+            <span key={ind}>
+              {string}
+              {br && <br />}
+            </span>
+          );
+        })}
+        <br />
+      </h2>
+      <p className="text-[#C5C6C5] font-thin sm:text-lg sm:max-w-[700px] max-w-[400px] mx-10">
+        {text}
+      </p>
+      {btnText && (
+        <Button className="relative flex bg-[#7B15F8] rounded-[8px] items-center justify-center gap-2 sm:py-2 py-1 sm:px-10 px-5 shadow-[0px_0px_80px_#9B4BFC] text-white font-medium capitalize">
+          <ShieldHalf />
+          {btnText}
+        </Button>
+      )}
     </section>
   );
 }
