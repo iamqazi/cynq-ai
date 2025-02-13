@@ -106,7 +106,7 @@ const PieChartWithLabels: React.FC = () => {
   const imageY = cy - imageHeight / 2
   return (
     <section
-      className=' sm:py-14 py-8 px-2 sm:px-5 md:mx-20 sm:mx-5  text-white overflow-hidden relative z-[1] max-w-[1440px] mx-auto'
+      className=' sm:py-14 py-8 px-2 sm:px-5  text-white overflow-hidden relative z-[1] max-w-[1440px] mx-auto  '
       aria-label='Tokenomics'
     >
       {/* Section Title */}

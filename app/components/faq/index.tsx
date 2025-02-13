@@ -17,27 +17,27 @@ interface FAQItem {
 const FAQsArray: FAQItem[] = [
   {
     id: "9199",
-    question: "How can your strategies be customized for my needs?",
+    question: "Lorem ipsum dolor sit amet consectetur. Donec vitae ut scelerisque mauris mauris aenean congue facilisis pulvinar?",
     ans: "Repellendus quisquam explicabo facere, saepe eveniet in natus. Magni in alias reiciendis consequatur sequi.",
   },
   {
     id: "9198",
-    question: "How can your strategies be customized for my needs?",
+    question: "Lorem ipsum dolor sit amet consectetur. Donec vitae ut scelerisque mauris mauris aenean congue facilisis pulvinar?",
     ans: "Repellendus quisquam explicabo facere, saepe eveniet in natus. Magni in alias reiciendis consequatur sequi.Repellendus quisquam explicabo facere, saepe eveniet in natus. Magni in alias reiciendis consequatur sequi.",
   },
   {
     id: "9197",
-    question: "How can your strategies be customized for my needs?",
+    question: "Lorem ipsum dolor sit amet consectetur. Donec vitae ut scelerisque mauris mauris aenean congue facilisis pulvinar?",
     ans: "Repellendus quisquam explicabo facere, saepe eveniet in natus. Magni in alias.",
   },
   {
     id: "9196",
-    question: "How can your strategies be customized for my needs?",
+    question: "Lorem ipsum dolor sit amet consectetur. Donec vitae ut scelerisque mauris mauris aenean congue facilisis pulvinar?",
     ans: "Repellendus quisquam explicabo facere, saepe eveniet in natus. Magni in alias reiciendis consequatur sequi.Repellendus quisquam explicabo facere, saepe eveniet in natus. Magni in alias reiciendis consequatur sequi.Repellendus quisquam explicabo facere, saepe eveniet in natus. Magni in alias reiciendis consequatur sequi.",
   },
   {
     id: "9195",
-    question: "How can your strategies be customized for my needs?",
+    question: "Lorem ipsum dolor sit amet consectetur. Donec vitae ut scelerisque mauris mauris aenean congue facilisis pulvinar?",
     ans: "Repellendus quisquam explicabo facere, saepe eveniet in natus. Magni in alias reiciendis consequatur sequi.Repellendus quisquam explicabo facere, saepe eveniet.",
   },
 ];
@@ -73,7 +73,7 @@ const FAQSection: React.FC = () => {
   return (
     <section
       ref={faqRef}
-      className="mx-auto max-w-[800px] sm:py-14 py-8 px-2 sm:px-5 text-white relative z-0"
+      className="mx-auto max-w-[800px]  py-4 sm:py-8 px-2 sm:px-5 text-white relative z-0"
       aria-label="Frequently Asked Questions"
     >
       <Image
@@ -88,7 +88,7 @@ const FAQSection: React.FC = () => {
         FAQ
       </h1>
       {/* FAQ Items */}
-      <div className="faq-item flex flex-col sm:px-10 px-3 gap-3 my-5 md:my-10">
+      <div className="faq-item flex flex-col sm:px-10 px-3 gap-4 my-5 md:my-10 ">
         {FAQsArray.map((FAQ) => (
           <Question
             key={FAQ.id}
@@ -133,7 +133,7 @@ export function Question({
   return (
     <article className="faq-item relative text-white">
       <div
-        className="absolute w-full h-full z-[-10] bg-[#333333] left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 box-content p-[1px] rounded-lg"
+        className="absolute w-full h-full z-[-10] bg-[#333333] left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 box-content p-[1.5px] rounded-lg"
         style={{
           backgroundImage: `linear-gradient(130deg , #ffffff26 15% , #ffffffbe 25%, #ffffff26 37%)`,
         }}
@@ -147,7 +147,7 @@ export function Question({
           id={`faq-question-${id}`}
         >
           {/* Use a heading element for the question */}
-          <h2 className="p-4 pl-0 text-sm md:text-base text-white/70">
+          <h2 className="p-3 pl-0 text-sm md:text-base text-white/70">
             {question}
           </h2>
           <button
