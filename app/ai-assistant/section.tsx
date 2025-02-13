@@ -39,9 +39,9 @@ export default function TradingFeatures() {
             AI-Driven Market Analysis
           </h3>
           <p className="text-[#999] max-w-[312px] text-[16px] leading-[19px] relative z-10">
-            CYNQAi's AI continuously monitors, analyzes, and interprets market
-            trends, identifying profitable trade opportunities before they
-            happen.
+            CYNQAi&apos;s AI continuously monitors, analyzes, and interprets
+            market trends, identifying profitable trade opportunities before
+            they happen.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ export default function TradingFeatures() {
             Automated Trading Strategies
           </h3>
           <p className="text-[#999] max-w-[312px] text-[16px] leading-[19px] ml-0 md:ml-auto relative z-10">
-            CYNQAi's trading assistant offers a suite of automated trading
+            CYNQAi&apos;s trading assistant offers a suite of automated trading
             strategies, allowing users to execute profitable trades 24/7 without
             manual intervention.
           </p>
