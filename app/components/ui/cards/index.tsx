@@ -1,27 +1,16 @@
 import { cardData } from "@/app/types/data";
-import Image from "next/image";
 
 interface TradingCardProps {
   image: string;
   title: string;
 }
 
-export const TradingCard = ({ image, title }: TradingCardProps) => {
+export const TradingCard = ({ image }: TradingCardProps) => {
   return (
-    <div className="rounded-2xl border-[1px] border-white/15 bg-[#8C45FF1C] p-6 flex flex-col items-center shadow-xl">
-      <div className="relative w-[238px] h-[238px] mb-6">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-contain w-[238px] h-[238px]"
-          priority
-        />
-      </div>
-      <h2 className="text-white text-3xl font-bold text-center mb-3">
-        {title}
-      </h2>
-    </div>
+    <div
+      className="rounded-2xl   p-6 flex flex-col h-[400px] w-[300px] items-center shadow-xl bg-cover bg-center"
+      style={{ backgroundImage: `url(${image})` }}
+    ></div>
   );
 };
 

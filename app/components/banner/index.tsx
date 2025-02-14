@@ -3,7 +3,7 @@ import React from "react";
 
 const MarqueeBanner: React.FC = () => {
   return (
-    <div className="w-full h-[54px] bg-purple-600 py-3 overflow-hidden whitespace-nowrap">
+    <div className="w-full h-[48px] bg-purple-600 py-3 overflow-hidden whitespace-nowrap">
       <motion.div
         className="text-white text-[18px] font-medium flex items-center gap-2"
         initial={{ x: "100%" }}

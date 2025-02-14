@@ -35,9 +35,16 @@ const CryptoPurchaseUI = () => {
             15d : 13h : 20m
           </div>
 
-          <div className="text-white/50 flex justify-between text-[18px] mb-2">
-            <span> Current Price: $0.00375</span>
-            <span>Next Price: $0.3</span>
+          <div className="flex justify-between text-[12px] mb-2">
+            <p className="text-white flex gap-[4px]">
+              {" "}
+              Total raised :{" "}
+              <span className="text-[#A983E6]"> 200000/350000</span>
+            </p>
+            <p className="text-white flex gap-[4px]">
+              Listing Price :
+              <span className="text-[#A983E6]"> $0.05 (+5000%)</span>
+            </p>
           </div>
 
           <div className="w-full bg-white/10 h-[22px] rounded-full mb-[15px]">
@@ -47,6 +54,15 @@ const CryptoPurchaseUI = () => {
             Listing Price :{" "}
             <span className="text-[#A983E6]">$0.05 (+5000%)</span>
           </p>
+          <div className="flex items-center mt-[1rem] justify-between bg-white/10 text-white rounded-full px-6 py-1 max-w-lg mx-auto">
+            <span className="text-[12px] text-white">
+              Your purchased CYNQ : 0
+            </span>
+            <span className="text-white/20 text-[20px]">|</span>
+            <span className="text-[12px] text-white">
+              Your Stackable CYNQ : 0
+            </span>
+          </div>
           <div className="flex w-full gap-[10px] mt-[18px] mb-[15px] items-center">
             <Button className="relative flex bg-[#7B15F8]/25 border-[2px] border-[#7B15F8] rounded-full items-center justify-center w-[207px] h-[42px] gap-2  text-white font-medium">
               ETH

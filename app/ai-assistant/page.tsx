@@ -35,7 +35,7 @@ export default function AIAssistant() {
         words.forEach((word, index) => {
           const span = document.createElement("span");
           span.className = "word";
-          span.style.color = "#6f6f6f";
+          span.style.color = "#6f6f6fd2";
           span.style.display = "inline-block";
           span.textContent = word;
 

@@ -99,6 +99,17 @@ const HeroSection: React.FC = () => {
                   )}
                 </div>
               </div>
+              <div className="flex items-center gap-[10px]">
+                <p className="text-[26px] text-white/70 leading-[27px] ">
+                  Powered by{" "}
+                </p>
+                <Image
+                  src={"/deppseek.png"}
+                  alt="img"
+                  height={50}
+                  width={230}
+                />
+              </div>
             </div>
 
             {/* Right Side Card */}
