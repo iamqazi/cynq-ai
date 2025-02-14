@@ -27,10 +27,6 @@ const links = [
     link: "/predictive-ai",
   },
   {
-    text: "Blog",
-    link: "/blog",
-  },
-  {
     text: "Staking",
     link: "/staking",
   },
