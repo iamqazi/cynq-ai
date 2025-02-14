@@ -8,7 +8,7 @@ const MarqueeBanner: React.FC = () => {
         className="text-white text-[18px] font-medium flex items-center gap-2"
         initial={{ x: "100%" }}
         animate={{ x: "-100%" }}
-        transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+        transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
       >
         🚀 CYNQ Ai Presale is NOW LIVE! Be part of the future—claim your
         discounted tokens and exclusive access to revolutionary AI-blockchain

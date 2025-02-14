@@ -7,6 +7,7 @@ import Image from "next/image";
 import CircularPathAnimation from "./OrbitalBackground";
 import AnimatedBackground from "./start";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const rotatingTexts = [
   "AI Predictions",
@@ -80,7 +81,7 @@ const HeroSection: React.FC = () => {
                     Audit
                   </Button>
                   <Button className="relative flex bg-[#fff] w-full md:w-[188px] h-[44px] rounded-[8px] items-center justify-center gap-2 px-4 py-4 text-black font-medium sm:flex md:hidden lg:hidden">
-                    Stacking
+                    <Link href={'/staking'}>Staking</Link>
                   </Button>
                 </div>
 
