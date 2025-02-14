@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="h-[90vh] relative">
+    <div className="min-h-screen relative">
       <Image
         src={"Background.svg"}
         alt="img"
