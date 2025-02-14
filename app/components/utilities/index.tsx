@@ -1,8 +1,9 @@
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
+// Define the utilities array
 const utilitiesArray = [
   {
     title: "Decentralized Predictive AI for Crypto Predictions",
@@ -26,10 +27,151 @@ const utilitiesArray = [
   },
 ];
 
+// Define blockchain node type
+interface BlockchainNode {
+  x: number;
+  y: number;
+  size: number;
+  connections: number[];
+  speed: number;
+  angle: number;
+}
+
 export default function Utilities() {
   const sectionRef = useRef<HTMLElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const articleRefs = useRef<(HTMLElement | null)[]>([]);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [nodes, setNodes] = useState<BlockchainNode[]>([]);
 
+  // Initialize blockchain animation
+  useEffect(() => {
+    if (
+      typeof window === "undefined" ||
+      !sectionRef.current ||
+      !canvasRef.current
+    )
+      return;
+
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    // Resize canvas to match section size
+    const resizeCanvas = () => {
+      const rect = sectionRef.current?.getBoundingClientRect();
+      if (rect) {
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+      }
+    };
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    // Generate initial nodes
+    const generateNodes = (): BlockchainNode[] => {
+      const newNodes: BlockchainNode[] = [];
+      const nodeCount = Math.floor((canvas.width * canvas.height) / 35000); // Adjusted density for cleaner look
+
+      for (let i = 0; i < nodeCount; i++) {
+        newNodes.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          size: 1.5 + Math.random() * 2.5, // Smaller nodes for cleaner appearance
+          connections: [],
+          speed: 0.5 + Math.random() * 0.5, // Slower movement for smoother animation
+          angle: Math.random() * Math.PI * 2,
+        });
+      }
+
+      // Create connections - fewer connections for cleaner look
+      for (let i = 0; i < newNodes.length; i++) {
+        const maxConnections = 2 + Math.floor(Math.random() * 2); // Fewer connections
+        const possibleConnections = [...Array(newNodes.length).keys()]
+          .filter(
+            (j) =>
+              j !== i &&
+              Math.hypot(
+                newNodes[j].x - newNodes[i].x,
+                newNodes[j].y - newNodes[i].y
+              ) < 150
+          ) // Only connect nearby nodes
+          .sort(() => 0.5 - Math.random())
+          .slice(0, maxConnections);
+
+        newNodes[i].connections = possibleConnections;
+      }
+
+      return newNodes;
+    };
+
+    const initialNodes = generateNodes();
+    setNodes(initialNodes);
+
+    // Animation function for blockchain background
+    const animateBlockchain = () => {
+      if (!ctx || !canvas) return;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Set more subtle styles
+      ctx.fillStyle = "rgba(255, 255, 255, 0.992)";
+      ctx.strokeStyle = "rgb(255, 255, 255)";
+      ctx.lineWidth = 0.8; // Thinner lines for cleaner look
+
+      initialNodes.forEach((node, i) => {
+        // Draw node
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.size, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Draw connections with subtle gradient
+        node.connections.forEach((targetIndex) => {
+          if (targetIndex >= initialNodes.length) return;
+
+          const target = initialNodes[targetIndex];
+          const gradient = ctx.createLinearGradient(
+            node.x,
+            node.y,
+            target.x,
+            target.y
+          );
+          gradient.addColorStop(0, "rgba(255, 255, 255, 0.08)");
+          gradient.addColorStop(1, "rgba(255, 255, 255, 0.04)");
+
+          ctx.beginPath();
+          ctx.strokeStyle = gradient;
+          ctx.moveTo(node.x, node.y);
+          ctx.lineTo(target.x, target.y);
+          ctx.stroke();
+        });
+
+        // Smoother node movement
+        initialNodes[i].angle += (Math.random() - 0.5) * 0.01;
+        initialNodes[i].x +=
+          Math.cos(initialNodes[i].angle) * initialNodes[i].speed;
+        initialNodes[i].y +=
+          Math.sin(initialNodes[i].angle) * initialNodes[i].speed;
+
+        // Keep nodes within bounds with smoother wrapping
+        if (initialNodes[i].x < -50) initialNodes[i].x = canvas.width + 50;
+        if (initialNodes[i].x > canvas.width + 50) initialNodes[i].x = -50;
+        if (initialNodes[i].y < -50) initialNodes[i].y = canvas.height + 50;
+        if (initialNodes[i].y > canvas.height + 50) initialNodes[i].y = -50;
+      });
+
+      requestAnimationFrame(animateBlockchain);
+    };
+
+    animateBlockchain();
+
+    return () => {
+      window.removeEventListener("resize", resizeCanvas);
+    };
+  }, []);
+
+  // Setup existing GSAP animations
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -125,15 +267,26 @@ export default function Utilities() {
     <section
       ref={sectionRef}
       aria-label="CYNQ Ai Utilities"
-      className="lg:px-20 p-14  flex flex-col items-center text-white"
+      className="lg:px-20 p-14 flex flex-col items-center text-white relative overflow-hidden"
     >
-      <header className="md:mb-20 sm:mb-16 mb-12 text-center">
+      {/* Refined Blockchain Background Canvas */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full pointer-events-none opacity-50"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 100%)",
+        }}
+        aria-hidden="true"
+      />
+
+      <header className="md:mb-20 sm:mb-16 mb-12 text-center relative z-10">
         <h1 className="text-white lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-medium">
           Utilities
         </h1>
       </header>
 
-      <div role="list" className="w-full max-w-[1000px]">
+      <div role="list" className="w-full max-w-[1000px] relative z-10">
         {utilitiesArray.map((util, i) => (
           <article
             key={i}
@@ -159,7 +312,7 @@ export default function Utilities() {
 
               {/* Image Container */}
               <div
-                className="order-1 w-full h-full sm:max-w-[500px] max-w-[300px] sm:max-h-[400px] max-h-[250px] relative rounded-xl overflow-clip image-container border-animation animate-glow"
+                className="order-1 bg-[#10081c] w-full h-full sm:max-w-[500px] max-w-[300px] sm:max-h-[400px] max-h-[250px] relative rounded-xl overflow-clip image-container border-animation animate-glow"
                 aria-hidden="true"
               >
                 <Image
@@ -185,7 +338,7 @@ export default function Utilities() {
                   quality={85}
                   width={670}
                   height={123}
-                  className="w-full connection-line h-full select-none"
+                  className="w-full  connection-line h-full select-none"
                 />
               </div>
             )}

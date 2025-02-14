@@ -36,7 +36,7 @@ export default function PredictiveAi() {
         words.forEach((word, index) => {
           const span = document.createElement("span");
           span.className = "word";
-          span.style.color = "#6f6f6f";
+          span.style.color = "#5b5a5a4f";
           span.style.display = "inline-block";
           span.textContent = word;
 
@@ -65,7 +65,7 @@ export default function PredictiveAi() {
         // Add the color animation to the timeline
         tl.fromTo(
           wordSpans,
-          { color: "#6f6f6f" },
+          { color: "#5b5a5a4f" },
           { color: "white", stagger: 0.05, duration: 1 }
         );
       }
