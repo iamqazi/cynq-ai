@@ -42,14 +42,16 @@ const HeroSection: React.FC = () => {
 
         {/* Main Content */}
         <div className="flex items-center justify-center text-white  py-8 mt-[34px] lg:py-0">
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-8  mx-[24px]  w-full">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 mx-[24px]  lg:mx-[150px]  w-full">
             {/* Left Side Content */}
             <div className="flex flex-col text-center lg:text-left justify-center space-y-4 lg:space-y-6">
               <h1 className="text-4xl md:text-6xl lg:text-[72px] leading-tight lg:leading-[78px] font-bold">
-                Cynq Ai
+                CYNQ Ai
               </h1>
               <p className="text-2xl md:text-5xl lg:text-[72px] leading-tight lg:leading-[78px] font-semibold">
-                The Future of{" "}
+                The Future of
+                {index === 0 && <br />}
+                {index === 0 ? "Crypto with" : ""}{" "}
                 <span className="relative inline-flex mr-1">
                   <motion.span
                     key={index}
@@ -62,9 +64,8 @@ const HeroSection: React.FC = () => {
                     {rotatingTexts[index]}
                   </motion.span>
                 </span>
-                <br></br>
-                Crypto Automation
               </p>
+
               <p className="text-lg md:text-2xl lg:text-[30px] leading-normal lg:leading-[36px] text-gray-300">
                 Trade Smarter. Invest Better. Automate Everything.
               </p>
@@ -81,7 +82,7 @@ const HeroSection: React.FC = () => {
                     Audit
                   </Button>
                   <Button className="relative flex bg-[#fff] w-full md:w-[188px] h-[44px] rounded-[8px] items-center justify-center gap-2 px-4 py-4 text-black font-medium sm:flex md:hidden lg:hidden">
-                    <Link href={'/staking'}>Staking</Link>
+                    <Link href={"/staking"}>Staking</Link>
                   </Button>
                 </div>
 
@@ -100,7 +101,7 @@ const HeroSection: React.FC = () => {
                   )}
                 </div>
               </div>
-              <div className="flex items-center gap-[10px]">
+              <div className="flex items-center gap-[10px] justify-center lg:justify-start">
                 <p className="text-[26px] text-white/70 leading-[27px] ">
                   Powered by{" "}
                 </p>

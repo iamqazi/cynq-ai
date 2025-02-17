@@ -13,6 +13,9 @@ import { Button } from "@nextui-org/react";
 const Header = () => {
   const [sideBarOpen, setSideBarOpen] = useState(false);
   const [optionOpen, setOptionOpen] = useState(false);
+  const handleClick = () => {
+    window.open("/whitepaper.pdf", "_blank");
+  };
   return (
     <header
       className={`sticky top-0 bg-black w-full  z-50 py-4 sm:px-6 px-3 flex justify-between items-center border-b border-white/15 text-sm `}
@@ -112,7 +115,10 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <Button className="lg:block hidden px-6 py-2 text-black rounded-lg transition-all duration-700 hover:rounded-sm bg-[#ffffff]">
+        <Button
+          onClick={handleClick}
+          className="lg:block hidden px-6 py-2 text-black rounded-lg transition-all duration-700 hover:rounded-sm bg-[#ffffff]"
+        >
           Whitepaper
         </Button>
         <button

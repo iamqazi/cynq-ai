@@ -144,3 +144,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .animate-glow:hover {
   transform: scale(1.05);
 }
+/* Hide spinner buttons in WebKit browsers (Chrome, Safari, Edge) */
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide spinner buttons in Firefox */
+.no-spinner {
+  -moz-appearance: textfield;
+}

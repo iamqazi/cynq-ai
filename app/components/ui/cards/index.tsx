@@ -16,7 +16,7 @@ export const TradingCard = ({ image }: TradingCardProps) => {
 
 export const TradingCardGrid = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-8">
+    <div className="grid lg:grid-cols-2 grid-cols-1 xl:grid-cols-4 gap-4 p-8">
       {cardData.map((card) => (
         <TradingCard key={card.title} image={card.image} title={card.title} />
       ))}
