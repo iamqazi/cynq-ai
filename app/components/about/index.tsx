@@ -49,23 +49,34 @@ export default function About() {
       </div>
 
       <div className="relative flex flex-col md:flex-row md:items-start items-center md:gap-[30px] text-center md:text-start">
-        <div className="about-content-item bg-[#160428] z-[1] h-[150px] w-[150px] md:h-[217px] md:w-[217px] border border-white/15 p-4 md:px-[16px] md:py-[12px] rounded-[20px] relative shadow-[0px_0px_150px_#9b4bfc]">
+        <div
+          className="relative bg-[#160428] border border-white/15 p-4 md:px-[16px] md:py-[12px] flex-shrink-0  rounded-[20px] shadow-[0px_0px_150px_#9b4bfc]
+          lg:h-[200px] lg:w-[200px]  md:h-[170px] md:w-[170px] h-[150px] w-[150px]"
+        >
+          <span className="xl:w-[900px] lg:w-[800px] md:w-[630px] w-[230px] h-[1px] bg-white/10 block absolute top-[-1px] left-2/4 lg:-translate-x-[17%] md:-translate-x-[20%] -translate-x-2/4 "></span>
+          <span className="xl:w-[900px] lg:w-[800px] md:w-[630px] w-[230px] h-[1px] bg-white/10 block absolute bottom-[-1px] left-2/4 lg:-translate-x-[17%] md:-translate-x-[20%] -translate-x-2/4 "></span>
+          <span className="w-[1px] lg:h-[270px] md:h-[230px]  h-[220px] bg-white/10 block absolute top-2/4 -translate-y-2/4 left-0 -translate-x-2/4 "></span>
+          <span
+            className="w-[1px] lg:h-[270px] md:h-[230px]  h-[220px] bg-white/10 block absolute top-2/4 -translate-y-2/4 right-[-1px] -translate-x-2/4 
+        "
+          ></span>
           <Image
             src={"/star.svg"}
             alt="star"
             height={150}
             width={150}
-            className="md:h-[200px] md:w-[200px]"
+            className="relative z-0 w-full h-full"
           />
         </div>
         <div className="about-content-item z-[2] mt-5 px-4 md:px-0 flex flex-col md:items-start items-center">
-          <p className="text-lg md:text-xl lg:text-2xl font-medium max-w-[280px] md:max-w-[330px]">
-            Lorem ipsum dolor sit amet consectetur. At leo fermentum at lectus
-            pellentesque purus hac.
+          <p className="text-lg md:text-xl lg:text-2xl font-medium max-w-[280px] md:max-w-[600px]">
+            Empowering the Future of Crypto Finance with AI-Powered Predictions,
+            Automated Trading, Cross- Chain Arbitrage, and Seamless Tax
+            Optimization – All Driven by Decentralized Intelligence.
           </p>
-          <p className="text-[12px] md:text-sm text-white/50 max-w-[260px] md:max-w-[310px] mt-1">
-            Lorem ipsum dolor sit amet consectetur. At leo fermentum at lectus
-            pellentesque purus hac.
+          <p className="text-[12px] md:text-sm text-white/50 max-w-[260px] md:max-w-[500px] mt-1">
+            Decentralized AI solutions for predictive market insights, automated
+            trading, seamless arbitrage, and optimized crypto tax management.
           </p>
         </div>
       </div>
