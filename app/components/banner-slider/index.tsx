@@ -24,16 +24,25 @@ const BannerAnimation = ({ theme }: { theme?: "light" | "dark" }) => {
   }, []);
 
   const technologies = [
-    { title: "React", image: "/slider-logo.png" },
-    { title: "Next.js", image: "/slider-logo.png" },
-    { title: "Node.js", image: "/slider-logo.png" },
-    { title: "TypeScript", image: "/slider-logo.png" },
-    { title: "Tailwind CSS", image: "/slider-logo.png" },
-    { title: "GraphQL", image: "/slider-logo.png" },
+    { title: "React", image: "/logo/analytics-insight.png" },
+    { title: "Next.js", image: "/logo/benzinga.png" },
+    { title: "Node.js", image: "/logo/bicoin.png" },
+    { title: "TypeScript", image: "/logo/business-insider.png" },
+    { title: "Tailwind CSS", image: "/logo/coinpedia-fintech-news.png" },
+    { title: "GraphQL", image: "/logo/cryptodaily.png" },
+    { title: "GraphQL", image: "/logo/cryptopolitans.png" },
+    { title: "GraphQL", image: "/logo/finbold.png" },
+    { title: "GraphQL", image: "/logo/investing.png" },
+    { title: "GraphQL", image: "/logo/newsbtc.png" },
+    { title: "GraphQL", image: "/logo/the-economic-times.png" },
+    { title: "GraphQL", image: "/logo/the-news-crypto.png" },
+    { title: "GraphQL", image: "/logo/the-times-of-india.png" },
   ];
 
   return (
-    <div className={`mt-[100px] sec-5-trigger ${backgroundClass} max-w-[1440px] mx-auto`}>
+    <div
+      className={`mt-[100px] sec-5-trigger ${backgroundClass} max-w-[1440px] mx-auto`}
+    >
       <div className="flex flex-col gap-8 md:gap-16 ">
         <div className="sec-5-move-anim relative top-[200px] flex flex-col gap-11 opacity-0 md:gap-16">
           <div className="h-[7.125rem]">
@@ -46,7 +55,7 @@ const BannerAnimation = ({ theme }: { theme?: "light" | "dark" }) => {
                   <Image
                     src={tech.image}
                     alt={tech.title}
-                    className="max-w-full"
+                    className="w-[150px] h-[50px] "
                     width={100}
                     height={100}
                   />

@@ -16,28 +16,33 @@ interface FAQItem {
 const FAQsArray: FAQItem[] = [
   {
     id: "9199",
-    question: "How can your strategies be customized for my needs?",
-    ans: "Repellendus quisquam explicabo facere, saepe eveniet in natus. Magni in alias reiciendis consequatur sequi.",
+    question: "What is CYNQAi?",
+    ans: "CYNQAi is an AI-powered, decentralized ecosystem that provides predictive market analytics, automated trading, cross-chain arbitrage execution, and crypto tax optimization.",
   },
   {
     id: "9198",
-    question: "How can your strategies be customized for my needs?",
-    ans: "Repellendus quisquam explicabo facere, saepe eveniet in natus. Magni in alias reiciendis consequatur sequi.Repellendus quisquam explicabo facere, saepe eveniet in natus. Magni in alias reiciendis consequatur sequi.",
+    question: "How does CYNQAi's Predictive AI work?",
+    ans: "Our machine learning models analyze market trends, social sentiment, and on-chain data to provide real-time, high-accuracy crypto price forecasts.",
   },
   {
     id: "9197",
-    question: "How can your strategies be customized for my needs?",
-    ans: "Repellendus quisquam explicabo facere, saepe eveniet in natus. Magni in alias.",
+    question: "What is the AI-Powered Crypto Trading Assistant?",
+    ans: "CYNQAi’s AI trading bot executes trades 24/7, manages risk, and optimizes portfolios without human emotions—perfect for both beginners and pro traders.",
   },
   {
     id: "9196",
-    question: "How can your strategies be customized for my needs?",
-    ans: "Repellendus quisquam explicabo facere, saepe eveniet in natus. Magni in alias reiciendis consequatur sequi.Repellendus quisquam explicabo facere, saepe eveniet in natus. Magni in alias reiciendis consequatur sequi.Repellendus quisquam explicabo facere, saepe eveniet in natus. Magni in alias reiciendis consequatur sequi.",
+    question: "How does the AI Arbitrage Bot generate profits?",
+    ans: "The AI bot scans multiple exchanges for price differences and executes instant trades to capture risk-free arbitrage profits across Ethereum, BSC, Solana, and more.",
   },
   {
     id: "9195",
-    question: "How can your strategies be customized for my needs?",
-    ans: "Repellendus quisquam explicabo facere, saepe eveniet in natus. Magni in alias reiciendis consequatur sequi.Repellendus quisquam explicabo facere, saepe eveniet.",
+    question: "Can CYNQAi help with crypto taxes?",
+    ans: "Yes! Our AI Tax Optimization Tool automates tax tracking, generates reports, and suggests tax-loss harvesting strategies to reduce liabilities and ensure compliance.",
+  },
+  {
+    id: "9190",
+    question: "How can I participate in the CYNQAi ecosystem?",
+    ans: "You can stake $CYNQAi tokens to earn rewards, access premium AI analytics, and participate in decentralized governance through the CYNQAi DAO.",
   },
 ];
 
@@ -187,7 +192,7 @@ export function Question({
             ref={answerRef}
             className="pl-3 sm:pl-6 pr-6 md:w-[90%] font-thin text-sm md:text-base text-white/70"
           >
-            Ans. {ans}
+            {ans}
           </p>
         </section>
       </div>
