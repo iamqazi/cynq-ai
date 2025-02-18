@@ -137,8 +137,8 @@ export default function Utilities() {
             target.x,
             target.y
           );
-          gradient.addColorStop(0, "rgba(255, 255, 255, 0.08)");
-          gradient.addColorStop(1, "rgba(255, 255, 255, 0.04)");
+          gradient.addColorStop(0, "rgb(0, 0, 0)");
+          gradient.addColorStop(1, "rgb(0, 0, 0)");
 
           ctx.beginPath();
           ctx.strokeStyle = gradient;
@@ -312,7 +312,7 @@ export default function Utilities() {
 
               {/* Image Container */}
               <div
-                className="order-1 bg-[#10081c] w-full h-full sm:max-w-[500px] max-w-[300px] sm:max-h-[400px] max-h-[250px] relative rounded-xl overflow-clip image-container border-animation animate-glow"
+                className="order-1 bg-[#10081c] w-full h-full sm:max-w-[500px] max-w-[300px] sm:max-h-[400px] max-h-[250px] relative rounded-xl overflow-clip image-container border-animation border-[2px] shadow-md shadow-white/80 "
                 aria-hidden="true"
               >
                 <Image

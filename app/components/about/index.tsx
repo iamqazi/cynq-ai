@@ -40,16 +40,12 @@ export default function About() {
   return (
     <section
       ref={aboutRef}
-      className="relative flex flex-col items-center min-h-screen text-white bg-black pb-16 sm:pt-8 px-4 md:px-8 lg:px-16"
+      className="relative flex flex-col items-center min-h-screen text-white bg-black pb-16 sm:pt-8 px-4 md:px-8 lg:px-0"
     >
       <div className="about-content-item max-w-3xl text-center pb-[50px] md:pb-[80px] lg:pb-[100px] items-center flex flex-col">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-          About Cnyq
+          About CNYQ
         </h2>
-        <p className="text-[16px] md:text-[18px] lg:text-[20px] text-white/70 text-center max-w-[80%] sm:max-w-[330px] md:max-w-[420px] mt-2">
-          Lorem ipsum dolor sit amet consectetur. At leo fermentum at lectus
-          pellentesque purus hac.
-        </p>
       </div>
 
       <div className="relative flex flex-col md:flex-row md:items-start items-center md:gap-[30px] text-center md:text-start">
@@ -74,7 +70,7 @@ export default function About() {
         </div>
       </div>
 
-      <section className="mt-[100px] about-content-item">
+      <section className="mt-[100px] max-w-[1340px] flex justify-center mx-auto about-content-item">
         <TradingCardGrid />
       </section>
     </section>
