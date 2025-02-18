@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Button } from "@nextui-org/react";
+import ReferralModal from "./form";
 
 const CryptoPurchaseUI = () => {
   const [selected, setSelected] = useState<string>("ETH");
   const [selectedButton, setSelectedButton] = useState<string>("one");
+  const [isReferralModalOpen, setIsReferralModalOpen] = useState(false);
   return (
     <div className="relative flex items-center justify-center lg:justify-end ">
       <div
@@ -192,11 +194,17 @@ const CryptoPurchaseUI = () => {
               Connect Wallet
             </Button>
 
-            <Button className="w-[207px] bg-transparent border h-[54px] border-gray-600 text-white rounded-[64px] py-4 font-medium hover:bg-purple-800/20 transition-colors">
+            <Button
+              className="w-[207px] bg-transparent border h-[54px] border-gray-600 text-white rounded-[64px] py-4 font-medium hover:bg-purple-800/20 transition-colors"
+              onClick={() => setIsReferralModalOpen(true)}
+            >
               Refer a friend
             </Button>
           </div>
-
+          <ReferralModal
+            isOpen={isReferralModalOpen}
+            onClose={() => setIsReferralModalOpen(false)}
+          />
           <div className=" items-center justify-center mt-[16px] flex">
             <Button className=" text-gray-400 text-sm flex items-center justify-center gap-2">
               <span>

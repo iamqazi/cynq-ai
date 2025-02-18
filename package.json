@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@hookform/resolvers": "^4.1.0",
     "@nextui-org/react": "^2.6.11",
     "framer-motion": "^12.4.0",
     "gsap": "^3.12.7",
@@ -20,10 +21,13 @@
     "react-country-flag": "^3.1.0",
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",
+    "react-hook-form": "^7.54.2",
+    "react-hot-toast": "^2.5.2",
     "react-select": "^5.10.0",
     "react-world-flags": "^1.6.0",
     "recharts": "^2.15.1",
-    "swiper": "^11.2.2"
+    "swiper": "^11.2.2",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
