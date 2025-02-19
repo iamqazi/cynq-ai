@@ -63,17 +63,17 @@ const renderCustomizedLabel = ({
   const x = cx + radius * Math.cos(-midAngle * RADIAN);
   const y = cy + radius * Math.sin(-midAngle * RADIAN);
   // Wrap the label text (using a max of 15 characters per line, adjust as needed)
-  const labelLines = wrapText(data[index].name, 15);
+  const labelLines = wrapText(data[index].name, 20);
   return (
     <text
       x={x}
       y={y}
       fill="#FFFFFF"
       textAnchor={x > cx ? "start" : "end"}
-      className="md:text-xl sm:text-lg text-white"
+      className="md:text-[23px] sm:text-lg text-white"
     >
       {labelLines.map((line, i) => (
-        <tspan key={i} x={x} dy={i === 0 ? "0" : "1.2em"}>
+        <tspan key={i} x={x} dy={i === 0 ? ".5rem" : "1.2em"}>
           {line}
         </tspan>
       ))}
@@ -125,41 +125,53 @@ const PieChartWithLabels: React.FC = () => {
           <h3 className="md:text-4xl sm:text-3xl text-2xl font-semibold mb-5">
             Token Details
           </h3>
-          <div className="flex flex-col gap-3 p-5 border font-thin border-white/15 rounded-xl text-white/70">
-            <span>
+          <div className="flex flex-col gap-3 p-5 border w-[400px] font-thin border-white/15 rounded-xl text-white/70">
+            <span className="text-[26px]">
               Token Name:{" "}
-              <span className="font-semibold text-white">CYNQAI</span>
+              <span className="font-semibold text-white text-[26px] ">
+                CYNQAI
+              </span>
             </span>
             <hr className="border-b border-white/15" />
-            <span>
+            <span className="text-[26px]">
               Token Ticker:{" "}
-              <span className="font-semibold text-white">$CYNQAI</span>
+              <span className="font-semibold text-white text-[26px] ">
+                $CYNQAI
+              </span>
             </span>
             <hr className="border-b border-white/15" />
-            <span>
-              Chain: <span className="font-semibold text-white">Ethereum</span>
+            <span className="text-[26px]">
+              Chain:{" "}
+              <span className="font-semibold text-white text-[26px] ">
+                Ethereum
+              </span>
             </span>
             <hr className="border-b border-white/15" />
-            <span>
+            <span className="text-[26px]">
               Contract:{" "}
-              <span className="font-semibold text-white">To Be Announced</span>
+              <span className="font-semibold text-white text-[26px] ">
+                To Be Announced
+              </span>
             </span>
             <hr className="border-b border-white/15" />
-            <span>
+            <span className="text-[26px]">
               Supply: 
-              <span className="font-semibold text-white">10,000,000,000</span>
+              <span className="font-semibold text-white text-[26px] ">
+                10,000,000,000
+              </span>
             </span>
             <hr className="border-b border-white/15" />
-            <span>
-              Decimals: <span className="font-semibold text-white">9</span>
+            <span className="text-[26px]">
+              Decimals: 
+              <span className="font-semibold text-white text-[26px] ">9</span>
             </span>
           </div>
         </div>
         {isInView ? (
           <PieChart
-            width={chartWidth}
-            height={chartHeight}
-            className=" mx-auto pie-responsive relative"
+            width={600}
+            height={500}
+            className="mx-auto top-[-20px] pie-responsive relative"
           >
             {/* Define the linear gradient in an SVG <defs> block */}
             <defs>
@@ -169,18 +181,18 @@ const PieChartWithLabels: React.FC = () => {
               </linearGradient>
             </defs>
             <Pie
+              className="w-[130%]"
               data={data}
-              cx={cx} // Center X-coordinate
-              cy={cy} // Center Y-coordinate
+              cx={300} // Adjusted to half of new width
+              cy={235} // Adjusted to half of new height
               innerRadius={innerRadius}
               outerRadius={outerRadius}
               dataKey="value"
               label={renderCustomizedLabel}
-              labelLine={false} // Disables connector lines
-              stroke="none" // Removes border lines between slices
-              // Rotate the pie chart:
-              startAngle={90} // The starting angle (in degrees)
-              endAngle={-270} // The ending angle (in degrees)
+              labelLine={false}
+              stroke="none"
+              startAngle={90}
+              endAngle={-270}
               isAnimationActive={true}
               animationDuration={700}
             >
@@ -194,18 +206,18 @@ const PieChartWithLabels: React.FC = () => {
             </Pie>
 
             {/* SVG image element placed in the center of the chart */}
-
             <image
-              x={imageX}
-              y={imageY}
+              x={300 - imageWidth / 2} // Centered based on new width
+              y={250 - imageHeight / 2} // Centered based on new height
               width={imageWidth}
               height={imageHeight}
-              href="/cyanaiPie.gif" // Make sure this path is correct
+              href="/cyanaiPie.gif"
             />
+
             {/* SVG Gradient element placed in the center of the chart */}
             <image
-              x={cx - 400 / 2 - 5}
-              y={cy - 400 / 2}
+              x={300 - 400 / 2 - 5} // Centered based on new width
+              y={250 - 400 / 2} // Centered based on new height
               width={400}
               height={400}
               href="/pieGradient.svg"
@@ -213,8 +225,8 @@ const PieChartWithLabels: React.FC = () => {
           </PieChart>
         ) : (
           <div
-            style={{ width: chartWidth, height: chartHeight }}
-            className=" mx-auto pie-responsive relative"
+            style={{ width: 600, height: 500 }}
+            className="mx-auto pie-responsive relative"
           ></div>
         )}
       </section>

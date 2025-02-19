@@ -48,10 +48,8 @@ const HeroSection: React.FC = () => {
               <h1 className="text-4xl md:text-6xl lg:text-[72px] leading-tight lg:leading-[78px] font-bold">
                 CYNQ Ai
               </h1>
-              <p className="text-2xl md:text-5xl lg:text-[72px] leading-tight lg:leading-[78px] font-semibold">
-                The Future of
-                {index === 0 && <br />}
-                {index === 0 ? "Crypto with" : ""}{" "}
+              <p className="text-2xl md:text-5xl lg:text-[55px] leading-tight lg:leading-[55px] font-semibold">
+                The Future of {index === 0 ? "Crypto with" : "Crypto with"}{" "}
                 <span className="relative inline-flex mr-1">
                   <motion.span
                     key={index}
@@ -66,13 +64,13 @@ const HeroSection: React.FC = () => {
                 </span>
               </p>
 
-              <p className="text-lg md:text-2xl lg:text-[30px] leading-normal lg:leading-[36px] text-gray-300">
+              <p className="text-md md:text-2xl lg:text-[30px] leading-normal lg:leading-[36px] text-gray-300">
                 Trade Smarter. Invest Better. Automate Everything.
               </p>
 
               <div className="flex flex-col justify-center lg:justify-start lg:flex-row lg:items-center gap-4 lg:gap-[28px] items-center  mt-2">
                 <div className="flex gap-4">
-                  <Button className="relative flex bg-[#7B15F8] w-[188px] h-[44px] rounded-[8px] items-center justify-center gap-2 px-4 py-4 text-white font-medium">
+                  <Button className="relative flex bg-[#7B15F8] w-[100px] md:w-[188px] h-[44px] rounded-[8px] items-center justify-center gap-2 px-4 py-4 text-white font-medium">
                     <Image
                       src={"/Vector.png"}
                       height={20}
@@ -81,12 +79,12 @@ const HeroSection: React.FC = () => {
                     />{" "}
                     Audit
                   </Button>
-                  <Button className="relative flex bg-[#fff] w-full md:w-[188px] h-[44px] rounded-[8px] items-center justify-center gap-2 px-4 py-4 text-black font-medium sm:flex md:hidden lg:hidden">
+                  <Button className="relative flex bg-[#fff] w-[100px] h-[44px] rounded-[8px] items-center justify-center gap-2  py-4 text-black font-medium sm:flex md:hidden lg:hidden">
                     <Link href={"/staking"}>Staking</Link>
                   </Button>
                 </div>
 
-                <div className="flex items-center gap-4 flex-wrap sm:flex-nowrap">
+                <div className="md:flex hidden sm:block items-center gap-4 flex-wrap ">
                   {["/one.png", "/second.png", "/three.png", "/last.png"].map(
                     (src, index) => (
                       <Image
@@ -102,7 +100,7 @@ const HeroSection: React.FC = () => {
                 </div>
               </div>
               <div className="flex items-center gap-[10px] justify-center lg:justify-start">
-                <p className="text-[26px] text-white/70 leading-[27px] ">
+                <p className="text-[20px] md:text-[26px] text-white/70 leading-[27px] ">
                   Powered by{" "}
                 </p>
                 <Image

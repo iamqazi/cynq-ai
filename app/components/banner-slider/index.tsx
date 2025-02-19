@@ -24,12 +24,19 @@ const BannerAnimation = ({ theme }: { theme?: "light" | "dark" }) => {
   }, []);
 
   const technologies = [
-    { title: "React", image: "/slider-logo.png" },
-    { title: "Next.js", image: "/slider-logo.png" },
-    { title: "Node.js", image: "/slider-logo.png" },
-    { title: "TypeScript", image: "/slider-logo.png" },
-    { title: "Tailwind CSS", image: "/slider-logo.png" },
-    { title: "GraphQL", image: "/slider-logo.png" },
+    { title: "React", image: "/logo/analytics-insight.png" },
+    { title: "Next.js", image: "/logo/benzinga.png" },
+    { title: "Node.js", image: "/logo/bicoin.png" },
+    { title: "TypeScript", image: "/logo/business-insider.png" },
+    { title: "Tailwind CSS", image: "/logo/coinpedia-fintech-news.png" },
+    { title: "GraphQL", image: "/logo/cryptodaily.png" },
+    { title: "GraphQL", image: "/logo/cryptopolitans.png" },
+    { title: "GraphQL", image: "/logo/finbold.png" },
+    { title: "GraphQL", image: "/logo/investing.png" },
+    { title: "GraphQL", image: "/logo/newsbtc.png" },
+    { title: "GraphQL", image: "/logo/the-economic-times.png" },
+    { title: "GraphQL", image: "/logo/the-news-crypto.png" },
+    { title: "GraphQL", image: "/logo/the-times-of-india.png" },
   ];
 
   return (
@@ -48,7 +55,7 @@ const BannerAnimation = ({ theme }: { theme?: "light" | "dark" }) => {
                   <Image
                     src={tech.image}
                     alt={tech.title}
-                    className="max-w-full"
+                    className="w-[150px] h-[50px] "
                     width={100}
                     height={100}
                   />

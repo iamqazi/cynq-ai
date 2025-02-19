@@ -8,51 +8,42 @@ const dummyData = [
   {
     heading: "Q1 2025",
     points: [
-      "Define project scope",
-      "Identify key stakeholders",
-      "Set clear objectives",
-      "Develop a roadmap",
-      "Allocate resources efficiently",
+      "Predictive AI Development & Testing",
+      "Blockchain & Predictive AI Smart Contracts Deployment",
+      "Predictive AI Beta Testing & Staking Program",
+      "Predictive AI Deployment",
+      "Public Predictive AI Launch",
     ],
   },
   {
     heading: "Q2 2025",
     points: [
-      "Create wireframes",
-      "Develop UI/UX designs",
-      "Gather client feedback",
-      "Refine based on inputs",
-      "Finalize the prototype",
+      "AI Model Development & Training",
+      "Infrastructure & Smart Contracts",
+      "Beta Testing & Security Audits",
+      "Public Release of AI Trading Assistant",
+      "AI Trading Beta Launch",
     ],
   },
   {
     heading: "Q3 2025",
     points: [
-      "Set up development environment",
-      "Write clean and scalable code",
-      "Implement core functionalities",
-      "Integrate APIs and databases",
-      "Conduct unit testing",
+      "Arbitrage Algorithm & AI Model Training",
+      "Multi-Chain Arbitrage Smart Contracts Deployment",
+      "Public Beta Testing & Liquidity Optimization",
+      "Public Arbitrage Bot Launch & Profit-Sharing Model",
+      "AI-Optimized Cross-Chain Arbitrage Bot",
     ],
   },
   {
     heading: "Q4 2025",
     points: [
-      "Perform functional testing",
-      "Fix identified bugs",
-      "Ensure compatibility across devices",
-      "Conduct performance testing",
-      "Receive final approval",
-    ],
-  },
-  {
-    heading: "Q5 2025",
-    points: [
-      "Deploy to production",
-      "Monitor system performance",
-      "Fix any post-launch issues",
-      "Provide ongoing support",
-      "Plan for future updates",
+      "Investment DAO & Tax Optimization Tool",
+      "Governance & Staking Launch",
+      "AI Investment Strategy & Portfolio Automation",
+      "AI Tax Optimization Tool Beta Release",
+      "Full Public Launch of Investment DAO & Tax Tool",
+      "AI Trading Beta Launch",
     ],
   },
 ];
@@ -173,11 +164,11 @@ const DevelopmentProcessLg = ({ data = dummyData }) => {
           <div className="dep-left flex h-fit w-full relative flex-[0.5] flex-col pb-[5rem]">
             <Image
               ref={imageRef}
-              src={"/image-8.svg"}
+              src={"/cyanaiPie.gif"}
               alt="img"
               height={100}
               width={100}
-              className="w-[200px] h-[200px] md:w-[500px] md:h-[500px] absolute top-[-120px] md:top-[-240px] right-[20px] md:right-[10px] cursor-pointer"
+              className="w-[200px] h-[200px] md:w-[300px] md:h-[300px] absolute top-[-120px] md:top-[-120px] right-[20px] md:right-[50px] cursor-pointer"
               style={{ transformOrigin: "center center" }}
             />
           </div>
@@ -195,15 +186,22 @@ const DevelopmentProcessLg = ({ data = dummyData }) => {
                     <h4 className="text-[24px] md:text-[36px] font-[700] font-metro-semi-bold text-white">
                       {item.heading}
                     </h4>
-                    <span className="px-4 py-1 bg-yellow-500 text-black font-[700] rounded-full text-[14px] md:text-[16px] w-fit">
-                      IN PROGRESS
+
+                    <span
+                      className={`px-4 py-1 font-[700] rounded-full text-[14px] md:text-[16px] w-fit ${
+                        index === 0
+                          ? "bg-yellow-500 text-black"
+                          : "bg-gray-400 text-black"
+                      }`}
+                    >
+                      {index === 0 ? " IN PROGRESS" : "TO DO"}
                     </span>
                   </div>
                   <ul className="py-4 md:py-6 text-sm md:text-base text-white space-y-2">
                     {item.points.map((point, idx) => (
                       <li key={idx} className="flex items-center gap-2">
                         <Image
-                          src={idx < 3 ? "/filled.svg" : "/unfilled.svg"}
+                          src={idx < 3 ? "/unfilled.svg" : "/unfilled.svg"}
                           alt="Tick Icon"
                           height={20}
                           width={20}

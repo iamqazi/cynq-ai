@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Button } from "@nextui-org/react";
+import ReferralModal from "./form";
 
 const CryptoPurchaseUI = () => {
   const [selected, setSelected] = useState<string>("ETH");
   const [selectedButton, setSelectedButton] = useState<string>("one");
+  const [isReferralModalOpen, setIsReferralModalOpen] = useState(false);
   return (
     <div className="relative flex items-center justify-center lg:justify-end ">
       <div
@@ -54,9 +56,12 @@ const CryptoPurchaseUI = () => {
             Raised :<span className="text-[#A983E6]">200000/350000</span>
           </p>
           <div className="flex items-center mt-[1rem] justify-between bg-white/10 text-white px-6 py-[10px] ">
-            <p className="text-[14px] font-[500] flex flex-col items-center text-white">
+            <p className="text-[14px] hidden sm:block font-[500] md:flex flex-col items-center text-white">
               Your purchased CYNQ{" "}
               <span className="text-[#936DFF]">857387659</span>
+            </p>
+            <p className="text-[12px] sm:flex md:hidden lg:hidden  font-[500] flex flex-col items-center text-white">
+              Purchased $CYNQ <span className="text-[#936DFF]">857387659</span>
             </p>
             <Image
               src={"/Line.svg"}
@@ -65,9 +70,12 @@ const CryptoPurchaseUI = () => {
               width={10}
               alt="image"
             />
-            <p className="text-[14px] font-[500] flex flex-col items-center text-white">
+            <p className="text-[14px] hidden sm:block font-[500] md:flex flex-col items-center text-white">
               Your Stackable CYNQ{" "}
               <span className="text-[#936DFF]"> 4409859</span>
+            </p>
+            <p className="text-[12px] sm:flex md:hidden lg:hidden font-[500] flex flex-col items-center text-white">
+              Stackable $CYNQ <span className="text-[#936DFF]"> 4409859</span>
             </p>
           </div>
           <div className="flex w-full gap-[10px] mt-[18px] mb-[15px] items-center">
@@ -99,15 +107,17 @@ const CryptoPurchaseUI = () => {
               height={1}
               width={100}
               alt="image"
-              className="h-[1px]"
+              className="h-[1px] w-[70px] md:w-[100px] "
             />
-            <p className="text-[12px] text-white ">01 CYNQ = 0.001$</p>
+            <p className="text-[10px] md:text-[12px] text-white ">
+              01 CYNQ = 0.001$
+            </p>
             <Image
               src={"/line1.png"}
               height={1}
               width={100}
               alt="image"
-              className="h-[1px]"
+              className="h-[1px] w-[70px] md:w-[100px]"
             />
           </div>
 
@@ -116,7 +126,7 @@ const CryptoPurchaseUI = () => {
               <label className="text-white text-[18px] leading-[19px] mb-[5px] block">
                 Pay with {selected}
               </label>
-              <div className="bg-transparent rounded-[70px] h-[50px] px-4 flex items-center justify-between border border-white/15">
+              <div className="bg-transparent rounded-[70px] h-[50px] px-1 md:px-4 flex items-center justify-between border border-white/15">
                 <div className="flex items-center gap-2">
                   <Image
                     src={selected === "ETH" ? "/icons2.png" : "/usdt.png"}
@@ -130,7 +140,7 @@ const CryptoPurchaseUI = () => {
                 <input
                   type="number"
                   defaultValue="0.004"
-                  className="bg-transparent text-white !text-right focus:ring-0 focus:outline-none outline-none w-full pr-4 no-spinner"
+                  className="bg-transparent text-white !text-right focus:ring-0 focus:outline-none outline-none w-full pr-1 md:pr-4 no-spinner"
                 />
               </div>
             </div>
@@ -139,7 +149,7 @@ const CryptoPurchaseUI = () => {
               <label className="text-white text-[18px] leading-[19px] mb-[5px] block">
                 Receive $CYNQ
               </label>
-              <div className="bg-transparent rounded-[70px] h-[50px] px-4 flex items-center justify-between border border-white/15">
+              <div className="bg-transparent rounded-[70px] h-[50px] px-2 md:px-4 flex items-center justify-between border border-white/15">
                 <div className="flex items-center gap-2">
                   <Image
                     src="/receive.png"
@@ -154,8 +164,8 @@ const CryptoPurchaseUI = () => {
               </div>
             </div>
           </div>
-          <p className="text-white text-[12px] py-4 text-center leading-[14px] font-[400] ">
-            Listing Price :
+          <p className="text-white text-[16px] py-4 text-center leading-[14px] font-[400] ">
+            Listing Price :{" "}
             <span className="text-[#A983E6]">$0.05 (+5000%)</span>
           </p>
 
@@ -191,11 +201,17 @@ const CryptoPurchaseUI = () => {
               Connect Wallet
             </Button>
 
-            <Button className="w-[207px] bg-transparent border h-[54px] border-gray-600 text-white rounded-[64px] py-4 font-medium hover:bg-purple-800/20 transition-colors">
+            <Button
+              className="w-[207px] bg-transparent border h-[54px] border-gray-600 text-white rounded-[64px] py-4 font-medium hover:bg-purple-800/20 transition-colors"
+              onClick={() => setIsReferralModalOpen(true)}
+            >
               Refer a friend
             </Button>
           </div>
-
+          <ReferralModal
+            isOpen={isReferralModalOpen}
+            onClose={() => setIsReferralModalOpen(false)}
+          />
           <div className=" items-center justify-center mt-[16px] flex">
             <Button className=" text-gray-400 text-sm flex items-center justify-center gap-2">
               <span>
@@ -219,7 +235,7 @@ const CryptoPurchaseUI = () => {
                   className="opacity-50"
                 />
               </span>{" "}
-              Help, My Wallet Won&apos;t Connect!
+              My Wallet Won&apos;t Connect!
             </Button>
           </div>
         </div>

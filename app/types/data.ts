@@ -2,19 +2,19 @@ import { articleType, CardData } from "./types";
 
 export const cardData: CardData[] = [
   {
-    image: "/img-one.png",
+    image: "/ones.png",
     title: "AI-Powered Crypto Trading Assistant",
   },
   {
-    image: "/Overlay.png",
+    image: "/twos.png",
     title: "Real-Time Market Insights",
   },
   {
-    image: "/two.png",
+    image: "/threes.png",
     title: "Portfolio Optimization Tools",
   },
   {
-    image: "/img-three.png",
+    image: "/fours.png",
     title: "Advanced Risk Analysis",
   },
 ];

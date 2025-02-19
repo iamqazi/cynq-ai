@@ -11,6 +11,14 @@ const links = [
     link: "/",
   },
   {
+    text: "Predictive Ai",
+    link: "/predictive-ai",
+  },
+  {
+    text: "Ai Trading",
+    link: "/ai-assistant",
+  },
+  {
     text: "Ai Arbitrage",
     link: "/ai-arbitrage",
   },
@@ -18,14 +26,7 @@ const links = [
     text: "Ai Tax Tool",
     link: "/ai-tax-tool",
   },
-  {
-    text: "Ai Assistant",
-    link: "/ai-assistant",
-  },
-  {
-    text: "Predictive Ai",
-    link: "/predictive-ai",
-  },
+
   {
     text: "Staking",
     link: "/staking",
