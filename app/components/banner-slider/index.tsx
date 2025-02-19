@@ -24,19 +24,14 @@ const BannerAnimation = ({ theme }: { theme?: "light" | "dark" }) => {
   }, []);
 
   const technologies = [
-    { title: "React", image: "/logo/analytics-insight.png" },
-    { title: "Next.js", image: "/logo/benzinga.png" },
-    { title: "Node.js", image: "/logo/bicoin.png" },
-    { title: "TypeScript", image: "/logo/business-insider.png" },
-    { title: "Tailwind CSS", image: "/logo/coinpedia-fintech-news.png" },
-    { title: "GraphQL", image: "/logo/cryptodaily.png" },
-    { title: "GraphQL", image: "/logo/cryptopolitans.png" },
-    { title: "GraphQL", image: "/logo/finbold.png" },
-    { title: "GraphQL", image: "/logo/investing.png" },
-    { title: "GraphQL", image: "/logo/newsbtc.png" },
-    { title: "GraphQL", image: "/logo/the-economic-times.png" },
-    { title: "GraphQL", image: "/logo/the-news-crypto.png" },
-    { title: "GraphQL", image: "/logo/the-times-of-india.png" },
+    { title: "React", image: "/icons/analytics-insight.png" },
+    { title: "Tailwind CSS", image: "/icons/coinpedia-fintech-news.png" },
+    { title: "GraphQL", image: "/icons/cryptodaily.png" },
+    { title: "GraphQL", image: "/icons/crypto-com.png" },
+    // { title: "GraphQL", image: "/icons/finbold.png" },
+    // { title: "GraphQL", image: "/icons/investing.png" },
+    { title: "GraphQL", image: "/icons/news-btc.png" },
+    // { title: "GraphQL", image: "/icons/the-news-crypto.png" },
   ];
 
   return (

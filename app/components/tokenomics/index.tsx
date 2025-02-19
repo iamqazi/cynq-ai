@@ -112,7 +112,7 @@ const PieChartWithLabels: React.FC = () => {
         <div
           className={` ${
             isInView ? "opacity-100" : "opacity-0 translate-y-10"
-          } transition-all flex flex-col justify-center  mb-[100px] duration-[1500ms] sm:text-xl md:text-2xl flex-1 `}
+          } transition-all items-center flex flex-col justify-center  mb-[100px] duration-[1500ms] sm:text-xl md:text-2xl flex-1 `}
         >
           <h3 className="md:text-4xl sm:text-3xl text-2xl font-semibold mb-5">
             Token Details
