@@ -88,11 +88,6 @@ const PieChartWithLabels: React.FC = () => {
   const pieChartSection = useRef<HTMLDivElement>(null);
   const isInView = useInView(pieChartSection, { amount: 0.3 });
 
-  // Define chart dimensions and center coordinates.
-  const chartWidth = 600;
-  const chartHeight = 600;
-  const cx = chartWidth / 2; // center x-coordinate
-  const cy = chartHeight / 2; // center y-coordinate
   const innerRadius = 140;
   const outerRadius = 187.5;
 
@@ -100,9 +95,6 @@ const PieChartWithLabels: React.FC = () => {
   const imageWidth = 200;
   const imageHeight = 200;
 
-  // Calculate image position so that it is centered in the hole.
-  const imageX = cx - imageWidth / 2 + 5;
-  const imageY = cy - imageHeight / 2;
   return (
     <section
       className=" sm:py-14 py-8 px-2 sm:px-5  text-white overflow-hidden relative z-[1] max-w-[1440px] mx-auto  "
@@ -126,44 +118,46 @@ const PieChartWithLabels: React.FC = () => {
             Token Details
           </h3>
           <div className="flex flex-col gap-3 p-5 border w-[400px] font-thin border-white/15 rounded-xl text-white/70">
-            <span className="text-[26px]">
+            <span className="text-[18px] md:text-[26px]">
               Token Name:{" "}
-              <span className="font-semibold text-white text-[26px] ">
+              <span className="font-semibold text-white text-[18px] md:text-[26px] ">
                 CYNQAI
               </span>
             </span>
             <hr className="border-b border-white/15" />
-            <span className="text-[26px]">
+            <span className="text-[18px] md:text-[26px]">
               Token Ticker:{" "}
-              <span className="font-semibold text-white text-[26px] ">
+              <span className="font-semibold text-white text-[18px] md:text-[26px] ">
                 $CYNQAI
               </span>
             </span>
             <hr className="border-b border-white/15" />
-            <span className="text-[26px]">
+            <span className="text-[18px] md:text-[26px]">
               Chain:{" "}
-              <span className="font-semibold text-white text-[26px] ">
+              <span className="font-semibold text-white text-[18px] md:text-[26px] ">
                 Ethereum
               </span>
             </span>
             <hr className="border-b border-white/15" />
-            <span className="text-[26px]">
+            <span className="text-[18px] md:text-[26px]">
               Contract:{" "}
-              <span className="font-semibold text-white text-[26px] ">
+              <span className="font-semibold text-white text-[18px] md:text-[26px] ">
                 To Be Announced
               </span>
             </span>
             <hr className="border-b border-white/15" />
-            <span className="text-[26px]">
+            <span className="text-[18px] md:text-[26px]">
               Supply: 
-              <span className="font-semibold text-white text-[26px] ">
+              <span className="font-semibold text-white text-[18px] md:text-[26px] ">
                 10,000,000,000
               </span>
             </span>
             <hr className="border-b border-white/15" />
-            <span className="text-[26px]">
+            <span className="text-[18px] md:text-[26px]">
               Decimals: 
-              <span className="font-semibold text-white text-[26px] ">9</span>
+              <span className="font-semibold text-white text-[18px] md:text-[26px] ">
+                9
+              </span>
             </span>
           </div>
         </div>
