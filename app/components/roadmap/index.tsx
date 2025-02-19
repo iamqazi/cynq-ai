@@ -52,7 +52,7 @@ const Roadmap = ({ data = dummyData }) => {
         RoadMap
       </h1>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6 max-w-[1440px] mx-auto ">
         {data.map((item, index) => (
           <div
             key={index}
