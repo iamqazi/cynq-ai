@@ -69,10 +69,10 @@ export default function About() {
           />
         </div>
         <div className="about-content-item z-[2] mt-5 px-4 md:px-0 flex flex-col md:items-start items-center">
-          <p className="text-lg md:text-xl lg:text-2xl font-medium max-w-[280px] md:max-w-[600px]">
-            Empowering the Future of Crypto Finance with AI-Powered Predictions,
-            Automated Trading, Cross- Chain Arbitrage, and Seamless Tax
-            Optimization – All Driven by Decentralized Intelligence.
+          <p className="text-lg md:text-xl lg:text-2xl font-medium max-w-[280px] md:max-w-[550px]">
+            Empowering Crypto Finance with AI-Powered Predictions, Automated
+            Trading, Arbitrage, and Tax Optimization – Fueled by Decentralized
+            Intelligence.
           </p>
           <p className="text-[12px] md:text-sm text-white/50 max-w-[260px] md:max-w-[500px] mt-1">
             Decentralized AI solutions for predictive market insights, automated

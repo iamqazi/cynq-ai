@@ -6,13 +6,13 @@ import FAQSection from "../components/faq";
 import HeroSection from "../components/hero-section";
 import Utilities from "../components/utilities";
 import Footer from "../components/shared/footer";
-import DevelopmentProcess from "../components/roadmap-animation";
 import Navbar from "../components/shared/navbar";
 import Tokenomics from "../components/tokenomics";
 import BuiltOn from "../components/built-on";
 import BannerAnimation from "../components/banner-slider";
 import Image from "next/image";
 import MarqueeBanner from "../components/banner";
+import Roadmap from "../components/roadmap";
 
 export default function LandingPage() {
   const [loading, setLoading] = useState(true);
@@ -49,8 +49,9 @@ export default function LandingPage() {
         <HeroSection />
         <BannerAnimation />
         <About />
-        <DevelopmentProcess />
         <Utilities />
+        <Roadmap />
+        {/* <DevelopmentProcess /> */}
         <Tokenomics />
         <FAQSection />
         <BuiltOn />

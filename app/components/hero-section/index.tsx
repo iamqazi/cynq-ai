@@ -42,7 +42,7 @@ const HeroSection: React.FC = () => {
 
         {/* Main Content */}
         <div className="flex items-center justify-center text-white  py-8 mt-[34px] lg:py-0">
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 mx-[24px]  lg:mx-[150px]  w-full">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 mx-[24px]  xl:mx-[150px]  w-full">
             {/* Left Side Content */}
             <div className="flex flex-col text-center lg:text-left justify-center space-y-4 lg:space-y-6">
               <h1 className="text-4xl md:text-6xl lg:text-[72px] leading-tight lg:leading-[78px] font-bold">

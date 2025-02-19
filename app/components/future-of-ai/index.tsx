@@ -19,7 +19,7 @@ export default function FutureOfAi() {
           >
             {/* Semantic heading structure */}
             <header>
-              <h1 className="text-white xl:text-[56px] xl:leading-[61.6px] lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-medium  leading-tight sm:max-w-[70%] mx-auto sm:mt-[84px] mt-5">
+              <h1 className="text-white xl:text-[56px] xl:leading-[58px] lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-[500]  leading-tight sm:max-w-[70%] mx-auto sm:mt-[84px] mt-5">
                 CYNQAi
                 <br />
                 The Future of AI-Driven Decentralized Finance
@@ -56,10 +56,26 @@ export default function FutureOfAi() {
             </form>
             <div className=" flex space-x-10 items-center mt-[10px] sm:mb-[53px] mb-5">
               {[
-                { href: "#", src: "/mingcute.svg", alt: "Mingcute Icon" },
-                { href: "#", src: "/twitter.svg", alt: "Twitter Icon" },
-                { href: "#", src: "/telegram.svg", alt: "Telegram Icon" },
-                { href: "#", src: "/magic.svg", alt: "Magic Icon" },
+                {
+                  href: "https://medium.com/cynqai",
+                  src: "/mingcute.svg",
+                  alt: "Mingcute Icon",
+                },
+                {
+                  href: "https://x.com/cynqai",
+                  src: "/twitter.svg",
+                  alt: "Twitter Icon",
+                },
+                {
+                  href: "https://t.me/cynqai",
+                  src: "/telegram.svg",
+                  alt: "Telegram Icon",
+                },
+                {
+                  href: "https://linktr.ee/cynqai",
+                  src: "/magic.svg",
+                  alt: "Magic Icon",
+                },
               ].map((social, index) => (
                 <a
                   key={index}
@@ -73,7 +89,7 @@ export default function FutureOfAi() {
                     width={75}
                     height={75}
                     alt={social.alt}
-                    className="max-w-[30px] sm:max-w-[50px] md:max-w-[60px] lg:max-w-[75px] hover:scale-110 select-none"
+                    className="w-[50px] h-[50px] hover:scale-110 select-none"
                   />
                 </a>
               ))}

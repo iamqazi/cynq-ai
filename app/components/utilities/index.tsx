@@ -116,8 +116,8 @@ export default function Utilities() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Set more subtle styles
-      ctx.fillStyle = "rgba(255, 255, 255, 0.992)";
-      ctx.strokeStyle = "rgb(255, 255, 255)";
+      ctx.fillStyle = "rgba(0, 0, 0, 0.992)";
+      ctx.strokeStyle = "rgb(0, 0, 0)";
       ctx.lineWidth = 0.8; // Thinner lines for cleaner look
 
       initialNodes.forEach((node, i) => {
@@ -330,7 +330,7 @@ export default function Utilities() {
 
             {/* Connection Line */}
             {i !== utilitiesArray.length - 1 && (
-              <div className="!transform connection-line !translate-x-0 !translate-y-0 sm:block xl:max-w-[600px] lg:max-w-[500px] md:max-w-[400px] max-w-[350px] max-h-[123px] mx-auto connection-line">
+              <div className="!transform sm:block hidden connection-line !translate-x-0 !translate-y-0 xl:max-w-[600px] lg:max-w-[500px] md:max-w-[400px] max-w-[350px] max-h-[123px] mx-auto connection-line">
                 <Image
                   src={i % 2 ? "/connectLine2.png" : "/connectLine.png"}
                   alt=""

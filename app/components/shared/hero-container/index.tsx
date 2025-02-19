@@ -123,6 +123,7 @@ const CryptoPurchaseUI = () => {
                     alt={selected}
                     width={31}
                     height={31}
+                    className="w-[20px] h-[20px] md:h-[30px] md:w-[30px] "
                   />
                   <span className="text-white/15 text-[30px]">|</span>
                 </div>
@@ -140,7 +141,13 @@ const CryptoPurchaseUI = () => {
               </label>
               <div className="bg-transparent rounded-[70px] h-[50px] px-4 flex items-center justify-between border border-white/15">
                 <div className="flex items-center gap-2">
-                  <Image src="/receive.png" alt=" " width={28} height={28} />
+                  <Image
+                    src="/receive.png"
+                    alt=" "
+                    width={28}
+                    height={28}
+                    className="w-[25px] h-[25px] md:h-[30px] md:w-[30px] "
+                  />
                   <span className="text-white/15 text-[30px]">|</span>
                 </div>
                 <span className="text-white">2300</span>
