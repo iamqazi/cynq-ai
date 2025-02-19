@@ -10,9 +10,9 @@ export default function FutureOfAi() {
         aria-label="AI-Driven Decentralized Finance Section"
         className="flex absolute bottom-[80px] w-full text-white px-[10px] sm:px-[80px] xl:px-[170px] "
       >
-        <div className="w-full mx-auto sm:px-4  ">
+        <div className="w-full flex justify-center mx-auto sm:px-4  ">
           <div
-            className="border w-full lg:min-h-[520px]  border-white/15 rounded-lg px-4 text-center flex flex-col items-center shadow-[0px_0px_130px_#9B4BFC] sm:gap-[30px] gap-6"
+            className="border w-[900px] lg:min-h-[420px]  border-white/15 rounded-lg px-4 text-center flex flex-col items-center shadow-[0px_0px_130px_#9B4BFC] sm:gap-[30px] gap-6"
             style={{
               background: " radial-gradient(circle at -20%, #271141, #000 )",
             }}

@@ -16,10 +16,26 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { href: "#", src: "/mingcute.svg", alt: "Mingcute Icon" },
-    { href: "#", src: "/twitter.svg", alt: "Twitter Icon" },
-    { href: "#", src: "/telegram.svg", alt: "Telegram Icon" },
-    { href: "#", src: "/magic.svg", alt: "Magic Icon" },
+    {
+      href: "https://medium.com/cynqai",
+      src: "/mingcute.svg",
+      alt: "Mingcute Icon",
+    },
+    {
+      href: "https://x.com/cynqai",
+      src: "/twitter.svg",
+      alt: "Twitter Icon",
+    },
+    {
+      href: "https://t.me/cynqai",
+      src: "/telegram.svg",
+      alt: "Telegram Icon",
+    },
+    {
+      href: "https://linktr.ee/cynqai",
+      src: "/magic.svg",
+      alt: "Magic Icon",
+    },
   ];
 
   return (

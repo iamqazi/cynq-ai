@@ -7,22 +7,22 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 const utilitiesArray = [
   {
     title: "Decentralized Predictive AI for Crypto Predictions",
-    text: "The CYNQAi Decentralized Predictive AI is a groundbreaking AI-driven forecasting system that provides real-time crypto price predictions, market risk assessments, and investment insights.Unlike traditional data oracles that only relay historical and real-time data, CYNQAi’s AI-powered prediction engine analyzes on-chain transactions, social sentiment, liquidity movements, and technical indicators to forecast future price trends and market behaviors.📊 Know the market before it moves – with AI-driven accuracy and full decentralization!",
+    text: "CYNQAi’s Decentralized Predictive AI delivers real-time crypto price forecasts, risk assessments, and investment insights by analyzing on-chain data, liquidity, and market sentiment.",
     img: "/utilities1.png",
   },
   {
     title: "AI-Powered Crypto Trading Assistant",
-    text: "An AI-Powered Crypto Trading Assistant is a next-generation trading platform that leverages machine learning (ML), deep learning, and predictive analytics to optimize cryptocurrency investments. By analyzing real-time market data, historical trends, and on-chain metrics, the AI provides automated trading strategies, risk management, and portfolio optimization for traders of all levels. This AI-driven assistant operates 24/7, adapting to market conditions faster than human traders and eliminating emotional biases that often lead to poor trading decisions.",
+    text: "CYNQAi’s AI-Powered Trading Assistant optimizes crypto investments with machine learning, automated strategies, and risk management—trading 24/7 without human bias.",
     img: "/utilities2.png",
   },
   {
     title: "AI-Optimized Cross-Chain Arbitrage Bot",
-    text: "The CYNQAi AI-Optimized Cross-Chain Arbitrage Bot is an automated trading system designed to identify and execute arbitrage opportunities across multiple blockchains and exchanges with precision, speed, and risk management. Unlike traditional arbitrage bots that rely on predefined rules, CYNQAi’s AI-powered system adapts to market conditions in real-time, ensuring that traders maximize profits from price inefficiencies across different ecosystems. 🔍 Eliminate manual monitoring and trade execution delays—let AI detect and act on cross-chain price gaps instantly!",
+    text: "CYNQAi’s AI Arbitrage Bot identifies and executes cross-chain trades in real-time, maximizing profits from price gaps with precision and speed",
     img: "/utilities3.png",
   },
   {
     title: "AI-Based Crypto Tax Optimization Tool",
-    text: "The CYNQAi AI-Based Crypto Tax Optimization Tool is an automated AI-driven system designed to track, analyze, and optimize crypto tax reporting across multiple exchanges, wallets, and blockchain networks. Crypto taxation is complex, with different rules for capital gains, staking rewards, DeFi earnings, and NFT transactions. CYNQAi’s AI ensures accurate tax calculations, optimized deductions, and automated compliance reporting, allowing users to minimize liabilities and maximize tax efficiency. 📊 Say goodbye to manual tax calculations – Let AI handle your crypto taxes seamlessly!",
+    text: "CYNQAi’s AI Tax Tool automates crypto tax tracking, calculations, and compliance—minimizing liabilities and maximizing efficiency across exchanges and wallets.",
     img: "/utilities4.png",
   },
 ];

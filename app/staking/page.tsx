@@ -79,9 +79,9 @@ export default function Staking() {
                     type="text"
                     value={stake.toLocaleString()}
                     onChange={handleInputChange}
-                    className="font-semibold bg-transparent border border-white/15 rounded px-2"
+                    className="font-semibold bg-transparent rounded px-2 focus:outline-none focus:ring-0"
+                    autoFocus
                   />
-                  <span className="text-sm text-[#7376AA]"> ~71.25 USD</span>
                 </div>
               </div>
               <div className="flex gap-[6px] text-white text-[15px]">

@@ -15,7 +15,28 @@ const rotatingTexts = [
   "AI Arbitrage",
   "AI Tax Tool",
 ];
-
+const socialLinks = [
+  {
+    href: "https://medium.com/cynqai",
+    src: "/mingcute.svg",
+    alt: "Mingcute Icon",
+  },
+  {
+    href: "https://x.com/cynqai",
+    src: "/twitter.svg",
+    alt: "Twitter Icon",
+  },
+  {
+    href: "https://t.me/cynqai",
+    src: "/telegram.svg",
+    alt: "Telegram Icon",
+  },
+  {
+    href: "https://linktr.ee/cynqai",
+    src: "/magic.svg",
+    alt: "Magic Icon",
+  },
+];
 const HeroSection: React.FC = () => {
   const [index, setIndex] = useState(0);
 
@@ -85,18 +106,23 @@ const HeroSection: React.FC = () => {
                 </div>
 
                 <div className="md:flex hidden sm:block items-center gap-4 flex-wrap ">
-                  {["/one.png", "/second.png", "/three.png", "/last.png"].map(
-                    (src, index) => (
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.href}
+                      title={social.alt}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Image
-                        key={index}
-                        src={src}
-                        alt={`icon-${index + 1}`}
-                        className="w-[24px] h-[24px]"
+                        src={social.src}
                         width={100}
                         height={50}
+                        alt={social.alt}
+                        className="w-[24px] h-[24px]"
                       />
-                    )
-                  )}
+                    </a>
+                  ))}
                 </div>
               </div>
               <div className="flex items-center gap-[10px] justify-center lg:justify-start">
