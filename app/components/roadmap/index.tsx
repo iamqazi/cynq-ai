@@ -56,7 +56,7 @@ const Roadmap = ({ data = dummyData }) => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="w-full max-w-md mx-auto md:max-w-none rounded-3xl"
+            className="h-auto lg:h-[352px] xl:h-[450px] w-full xl:w-[300px] max-w-md mx-auto md:max-w-none rounded-3xl"
           >
             <div
               style={{
