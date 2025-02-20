@@ -312,7 +312,7 @@ export default function Utilities() {
 
               {/* Image Container */}
               <div
-                className="order-1 bg-[#10081c] w-full h-full sm:max-w-[500px] max-w-[300px] sm:max-h-[400px] max-h-[250px] relative rounded-xl overflow-clip image-container border-animation border-[2px] shadow-md shadow-white/80 "
+                className="order-1 bg-[#10081c] w-full h-full sm:max-w-[500px] max-w-[300px] sm:max-h-[400px] max-h-[250px] relative rounded-xl overflow-clip image-container border-animation border-[2px]  "
                 aria-hidden="true"
               >
                 <Image

@@ -70,7 +70,7 @@ const renderCustomizedLabel = ({
       y={y}
       fill="#FFFFFF"
       textAnchor={x > cx ? "start" : "end"}
-      className="md:text-[23px] sm:text-lg text-white"
+      className="lg:text-[20px] w-[100px] text-[16px] text-white"
     >
       {labelLines.map((line, i) => (
         <tspan key={i} x={x} dy={i === 0 ? ".5rem" : "1.2em"}>
@@ -165,7 +165,7 @@ const PieChartWithLabels: React.FC = () => {
           <PieChart
             width={600}
             height={500}
-            className="mx-auto top-[-20px] pie-responsive relative"
+            className="mx-auto top-[-20px] md:!w-[90%] lg:!w-[80%] xl:!w-[60%] pie-responsive relative"
           >
             {/* Define the linear gradient in an SVG <defs> block */}
             <defs>

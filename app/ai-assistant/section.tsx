@@ -38,7 +38,7 @@ export default function TradingFeatures() {
         </div>
 
         {/* Main Heading */}
-        <h2 className="text-[25px] leading-[27px]  md:leading-[56px] text-center font-bold max-w-6xl mx-auto px-5 mb-24 relative z-20">
+        <h2 className="text-[25px] md:text-[30px] leading-[27px]  md:leading-[56px] text-center font-bold max-w-6xl mx-auto px-5 mb-24 relative z-20">
           Trade smarter, trade faster – Let AI optimize your portfolio 24/7!
         </h2>
 

@@ -81,7 +81,7 @@ export default function Articles({
                 href="#lastOption"
                 key={ind}
                 onClick={() => setArticleInd(ind)}
-                className={`border-b pb-5 sm:pb-8 md:pb-12 text-xl sm:text-lg md:text-xl  lg:text-[28px] flex items-center justify-between gap-5
+                className={`border-b py-5 text-xl sm:text-lg md:text-[20px]  flex items-center justify-between 
            ${
              ind === articleInd
                ? "text-[#9B4BFC]"

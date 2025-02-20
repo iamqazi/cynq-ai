@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { CircleDot } from "lucide-react";
 import React from "react";
 
 const dummyData = [
@@ -62,32 +62,21 @@ const Roadmap = ({ data = dummyData }) => {
               style={{
                 background: " radial-gradient(circle at -20%, #542887, #000 )",
               }}
-              className="h-auto lg:h-[352px] xl:h-[450px] w-full xl:w-[300px] rounded-[2rem] border-[1px] border-white/30  px-4 md:px-6 py-5 text-left"
+              className="h-auto lg:h-[352px] xl:h-[450px] w-full xl:w-[300px] rounded-[2rem] border-[1px] border-[#11BBFF]/50  px-4 md:px-6 py-5 text-left"
             >
               <div className="gap-2 md:gap-4">
                 <h4 className="text-[24px] md:text-[36px] font-[700] font-metro-semi-bold text-white">
                   {item.heading}
                 </h4>
-
-                <span
-                  className={`px-4 py-1 font-[700] rounded-full text-[14px] md:text-[16px] w-fit ${
-                    index === 0
-                      ? "bg-yellow-500 text-black"
-                      : "bg-gray-400 text-black"
-                  }`}
-                >
-                  {index === 0 ? " IN PROGRESS" : "TO DO"}
-                </span>
               </div>
               <ul className="py-4 md:py-6 text-sm md:text-base text-white space-y-2">
                 {item.points.map((point, idx) => (
-                  <li key={idx} className="flex items-center gap-2">
-                    <Image
-                      src={idx < 3 ? "/unfilled.svg" : "/unfilled.svg"}
-                      alt="Tick Icon"
-                      height={20}
-                      width={20}
-                      className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0"
+                  <li key={idx} className="flex items-start gap-2">
+                    <CircleDot
+                      height={5}
+                      width={5}
+                      fill="white"
+                      className="text-white mt-[9px]"
                     />
                     <span className="flex-1">{point}</span>
                   </li>

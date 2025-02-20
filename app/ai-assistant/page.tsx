@@ -80,7 +80,7 @@ export default function AIAssistant() {
       />
       <p
         ref={textRef}
-        className="heading-md my-5 text-[33px] leading-[39px] max-w-[1186px] md:px-24 px-5 mx-auto"
+        className="heading-md my-5 text-[19px] md:text-[25px] leading-[39px] max-w-[1186px] md:px-24 px-5 mx-auto"
       >
         CYNQAi&apos;s AI-Powered Crypto Trading Assistant is a revolutionary
         automated trading system that leverages machine learning, real-time

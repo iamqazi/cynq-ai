@@ -24,20 +24,18 @@ const BannerAnimation = ({ theme }: { theme?: "light" | "dark" }) => {
   }, []);
 
   const technologies = [
-    { title: "React", image: "/icons/analytics-insight.png" },
-    { title: "Tailwind CSS", image: "/icons/coinpedia-fintech-news.png" },
-    { title: "GraphQL", image: "/icons/cryptodaily.png" },
-    { title: "GraphQL", image: "/icons/crypto-com.png" },
-    // { title: "GraphQL", image: "/icons/finbold.png" },
-    // { title: "GraphQL", image: "/icons/investing.png" },
-    { title: "GraphQL", image: "/icons/news-btc.png" },
-    // { title: "GraphQL", image: "/icons/the-news-crypto.png" },
+    { title: "React", image: "/media/analytics-insight.png" },
+    { title: "Tailwind CSS", image: "/media/coinpedia-fintech-news.png" },
+    { title: "GraphQL", image: "/media/cointelegraph-logo.png" },
+    { title: "GraphQL", image: "/media/crypto-com.png" },
+    { title: "GraphQL", image: "/media/cryptodaily.png" },
+    { title: "GraphQL", image: "/media/finbold.png" },
+    { title: "GraphQL", image: "/media/news-btc.png" },
+    { title: "GraphQL", image: "/media/the-news-crypto.png" },
   ];
 
   return (
-    <div
-      className={`mt-[100px] sec-5-trigger ${backgroundClass} max-w-[1440px] mx-auto`}
-    >
+    <div className={`mt-[87px] sec-5-trigger ${backgroundClass}  mx-auto`}>
       <div className="flex flex-col gap-8 md:gap-16 ">
         <div className="sec-5-move-anim relative top-[200px] flex flex-col gap-11 opacity-0 md:gap-16">
           <div className="h-[7.125rem]">
@@ -50,7 +48,7 @@ const BannerAnimation = ({ theme }: { theme?: "light" | "dark" }) => {
                   <Image
                     src={tech.image}
                     alt={tech.title}
-                    className="w-[150px] h-[50px] "
+                    className="w-[150px] h-[40px] "
                     width={100}
                     height={100}
                   />

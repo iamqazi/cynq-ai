@@ -22,19 +22,19 @@ export const cardData: CardData[] = [
 export const TaxArticles: articleType[] = [
   {
     title: "Automated Tracking of Taxable and Non-Taxable Transactions",
-    text: "Tracking crypto transactions manually can be time-consuming and error-prone, especially with multiple wallets, exchanges, and DeFi platforms involved. CYNQAi’s AI-driven tax engine automatically scans, categorizes, and tracks all transactions in real time, distinguishing between taxable events (crypto-to-fiat conversions, staking rewards, NFT sales) and non-taxable transfers (wallet-to-wallet movements, holding crypto assets, and receiving gifts). This ensures users have accurate, organized tax records without the hassle of manual calculations, making compliance effortless and audit-proof.",
+    text: "Automated Tax Tracking CYNQAi’s AI Tax Engine automates crypto transaction tracking across wallets, exchanges, and DeFi. It instantly categorizes taxable and non-taxable events for accurate reporting. No more manual calculations—stay compliant effortlessly. Audit-ready, hassle-free tax management with AI precision. ",
   },
   {
     title: "Suggestions for Tax-Loss Harvesting to Minimize Tax Liabilities",
-    text: "One of the most effective strategies for reducing tax obligations is tax-loss harvesting, where underperforming assets are strategically sold to offset taxable gains. CYNQAi’s AI continuously analyzes portfolio performance, identifying assets with unrealized losses and suggesting optimal selling and buyback strategies to legally minimize tax liabilities while maintaining a balanced investment portfolio. Unlike traditional tax tools that provide year-end reports, CYNQAi offers real-time tax-loss harvesting opportunities throughout the year, ensuring traders and investors maximize their after-tax returns.",
+    text: "AI-Powered Tax-Loss Harvesting CYNQAi’s AI optimizes tax-loss harvesting by identifying underperforming assets to offset taxable gains. It suggests strategic selling and buybacks to minimize liabilities legally. Unlike traditional tax tools, it provides real-time tax-saving opportunities year-round. Maximize after-tax returns with AI-driven portfolio management. ",
   },
   {
     title: "Region-Specific Compliance Guidance and Reporting",
-    text: "Cryptocurrency tax laws vary across jurisdictions, making compliance a major challenge for global investors. CYNQAi’s AI automatically adjusts tax calculations based on regional regulations, ensuring accurate tax treatment for capital gains, staking rewards, airdrops, and DeFi earnings across multiple countries. The system generates country-specific tax reports compliant with IRS (US), HMRC (UK), ATO (Australia), and EU regulations, providing users with ready-to-file tax documents compatible with TurboTax, Koinly, and other tax filing software. Whether you’re trading in the US, Europe, or Asia, CYNQAi ensures full compliance with your local tax authorities, minimizing the risk of penalties or audits.",
+    text: "Region-Specific Compliance Reports CYNQAi’s AI automates tax compliance by adjusting calculations for regional regulations. It accurately tracks capital gains, staking rewards, and DeFi earnings worldwide. Generates country-specific tax reports compatible with major filing software. Stay compliant globally while minimizing audit risks and penalties. ",
   },
   {
     title: "Real-Time Alerts on Taxable Events",
-    text: "Tax planning shouldn’t be a last-minute task. CYNQAi’s AI sends real-time notifications whenever a taxable event occurs, allowing users to make informed financial decisions instantly. Whether it’s a large trade, staking reward, NFT sale, or DeFi yield payout, users receive instant alerts on their tax implications and suggestions for mitigating liabilities before the financial year ends. By staying ahead of taxable events, investors can proactively manage their portfolios, adjust holdings strategically, and ensure optimal tax efficiency, preventing unexpected tax burdens.",
+    text: "Real-Time Tax Alerts CYNQAi’s AI provides real-time alerts on taxable events for proactive tax planning. Instant notifications help users manage trades, staking rewards, and DeFi earnings. Get AI-driven tax-saving suggestions before the financial year ends. Optimize tax efficiency and avoid unexpected liabilities.",
   },
 ];
 
