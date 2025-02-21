@@ -1,12 +1,12 @@
 "use client";
 import { useEffect, useRef } from "react";
-import FAQSection from "../components/faq";
-import FutureOfAi from "../components/future-of-ai";
-import { SecondaryHero } from "../components/hero-section";
-import Footer from "../components/shared/footer";
-import Navbar from "../components/shared/navbar";
-import Articles from "../components/article";
-import { keyBenefitsArticles } from "../types/data";
+import FAQSection from "../../components/faq";
+import FutureOfAi from "../../components/future-of-ai";
+import { SecondaryHero } from "../../components/hero-section";
+import Footer from "../../components/shared/footer";
+import Navbar from "../../components/shared/navbar";
+import Articles from "../../components/article";
+import { keyBenefitsArticles } from "../../types/data";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

@@ -1,4 +1,4 @@
-import { cardData } from "@/app/types/data";
+import { cardData } from "@/types/data";
 
 interface TradingCardProps {
   image: string;

@@ -1,18 +1,18 @@
 "use client";
 import { useEffect, useState } from "react";
-import FutureOfAi from "../components/future-of-ai";
-import About from "../components/about";
-import FAQSection from "../components/faq";
-import HeroSection from "../components/hero-section";
-import Utilities from "../components/utilities";
-import Footer from "../components/shared/footer";
-import Navbar from "../components/shared/navbar";
-import Tokenomics from "../components/tokenomics";
-import BuiltOn from "../components/built-on";
-import BannerAnimation from "../components/banner-slider";
+import FutureOfAi from "../../components/future-of-ai";
+import About from "../../components/about";
+import FAQSection from "../../components/faq";
+import HeroSection from "../../components/hero-section";
+import Utilities from "../../components/utilities";
+import Footer from "../../components/shared/footer";
+import Navbar from "../../components/shared/navbar";
+import Tokenomics from "../../components/tokenomics";
+import BuiltOn from "../../components/built-on";
+import BannerAnimation from "../../components/banner-slider";
 import Image from "next/image";
-import MarqueeBanner from "../components/banner";
-import Roadmap from "../components/roadmap";
+import MarqueeBanner from "../../components/banner";
+import Roadmap from "../../components/roadmap";
 
 export default function LandingPage() {
   const [loading, setLoading] = useState(true);

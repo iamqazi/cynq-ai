@@ -3,7 +3,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 //article type
-import { articleType } from "@/app/types/types";
+import { articleType } from "@/types/types";
 
 type propType = {
   heading: string;

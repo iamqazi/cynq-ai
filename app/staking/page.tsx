@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import Footer from "../components/shared/footer";
-import Navbar from "../components/shared/navbar";
+import Footer from "../../components/shared/footer";
+import Navbar from "../../components/shared/navbar";
 import { CircleHelp, WalletMinimal } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@nextui-org/react";

@@ -1,7 +1,7 @@
 import React from "react";
 import { ScrollText, Shield, AlertTriangle } from "lucide-react";
-import Navbar from "../components/shared/navbar";
-import Footer from "../components/shared/footer";
+import Navbar from "../../components/shared/navbar";
+import Footer from "../../components/shared/footer";
 
 const TermsAndConditions = () => {
   return (

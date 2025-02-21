@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@nextui-org/react";
 import { LucideIcon } from "lucide-react";
-import { cn } from "@/app/utils/cn";
+import { cn } from "@/utils/cn";
 
 type GradientButtonProps = {
   text: string;
