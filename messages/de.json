@@ -225,5 +225,19 @@
   "footer_privacy": "Datenschutzrichtlinie",
   "footer_rights": "Alle Rechte vorbehalten.",
   "crypto_with": "Krypto mit",
-  "presale_announcement": "🚀 CYNQ Ai-Vorverkauf ist JETZT LIVE! Sei Teil der Zukunft – sichere dir deine rabattierten Token und exklusiven Zugang zu revolutionärer KI-Blockchain-Technologie. 🌐 Warte nicht, schließe dich heute der Innovationswelle an! 🔥"
+  "presale_announcement": "🚀 CYNQ Ai-Vorverkauf ist JETZT LIVE! Sei Teil der Zukunft – sichere dir deine rabattierten Token und exklusiven Zugang zu revolutionärer KI-Blockchain-Technologie. 🌐 Warte nicht, schließe dich heute der Innovationswelle an! 🔥",
+  "title_terms": "Allgemeine Geschäftsbedingungen",
+  "introduction_title": "Einleitung",
+  "introduction_text": "Sie sollten diese Bedingungen lesen, da sie unsere rechtlichen Verpflichtungen gegenüber Ihnen sowie eine Reihe von DOS und DON'Ts enthalten, die Sie beachten müssen, wenn Sie unsere Dienste nutzen. Durch die Nutzung unserer Dienste erklären Sie sich automatisch damit einverstanden, diese Bedingungen zu akzeptieren und rechtlich gebunden zu sein.",
+  "security_title": "Sicherheit",
+  "security_text": "Sicherheit ist für CYNQ Ai wichtig. Sie erklären sich damit einverstanden, Ihren Wallet-Zugang nicht mit anderen Benutzern oder Dritten zu teilen. Wir behalten uns das Recht vor, Konten, die unangemessen genutzt werden, zu sperren oder zu kündigen.",
+  "rules_title": "Nutzungsregeln",
+  "rule_1": "Keine persönlichen Angriffe",
+  "rule_2": "Keine Belästigung oder Mobbing anderer",
+  "rule_3": "Keine unangemessenen Inhalte veröffentlichen",
+  "rule_4": "Keine Verletzung geistiger Eigentumsrechte",
+  "service_interruption_title": "Dienstunterbrechung",
+  "service_interruption_text": "CYNQ Ai garantiert nicht, dass die Dienste immer verfügbar, ununterbrochen, pünktlich, sicher oder frei von Fehlern oder Viren sind. Wir können bestimmte Dienste ohne vorherige Ankündigung ändern, aussetzen oder einstellen.",
+  "age_restrictions_title": "Altersbeschränkungen",
+  "age_restrictions_text": "Unsere Dienste stehen Kindern unter 18 Jahren oder in einigen Gerichtsbarkeiten unter 21 Jahren nicht zur Verfügung. Bitte beachten Sie die Gesetze Ihres Landes für altersbezogene Richtlinien."
 }

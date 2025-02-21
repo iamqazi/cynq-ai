@@ -225,5 +225,19 @@
   "footer_privacy": "Política de Privacidad",
   "footer_rights": "Todos los derechos reservados.",
   "crypto_with": "Cripto con",
-  "presale_announcement": "🚀 ¡La preventa de CYNQ Ai está AHORA ACTIVA! Sé parte del futuro: reclama tus tokens con descuento y acceso exclusivo a tecnología revolucionaria de IA y blockchain. 🌐 ¡No esperes, únete a la ola de innovación hoy! 🔥"
+  "presale_announcement": "🚀 ¡La preventa de CYNQ Ai está AHORA ACTIVA! Sé parte del futuro: reclama tus tokens con descuento y acceso exclusivo a tecnología revolucionaria de IA y blockchain. 🌐 ¡No esperes, únete a la ola de innovación hoy! 🔥",
+  "title_terms": "Términos y Condiciones",
+  "introduction_title": "Introducción",
+  "introduction_text": "Debe leer estos Términos porque contienen nuestros compromisos legales con usted y una serie de cosas que puede y no puede hacer al utilizar nuestros Servicios. Al usar nuestros Servicios, se considera automáticamente que acepta estos Términos y se obliga legalmente a cumplirlos.",
+  "security_title": "Seguridad",
+  "security_text": "La seguridad es importante para CYNQ Ai. Usted acepta no compartir el acceso a su billetera con ningún otro usuario o tercero. Nos reservamos el derecho de suspender o cancelar cuentas que se utilicen de manera inapropiada.",
+  "rules_title": "Reglas de Uso",
+  "rule_1": "No participar en ataques personales",
+  "rule_2": "No acosar ni intimidar a otros",
+  "rule_3": "No publicar contenido inapropiado",
+  "rule_4": "No violar los derechos de propiedad intelectual",
+  "service_interruption_title": "Interrupción del Servicio",
+  "service_interruption_text": "CYNQ Ai no garantiza que los Servicios estarán siempre disponibles, ininterrumpidos, puntuales, seguros o libres de errores o virus. Podemos cambiar, suspender o interrumpir ciertos Servicios sin previo aviso.",
+  "age_restrictions_title": "Restricciones de Edad",
+  "age_restrictions_text": "Nuestros servicios no están disponibles para niños menores de 18 años o 21 años en algunas jurisdicciones. Consulte las leyes de su país para obtener orientación sobre la edad."
 }

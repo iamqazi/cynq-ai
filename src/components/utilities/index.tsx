@@ -258,7 +258,7 @@ export default function Utilities() {
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, []);
+  }, [utilitiesArray.length]);
 
   // Setup refs callback
   const setArticleRef = (el: HTMLElement | null, i: number) => {

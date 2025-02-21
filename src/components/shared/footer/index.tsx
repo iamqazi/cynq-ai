@@ -129,7 +129,7 @@ export default function Footer() {
         </small>
         <small className="sm:mx-0 mx-auto">
           <Link
-            href="/terms-and-conditions"
+            href={`/${locale}/staking`}
             title="Terms and Conditions"
             className="hover:text-[#7B15F8]"
           >
@@ -137,7 +137,7 @@ export default function Footer() {
           </Link>{" "}
           /{" "}
           <Link
-            href="/privacy-policy"
+            href={`/${locale}/privacy-policy`}
             title="Privacy Policy"
             className="hover:text-[#7B15F8]"
           >

@@ -47,7 +47,7 @@ const HeroSection: React.FC = () => {
     }, 3000); // Change text every 3 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [rotatingTexts.length]);
 
   return (
     <div className="min-h-screen relative">

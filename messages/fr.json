@@ -225,5 +225,19 @@
   "footer_privacy": "Politique de Confidentialité",
   "footer_rights": "Tous droits réservés.",
   "crypto_with": "Crypto avec",
-  "presale_announcement": "🚀 La prévente CYNQ Ai est MAINTENANT EN DIRECT ! Faites partie du futur – réclamez vos jetons à prix réduit et un accès exclusif à une technologie révolutionnaire IA-blockchain. 🌐 N'attendez pas, rejoignez la vague d'innovation dès aujourd'hui ! 🔥"
+  "presale_announcement": "🚀 La prévente CYNQ Ai est MAINTENANT EN DIRECT ! Faites partie du futur – réclamez vos jetons à prix réduit et un accès exclusif à une technologie révolutionnaire IA-blockchain. 🌐 N'attendez pas, rejoignez la vague d'innovation dès aujourd'hui ! 🔥",
+  "title_terms": "Conditions Générales",
+  "introduction_title": "Introduction",
+  "introduction_text": "Vous devez lire ces Conditions, car elles contiennent nos engagements légaux envers vous et un certain nombre de choses à faire et à ne pas faire dont vous devez être conscient lorsque vous utilisez nos Services. En utilisant nos Services, vous acceptez automatiquement ces Conditions et vous engagez légalement à les respecter.",
+  "security_title": "Sécurité",
+  "security_text": "La sécurité est importante pour CYNQ Ai. Vous acceptez de ne pas partager l'accès à votre portefeuille avec un autre utilisateur ou un tiers. Nous nous réservons le droit de suspendre ou de résilier les comptes utilisés de manière inappropriée.",
+  "rules_title": "Règles d'Utilisation",
+  "rule_1": "Ne pas engager d'attaques personnelles",
+  "rule_2": "Ne pas harceler ni intimider les autres",
+  "rule_3": "Ne pas publier de contenu inapproprié",
+  "rule_4": "Ne pas enfreindre les droits de propriété intellectuelle",
+  "service_interruption_title": "Interruption du Service",
+  "service_interruption_text": "CYNQ Ai ne garantit pas que les Services seront toujours disponibles, ininterrompus, ponctuels, sécurisés ou exempts de bogues ou de virus.",
+  "age_restrictions_title": "Restrictions d'Âge",
+  "age_restrictions_text": "Nos services ne sont pas disponibles pour les enfants de moins de 18 ans ou 21 ans dans certaines juridictions."
 }

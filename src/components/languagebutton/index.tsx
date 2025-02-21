@@ -3,23 +3,31 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
+interface LanguageOption {
+  value: string;
+  label: string;
+  image: string;
+}
+
+const languageOptions: LanguageOption[] = [
+  { value: "en", label: "English", image: "/svg/en.svg" },
+  { value: "es", label: "Spanish", image: "/svg/es.svg" },
+  { value: "de", label: "German", image: "/svg/de.svg" },
+  { value: "fr", label: "French", image: "/svg/es.svg" },
+  { value: "it", label: "Italian", image: "/svg/pt.svg" },
+];
+
 const LanguageDropdown = () => {
   const params = useParams();
 
-  const languageOptions = [
-    { value: "en", label: "English", image: "/svg/en.svg" },
-    { value: "es", label: "Spanish", image: "/svg/es.svg" },
-    { value: "de", label: "German", image: "/svg/de.svg" },
-    { value: "fr", label: "French", image: "/svg/es.svg" },
-    { value: "it", label: "Italian", image: "/svg/pt.svg" },
-  ];
-
-  const [selectedLanguage, setSelectedLanguage] = useState(languageOptions[0]);
+  const [selectedLanguage, setSelectedLanguage] = useState<LanguageOption>(
+    languageOptions[0]
+  );
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const handleChangeLanguage = (option: any) => {
+  const handleChangeLanguage = (option: LanguageOption) => {
     window.location.href = `/${option.value}`;
   };
 
@@ -28,7 +36,7 @@ const LanguageDropdown = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
         dropdownRef.current &&
-        !(dropdownRef.current as HTMLElement).contains(event.target as Node)
+        !dropdownRef.current.contains(event.target as Node)
       ) {
         setIsDropdownOpen(false);
       }
@@ -45,8 +53,7 @@ const LanguageDropdown = () => {
       languageOptions.find((option) => option.value === params.locale) ||
         languageOptions[0]
     );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [params]);
+  }, [params.locale]); // Only depend on params.locale
 
   return (
     <div className="relative group" ref={dropdownRef}>
