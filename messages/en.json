@@ -240,5 +240,48 @@
   "service_interruption_title": "Service Interruption",
   "service_interruption_text": "CYNQ Ai does not guarantee that the Services will always be available, uninterrupted, timely, secure, or free from bugs or viruses. We may change, suspend, or discontinue certain Services without notice.",
   "age_restrictions_title": "Age Restrictions",
-  "age_restrictions_text": "Our services are not available for use by children under the age of 18 years old or 21 years old in some jurisdictions. Please refer to your country's laws for age-related guidance."
+  "age_restrictions_text": "Our services are not available for use by children under the age of 18 years old or 21 years old in some jurisdictions. Please refer to your country's laws for age-related guidance.",
+
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "intro": "This privacy policy informs you of your choices and our practices in relation to your Information. For the purposes of this Policy, \"we\", \"us\", and \"our\" refer to \"CYNQ Ai\".",
+    "children": {
+      "title": "Children",
+      "text": "Our services are not available for use by children and are intended for persons over the age of 18 years old, and 21 years old in some jurisdictions. Please refer to your country laws for age-appropriate guidance. To comply with the current 'UK Data Protection Act' for Children, specifically the Age Appropriate Design Code (also known as the Children's Act), risks have been assessed. More information can be found at ICO Children's Code Hub."
+    },
+    "personalInfo": {
+      "title": "Personal Information We Collect",
+      "item1": "Information you provide to us, such as your name, mailing address, phone number, email address, and payment information.",
+      "item2": "Information you provide via customer support channels, such as when contacting us via email.",
+      "item3": "Information collected when you use our app or website, including cookies and location-based data.",
+      "item4": "Information from third parties, including social media and analytics services like Google Analytics."
+    },
+    "usage": {
+      "title": "How We Use Your Personal Information",
+      "item1": "To provide you with our service, including access to our app via a virtual wallet.",
+      "item2": "To improve and monitor the use of our services.",
+      "item3": "To provide customer support and respond to your queries or complaints.",
+      "item4": "To prevent fraud, defend legal claims, and comply with legal obligations.",
+      "item5": "To conduct analytics and provide targeted advertising (with your consent)."
+    },
+    "rights": {
+      "title": "Your Rights",
+      "item1": "The right to request access to your personal data.",
+      "item2": "The right to request correction of your personal data.",
+      "item3": "The right to request erasure of your personal data.",
+      "item4": "The right to object to processing of your personal data.",
+      "item5": "The right to request restriction of processing of your personal data.",
+      "item6": "The right to request transfer of your personal data.",
+      "item7": "The right to withdraw consent at any time."
+    },
+    "security": {
+      "title": "Security",
+      "text": "We have security measures in place to protect your information, but transmission over the internet is not completely secure. We recommend using appropriate security measures when using our services."
+    },
+    "contact": {
+      "title": "Contact & Complaints",
+      "text": "If you have any questions or complaints regarding this policy, please contact us at admin@cynq.ai. If you wish to make a complaint about how we process your information, we will aim to respond within 30 days."
+    },
+    "changes": "Changes to this Policy: Any updates or changes to this policy will be published here."
+  }
 }

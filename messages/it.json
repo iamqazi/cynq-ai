@@ -239,5 +239,48 @@
   "service_interruption_title": "Interruzione del Servizio",
   "service_interruption_text": "CYNQ Ai non garantisce che i Servizi saranno sempre disponibili, ininterrotti, puntuali, sicuri o privi di bug o virus. Possiamo modificare, sospendere o interrompere determinati Servizi senza preavviso.",
   "age_restrictions_title": "Restrizioni di Età",
-  "age_restrictions_text": "I nostri servizi non sono disponibili per i bambini di età inferiore a 18 anni o 21 anni in alcune giurisdizioni. Si prega di fare riferimento alle leggi del proprio paese per le linee guida relative all'età."
+  "age_restrictions_text": "I nostri servizi non sono disponibili per i bambini di età inferiore a 18 anni o 21 anni in alcune giurisdizioni. Si prega di fare riferimento alle leggi del proprio paese per le linee guida relative all'età.",
+
+  "privacyPolicy": {
+    "title": "Informativa sulla Privacy",
+    "intro": "Questa informativa sulla privacy ti informa sulle tue scelte e sulle nostre pratiche relative alle tue informazioni. Ai fini di questa politica, \"noi\", \"ci\" e \"nostro\" si riferiscono a \"CYNQ Ai\".",
+    "children": {
+      "title": "Minori",
+      "text": "I nostri servizi non sono disponibili per l'uso da parte dei minori e sono destinati a persone di età superiore ai 18 anni, e ai 21 anni in alcune giurisdizioni. Ti invitiamo a fare riferimento alle leggi del tuo paese per indicazioni appropriate all'età. Per conformarsi all'attuale 'UK Data Protection Act' per i minori, in particolare all'Age Appropriate Design Code (noto anche come Children's Act), sono stati valutati i rischi. Maggiori informazioni sono disponibili sull'ICO Children's Code Hub."
+    },
+    "personalInfo": {
+      "title": "Informazioni Personali che Raccogliamo",
+      "item1": "Informazioni che ci fornisci, come il tuo nome, indirizzo postale, numero di telefono, indirizzo email e dati di pagamento.",
+      "item2": "Informazioni che ci fornisci tramite i canali di supporto clienti, come quando ci contatti via email.",
+      "item3": "Informazioni raccolte quando utilizzi la nostra app o il nostro sito web, inclusi cookie e dati basati sulla posizione.",
+      "item4": "Informazioni provenienti da terze parti, inclusi social media e servizi di analisi come Google Analytics."
+    },
+    "usage": {
+      "title": "Come Usiamo le Tue Informazioni Personali",
+      "item1": "Per fornirti il nostro servizio, incluso l'accesso alla nostra app tramite un portafoglio virtuale.",
+      "item2": "Per migliorare e monitorare l'utilizzo dei nostri servizi.",
+      "item3": "Per fornire supporto clienti e rispondere alle tue domande o reclami.",
+      "item4": "Per prevenire frodi, difendere rivendicazioni legali e rispettare gli obblighi di legge.",
+      "item5": "Per condurre analisi e fornire pubblicità mirata (con il tuo consenso)."
+    },
+    "rights": {
+      "title": "I Tuoi Diritti",
+      "item1": "Il diritto di richiedere l'accesso ai tuoi dati personali.",
+      "item2": "Il diritto di richiedere la correzione dei tuoi dati personali.",
+      "item3": "Il diritto di richiedere la cancellazione dei tuoi dati personali.",
+      "item4": "Il diritto di opporti al trattamento dei tuoi dati personali.",
+      "item5": "Il diritto di richiedere la limitazione del trattamento dei tuoi dati personali.",
+      "item6": "Il diritto di richiedere il trasferimento dei tuoi dati personali.",
+      "item7": "Il diritto di revocare il consenso in qualsiasi momento."
+    },
+    "security": {
+      "title": "Sicurezza",
+      "text": "Abbiamo adottato misure di sicurezza per proteggere le tue informazioni, ma la trasmissione su internet non è completamente sicura. Ti consigliamo di utilizzare misure di sicurezza appropriate quando usi i nostri servizi."
+    },
+    "contact": {
+      "title": "Contatti & Reclami",
+      "text": "Se hai domande o reclami riguardo a questa informativa, contattaci all'indirizzo admin@cynq.ai. Se desideri presentare un reclamo sul trattamento delle tue informazioni, cercheremo di rispondere entro 30 giorni."
+    },
+    "changes": "Modifiche a questa Politica: Eventuali aggiornamenti o modifiche a questa politica saranno pubblicati qui."
+  }
 }

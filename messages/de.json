@@ -239,5 +239,48 @@
   "service_interruption_title": "Dienstunterbrechung",
   "service_interruption_text": "CYNQ Ai garantiert nicht, dass die Dienste immer verfügbar, ununterbrochen, pünktlich, sicher oder frei von Fehlern oder Viren sind. Wir können bestimmte Dienste ohne vorherige Ankündigung ändern, aussetzen oder einstellen.",
   "age_restrictions_title": "Altersbeschränkungen",
-  "age_restrictions_text": "Unsere Dienste stehen Kindern unter 18 Jahren oder in einigen Gerichtsbarkeiten unter 21 Jahren nicht zur Verfügung. Bitte beachten Sie die Gesetze Ihres Landes für altersbezogene Richtlinien."
+  "age_restrictions_text": "Unsere Dienste stehen Kindern unter 18 Jahren oder in einigen Gerichtsbarkeiten unter 21 Jahren nicht zur Verfügung. Bitte beachten Sie die Gesetze Ihres Landes für altersbezogene Richtlinien.",
+
+  "privacyPolicy": {
+    "title": "Datenschutzrichtlinie",
+    "intro": "Diese Datenschutzrichtlinie informiert Sie über Ihre Auswahlmöglichkeiten und unsere Praktiken in Bezug auf Ihre Informationen. Für die Zwecke dieser Richtlinie beziehen sich \"wir\", \"uns\" und \"unser\" auf \"CYNQ Ai\".",
+    "children": {
+      "title": "Kinder",
+      "text": "Unsere Dienste sind nicht für Kinder verfügbar und richten sich an Personen über 18 Jahren und in einigen Rechtsordnungen über 21 Jahren. Bitte beachten Sie die Gesetze Ihres Landes für altersgerechte Hinweise. Um mit dem aktuellen 'UK Data Protection Act' für Kinder, insbesondere dem Age Appropriate Design Code (auch bekannt als das Children's Act), in Übereinstimmung zu bleiben, wurden Risiken bewertet. Weitere Informationen finden Sie im ICO Children's Code Hub."
+    },
+    "personalInfo": {
+      "title": "Gesammelte persönliche Daten",
+      "item1": "Informationen, die Sie uns zur Verfügung stellen, wie z. B. Ihren Namen, Ihre Postadresse, Telefonnummer, E-Mail-Adresse und Zahlungsinformationen.",
+      "item2": "Informationen, die Sie über Kundensupport-Kanäle bereitstellen, z. B. wenn Sie uns per E-Mail kontaktieren.",
+      "item3": "Informationen, die beim Verwenden unserer App oder Website gesammelt werden, einschließlich Cookies und standortbasierter Daten.",
+      "item4": "Informationen von Dritten, einschließlich sozialer Medien und Analyse-Diensten wie Google Analytics."
+    },
+    "usage": {
+      "title": "Wie wir Ihre persönlichen Daten verwenden",
+      "item1": "Um Ihnen unseren Service bereitzustellen, einschließlich des Zugriffs auf unsere App über eine virtuelle Brieftasche.",
+      "item2": "Um die Nutzung unserer Dienste zu verbessern und zu überwachen.",
+      "item3": "Um Kundenservice bereitzustellen und auf Ihre Anfragen oder Beschwerden zu reagieren.",
+      "item4": "Um Betrug zu verhindern, rechtliche Ansprüche zu verteidigen und gesetzliche Verpflichtungen zu erfüllen.",
+      "item5": "Um Analysen durchzuführen und gezielte Werbung bereitzustellen (mit Ihrer Zustimmung)."
+    },
+    "rights": {
+      "title": "Ihre Rechte",
+      "item1": "Das Recht, Zugang zu Ihren persönlichen Daten zu verlangen.",
+      "item2": "Das Recht, die Korrektur Ihrer persönlichen Daten zu verlangen.",
+      "item3": "Das Recht, die Löschung Ihrer persönlichen Daten zu verlangen.",
+      "item4": "Das Recht, der Verarbeitung Ihrer persönlichen Daten zu widersprechen.",
+      "item5": "Das Recht, die Verarbeitung Ihrer persönlichen Daten einzuschränken.",
+      "item6": "Das Recht, die Übertragung Ihrer persönlichen Daten zu verlangen.",
+      "item7": "Das Recht, die Zustimmung jederzeit zu widerrufen."
+    },
+    "security": {
+      "title": "Sicherheit",
+      "text": "Wir haben Sicherheitsmaßnahmen zum Schutz Ihrer Daten getroffen, aber die Übertragung über das Internet ist nicht vollständig sicher. Wir empfehlen, bei der Nutzung unserer Dienste angemessene Sicherheitsmaßnahmen zu ergreifen."
+    },
+    "contact": {
+      "title": "Kontakt & Beschwerden",
+      "text": "Wenn Sie Fragen oder Beschwerden zu dieser Richtlinie haben, kontaktieren Sie uns bitte unter admin@cynq.ai. Wenn Sie eine Beschwerde über die Verarbeitung Ihrer Informationen einreichen möchten, werden wir versuchen, innerhalb von 30 Tagen zu antworten."
+    },
+    "changes": "Änderungen dieser Richtlinie: Alle Updates oder Änderungen dieser Richtlinie werden hier veröffentlicht."
+  }
 }

@@ -239,5 +239,48 @@
   "service_interruption_title": "Interruption du Service",
   "service_interruption_text": "CYNQ Ai ne garantit pas que les Services seront toujours disponibles, ininterrompus, ponctuels, sécurisés ou exempts de bogues ou de virus.",
   "age_restrictions_title": "Restrictions d'Âge",
-  "age_restrictions_text": "Nos services ne sont pas disponibles pour les enfants de moins de 18 ans ou 21 ans dans certaines juridictions."
+  "age_restrictions_text": "Nos services ne sont pas disponibles pour les enfants de moins de 18 ans ou 21 ans dans certaines juridictions.",
+
+  "privacyPolicy": {
+    "title": "Politique de Confidentialité",
+    "intro": "Cette politique de confidentialité vous informe de vos choix et de nos pratiques concernant vos informations. Aux fins de cette politique, \"nous\", \"notre\" et \"nos\" font référence à \"CYNQ Ai\".",
+    "children": {
+      "title": "Enfants",
+      "text": "Nos services ne sont pas disponibles pour les enfants et sont destinés aux personnes de plus de 18 ans, et de 21 ans dans certaines juridictions. Veuillez vous référer aux lois de votre pays pour des indications appropriées à l'âge. Afin de se conformer à la loi actuelle sur la protection des données au Royaume-Uni pour les enfants, notamment l'Age Appropriate Design Code (également connu sous le nom de Children's Act), les risques ont été évalués. Plus d'informations sont disponibles sur l'ICO Children's Code Hub."
+    },
+    "personalInfo": {
+      "title": "Informations Personnelles que Nous Collectons",
+      "item1": "Informations que vous nous fournissez, telles que votre nom, adresse postale, numéro de téléphone, adresse e-mail et informations de paiement.",
+      "item2": "Informations que vous fournissez via les canaux de support client, comme lorsque vous nous contactez par e-mail.",
+      "item3": "Informations collectées lorsque vous utilisez notre application ou notre site web, y compris les cookies et les données basées sur la localisation.",
+      "item4": "Informations provenant de tiers, y compris les réseaux sociaux et les services d'analyse comme Google Analytics."
+    },
+    "usage": {
+      "title": "Comment Nous Utilisons Vos Informations Personnelles",
+      "item1": "Pour vous fournir notre service, y compris l'accès à notre application via un portefeuille virtuel.",
+      "item2": "Pour améliorer et surveiller l'utilisation de nos services.",
+      "item3": "Pour fournir un support client et répondre à vos questions ou réclamations.",
+      "item4": "Pour prévenir la fraude, défendre des réclamations légales et respecter les obligations légales.",
+      "item5": "Pour effectuer des analyses et fournir de la publicité ciblée (avec votre consentement)."
+    },
+    "rights": {
+      "title": "Vos Droits",
+      "item1": "Le droit de demander l'accès à vos données personnelles.",
+      "item2": "Le droit de demander la correction de vos données personnelles.",
+      "item3": "Le droit de demander l'effacement de vos données personnelles.",
+      "item4": "Le droit de vous opposer au traitement de vos données personnelles.",
+      "item5": "Le droit de demander la limitation du traitement de vos données personnelles.",
+      "item6": "Le droit de demander le transfert de vos données personnelles.",
+      "item7": "Le droit de retirer votre consentement à tout moment."
+    },
+    "security": {
+      "title": "Sécurité",
+      "text": "Nous avons mis en place des mesures de sécurité pour protéger vos informations, mais la transmission sur Internet n'est pas totalement sécurisée. Nous vous recommandons d'utiliser des mesures de sécurité appropriées lorsque vous utilisez nos services."
+    },
+    "contact": {
+      "title": "Contact & Réclamations",
+      "text": "Si vous avez des questions ou des réclamations concernant cette politique, veuillez nous contacter à admin@cynq.ai. Si vous souhaitez déposer une réclamation concernant la manière dont nous traitons vos informations, nous nous efforcerons de répondre dans un délai de 30 jours."
+    },
+    "changes": "Modifications de cette Politique : Toute mise à jour ou modification de cette politique sera publiée ici."
+  }
 }
