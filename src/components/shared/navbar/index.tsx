@@ -35,9 +35,7 @@ const Header = () => {
       )}
       <Nav sideBarOpen={sideBarOpen} setSideBarOpen={setSideBarOpen} />
       <div className=" ml-4 gap-4 flex items-center  relative z-[1]">
-        <div className="relative text-left lg:block hidden  ">
-          <LanguageDropdown />
-        </div>
+        <LanguageDropdown />
         <Button
           onClick={handleClick}
           className="lg:block hidden px-6 py-2 text-black rounded-lg transition-all duration-700 hover:rounded-sm bg-[#ffffff]"
